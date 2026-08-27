@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Star, ArrowRight } from "lucide-react";
 
 export default function HomeAboutTeaser() {
@@ -28,9 +28,11 @@ export default function HomeAboutTeaser() {
       },
     },
   };
+  const headerRef = useRef(null);
+  const isInView = useInView(headerRef, { once: true, margin: "-40px" });
 
   return (
-    <section className="w-full bg-[#f8fafc] py-12 sm:py-16 font-sans text-[#0f172a] border-y border-slate-100 overflow-hidden">
+    <section className="w-full bg-[#fafafa] py-12 sm:py-16 font-sans text-[#0f172a]">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -50,10 +52,20 @@ export default function HomeAboutTeaser() {
 
         {/* Heading & Exact Blueprint Copy */}
         <motion.div variants={fadeUpVariants} className="text-center max-w-3xl mx-auto space-y-4">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#0f2a4a] leading-tight tracking-tight">
-            Your Trusted Partner in Business Growth
-          </h2>
-          
+
+          <div
+            ref={headerRef}
+            className={`text-center max-w-3xl mx-auto space-y-4 transition-all duration-700 delay-150 ease-out ${isInView
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-6"
+              }`}
+          >
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#0f2a4a] leading-tight tracking-tight transition-colors duration-300 hover:text-[#f26522]">
+              Your Trusted Partner in Business Growth<br className="hidden sm:inline" />
+
+            </h2>
+          </div>
+
           <div className="space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
             <p>
               Every successful business begins with the right guidance. At <strong className="text-[#0f2a4a]">AarambhGrow</strong>, we help entrepreneurs, startups, and growing businesses navigate every stage of their journey—from setting up a business and managing legal compliance to building a strong digital presence and scaling operations.

@@ -5,7 +5,7 @@ import { ArrowRight, Building2, TrendingUp, Globe2, ShieldCheck, ArrowUpRight } 
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[calc(100dvh-4rem)] lg:h-[calc(100dvh-4rem)] w-full flex flex-col justify-between bg-gradient-to-b from-slate-50/60 via-white to-slate-50/30 font-sans select-none">
+    <section className="relative min-h-[calc(100dvh-4rem)] lg:h-[calc(100dvh-4rem)] w-full flex flex-col justify-between bg-[#fafafa] font-sans select-none">
 
       {/* Custom Animations for Hero Content */}
       <style jsx global>{`
@@ -45,7 +45,7 @@ export default function Hero() {
 
         {/* RIGHT ALIGNED BACKGROUND IMAGE LAYER */}
         <div
-          className="hidden lg:block absolute top-1 -bottom-25 right-15 w-[75%] z-0 pointer-events-none"
+          className="hidden lg:block absolute top-1 -bottom-20 right-15 w-[75%] z-0 pointer-events-none"
           style={{
             backgroundImage: "url('/images/hero2.png')",
             backgroundRepeat: "no-repeat",
@@ -119,8 +119,8 @@ export default function Hero() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-2">
 
               {/* Stat 1 */}
-              <div className="flex items-center gap-2.5 bg-white/70 sm:bg-transparent p-2 sm:p-0 rounded-xl sm:rounded-none border border-slate-200/60 sm:border-none shadow-sm sm:shadow-none">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-[#03254C]">
+              <div className="flex items-center gap-2.5 bg-white/70 sm:bg-transparent p-2 sm:p-0 rounded-md sm:rounded-md border border-slate-200/60 sm:border-none shadow-sm sm:shadow-none">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-slate-100 text-[#03254C]">
                   <Building2 className="h-4.5 w-4.5" />
                 </div>
                 <div>
@@ -130,8 +130,8 @@ export default function Hero() {
               </div>
 
               {/* Stat 2 */}
-              <div className="flex items-center gap-2.5 bg-white/70 sm:bg-transparent p-2 sm:p-0 rounded-xl sm:rounded-none border border-slate-200/60 sm:border-none shadow-sm sm:shadow-none">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-[#F26522]">
+              <div className="flex items-center gap-2.5 bg-white/70 sm:bg-transparent p-2 sm:p-0 rounded-md sm:rounded-md border border-slate-200/60 sm:border-none shadow-sm sm:shadow-none">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-orange-50 text-[#F26522]">
                   <TrendingUp className="h-4.5 w-4.5" />
                 </div>
                 <div>
@@ -141,8 +141,8 @@ export default function Hero() {
               </div>
 
               {/* Stat 3 */}
-              <div className="flex items-center gap-2.5 bg-white/70 sm:bg-transparent p-2 sm:p-0 rounded-xl sm:rounded-none border border-slate-200/60 sm:border-none shadow-sm sm:shadow-none">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-green-50 text-[#157327]">
+              <div className="flex items-center gap-2.5 bg-white/70 sm:bg-transparent p-2 sm:p-0 rounded-md sm:rounded-md border border-slate-200/60 sm:border-none shadow-sm sm:shadow-none">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-green-50 text-[#157327]">
                   <Globe2 className="h-4.5 w-4.5" />
                 </div>
                 <div>
@@ -152,8 +152,8 @@ export default function Hero() {
               </div>
 
               {/* Stat 4 */}
-              <div className="flex items-center gap-2.5 bg-white/70 sm:bg-transparent p-2 sm:p-0 rounded-xl sm:rounded-none border border-slate-200/60 sm:border-none shadow-sm sm:shadow-none">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-[#03254C]">
+              <div className="flex items-center gap-2.5 bg-white/70 sm:bg-transparent p-2 sm:p-0 rounded-md sm:rounded-md border border-slate-200/60 sm:border-none shadow-sm sm:shadow-none">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-slate-100 text-[#03254C]">
                   <ShieldCheck className="h-4.5 w-4.5" />
                 </div>
                 <div>
@@ -161,7 +161,6 @@ export default function Hero() {
                   <p className="text-[10px] sm:text-xs text-slate-500 font-medium">Compliance Rate</p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

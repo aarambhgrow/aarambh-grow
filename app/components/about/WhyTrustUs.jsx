@@ -28,7 +28,7 @@ export default function WhyTrustUs() {
 
   return (
     <section className="w-full bg-white font-sans text-[#03254C] py-10 sm:py-14 px-4 sm:px-8 lg:px-12 border-t border-slate-100">
-      <div className="max-w-6xl mx-auto space-y-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 space-y-10">
         <div className="text-center max-w-xl mx-auto space-y-1.5">
           <span className="text-[10px] font-bold uppercase tracking-widest text-[#157327] bg-[#157327]/10 px-2.5 py-0.5 rounded-full">
             Trust & Credibility
@@ -48,10 +48,10 @@ export default function WhyTrustUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: idx * 0.1 }}
-                className="bg-[#f8fafc] border border-slate-200/80 p-5 rounded-lg space-y-3"
+                className="bg-[#f8fafc] border border-slate-200/80 p-5 rounded-md space-y-3"
               >
                 <div
-                  className="p-2.5 rounded-lg text-white w-fit"
+                  className="p-2.5 rounded-md text-white w-fit"
                   style={{ backgroundColor: item.color }}
                 >
                   <Icon className="w-5 h-5" />

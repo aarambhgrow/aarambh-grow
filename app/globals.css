@@ -39,3 +39,7 @@ body {
     transform-origin: right;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

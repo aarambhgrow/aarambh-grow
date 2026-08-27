@@ -54,12 +54,12 @@ const stats = [
 export default function WhyChooseUs() {
     return (
         <section className="font-body flex items-center justify-center py-6 px-4 lg:py-0 lg:px-0">
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="relative w-full max-w-[1220px] rounded-sm lg:rounded-sm min-h-[480px] lg:min-h-0 lg:aspect-[15/9] flex flex-col justify-center py-8 px-5 sm:px-8 lg:px-10 overflow-hidden shadow-md lg:shadow-none border border-slate-200/60 lg:border-none bg-white lg:bg-transparent"
+                className="relative w-full max-w-[1330px] min-h-[480px] lg:min-h-0 lg:aspect-[15/9] flex flex-col justify-center py-8 px-5 sm:px-8 lg:px-10 overflow-hidden shadow-md lg:shadow-none border border-slate-200/60 lg:border-none bg-[#fafafa] lg:bg-transparent"
             >
                 {/* FULL BACKGROUND IMAGE — Visible on laptop, hidden on mobile */}
                 <Image
@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
                 />
 
                 {/* TOP BADGE */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -86,10 +86,10 @@ export default function WhyChooseUs() {
                 </motion.div>
 
                 {/* CONTENT GRID */}
-                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-center">
+                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 ml-4 items-center">
 
                     {/* LEFT COLUMN — Text Content */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: -15 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -109,8 +109,8 @@ export default function WhyChooseUs() {
                         {/* Feature Bullet Points */}
                         <div className="space-y-1.5 sm:space-y-1.5 pt-1 max-w-sm mx-auto lg:mx-0">
                             {features.map((item, idx) => (
-                                <motion.div 
-                                    key={idx} 
+                                <motion.div
+                                    key={idx}
                                     initial={{ opacity: 0, x: -10 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
@@ -129,7 +129,7 @@ export default function WhyChooseUs() {
                     </motion.div>
 
                     {/* RIGHT COLUMN — 2x2 Stats Grid */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: 15 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -143,7 +143,7 @@ export default function WhyChooseUs() {
                                     key={i}
                                     whileHover={{ y: -2, scale: 1.01 }}
                                     whileTap={{ scale: 0.98 }}
-                                    className="bg-white/95 lg:bg-white/90 backdrop-blur-xs rounded-lg p-2.5 sm:p-3 border border-[#E2E8F0] shadow-2xs flex flex-col items-center justify-center text-center transition-transform duration-200"
+                                    className="bg-white/95 lg:bg-white/90 backdrop-blur-xs rounded-md p-2.5 sm:p-3 border border-[#E2E8F0] shadow-2xs flex flex-col items-center justify-center text-center transition-transform duration-200"
                                 >
                                     <div
                                         className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full ${stat.iconBg} flex items-center justify-center mb-1 shadow-2xs`}
@@ -160,7 +160,6 @@ export default function WhyChooseUs() {
                             );
                         })}
                     </motion.div>
-
                 </div>
             </motion.div>
         </section>

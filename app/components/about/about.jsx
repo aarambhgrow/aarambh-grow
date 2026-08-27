@@ -109,9 +109,9 @@ export default function AboutSection() {
                             <button
                                 onMouseEnter={() => setActiveHighlight(0)}
                                 onClick={() => setActiveHighlight(0)}
-                                className={`inline-block font-bold px-1.5 py-0.5 rounded-lm transition-all duration-200 border-b-2 cursor-pointer ${activeHighlight === 0
-                                        ? "bg-[#fff5f0] text-[#f26522] border-[#f26522]"
-                                        : "text-[#0f2a4a] border-slate-300 hover:border-[#f26522]"
+                                className={`inline-block font-bold px-1.5 py-0.5 rounded-md transition-all duration-200 border-b-2 cursor-pointer ${activeHighlight === 0
+                                    ? "bg-[#fff5f0] text-[#f26522] border-[#f26522]"
+                                    : "text-[#0f2a4a] border-slate-300 hover:border-[#f26522]"
                                     }`}
                             >
                                 empowering businesses to succeed
@@ -120,9 +120,9 @@ export default function AboutSection() {
                             <button
                                 onMouseEnter={() => setActiveHighlight(1)}
                                 onClick={() => setActiveHighlight(1)}
-                                className={`inline-block font-bold px-1.5 py-0.5 rounded-lm transition-all duration-200 border-b-2 cursor-pointer ${activeHighlight === 1
-                                        ? "bg-[#f0fdf4] text-[#157327] border-[#157327]"
-                                        : "text-[#0f2a4a] border-slate-300 hover:border-[#157327]"
+                                className={`inline-block font-bold px-1.5 py-0.5 rounded-md transition-all duration-200 border-b-2 cursor-pointer ${activeHighlight === 1
+                                    ? "bg-[#f0fdf4] text-[#157327] border-[#157327]"
+                                    : "text-[#0f2a4a] border-slate-300 hover:border-[#157327]"
                                     }`}
                             >
                                 creating lasting value
@@ -131,9 +131,9 @@ export default function AboutSection() {
                             <button
                                 onMouseEnter={() => setActiveHighlight(2)}
                                 onClick={() => setActiveHighlight(2)}
-                                className={`inline-block font-bold px-1.5 py-0.5 rounded-lm transition-all duration-200 border-b-2 cursor-pointer ${activeHighlight === 2
-                                        ? "bg-[#fff5f0] text-[#f26522] border-[#f26522]"
-                                        : "text-[#0f2a4a] border-slate-300 hover:border-[#f26522]"
+                                className={`inline-block font-bold px-1.5 py-0.5 rounded-md transition-all duration-200 border-b-2 cursor-pointer ${activeHighlight === 2
+                                    ? "bg-[#fff5f0] text-[#f26522] border-[#f26522]"
+                                    : "text-[#0f2a4a] border-slate-300 hover:border-[#f26522]"
                                     }`}
                             >
                                 delivering integrated solutions
@@ -152,8 +152,8 @@ export default function AboutSection() {
                                     onClick={() => setActiveHighlight(idx)}
                                     onMouseEnter={() => setActiveHighlight(idx)}
                                     className={`text-xs font-extrabold px-3 py-1 rounded-full transition-all duration-200 ${activeHighlight === idx
-                                            ? "bg-[#0f2a4a] text-white shadow-sm"
-                                            : "bg-white text-slate-600 border border-slate-200 hover:border-slate-300"
+                                        ? "bg-[#0f2a4a] text-white shadow-sm"
+                                        : "bg-white text-slate-600 border border-slate-200 hover:border-slate-300"
                                         }`}
                                 >
                                     {item.badge}
@@ -164,7 +164,7 @@ export default function AboutSection() {
 
                     {/* RIGHT: DYNAMIC ARCHITECTURAL DISPLAY PANEL */}
                     <div className="lg:col-span-5">
-                        <div className="relative bg-white border border-slate-200/80 rounded-lm p-5 sm:p-6 shadow-sm">
+                        <div className="relative bg-white border border-slate-200/80 rounded-md p-5 sm:p-6 shadow-sm">
                             {/* Top Meta Indicator */}
                             <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
                                 <div className="flex items-center gap-2">
@@ -194,7 +194,7 @@ export default function AboutSection() {
                                 {current.highlights.map((point, idx) => (
                                     <div
                                         key={idx}
-                                        className="flex items-center gap-2.5 p-2 rounded-lm bg-[#f8fafc] border border-slate-100"
+                                        className="flex items-center gap-2.5 p-2 rounded-md bg-[#f8fafc] border border-slate-100"
                                     >
                                         <CheckCircle2
                                             className="w-3.5 h-3.5 shrink-0"

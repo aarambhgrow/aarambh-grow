@@ -91,7 +91,7 @@ export default function SupportedIndustriesList() {
   const isInView = useInView(headerRef, { once: true, margin: "-40px" });
 
   return (
-    <section className="bg-[#F8FAFC] py-12 sm:py-14 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#fafafa] py-12 sm:py-14 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* CENTERED HEADER SECTION */}
         <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-8 pb-6 border-b border-slate-200 space-y-3">
@@ -136,8 +136,8 @@ export default function SupportedIndustriesList() {
                       {/* Number */}
                       <span
                         className={`text-xs sm:text-sm font-extrabold transition-colors duration-300 ${isActive
-                            ? "text-[#F26522]"
-                            : "text-slate-400 group-hover:text-slate-600"
+                          ? "text-[#F26522]"
+                          : "text-slate-400 group-hover:text-slate-600"
                           }`}
                       >
                         {item.id}
@@ -146,8 +146,8 @@ export default function SupportedIndustriesList() {
                       {/* Icon */}
                       <div
                         className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${isActive
-                            ? "bg-slate-900 text-white shadow-md scale-105"
-                            : "bg-slate-100 text-slate-600 group-hover:bg-white group-hover:shadow-sm"
+                          ? "bg-slate-900 text-white shadow-md scale-105"
+                          : "bg-slate-100 text-slate-600 group-hover:bg-white group-hover:shadow-sm"
                           }`}
                       >
                         <Icon
@@ -160,8 +160,8 @@ export default function SupportedIndustriesList() {
                       {/* Title */}
                       <h3
                         className={`text-sm sm:text-lg font-bold transition-colors duration-300 ${isActive
-                            ? "text-[#0F2A4A]"
-                            : "text-slate-700 group-hover:text-[#0F2A4A]"
+                          ? "text-[#0F2A4A]"
+                          : "text-slate-700 group-hover:text-[#0F2A4A]"
                           }`}
                       >
                         {item.label}

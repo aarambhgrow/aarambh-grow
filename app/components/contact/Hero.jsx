@@ -102,9 +102,9 @@ export default function ContactHero() {
                   key={idx}
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.2 }}
-                  className="flex items-start gap-3 p-3.5 rounded-lg bg-white border border-slate-200/70 shadow-xs text-left"
+                  className="flex items-start gap-3 p-3.5 rounded-md bg-white border border-slate-200/70 shadow-xs text-left"
                 >
-                  <div className={`p-2.5 rounded-lg ${item.bgColor} ${item.iconColor} shrink-0`}>
+                  <div className={`p-2.5 rounded-md ${item.bgColor} ${item.iconColor} shrink-0`}>
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>

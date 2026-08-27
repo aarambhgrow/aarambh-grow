@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import { 
-  FileText, 
-  DollarSign, 
-  Award, 
-  Megaphone, 
-  Scale, 
-  Settings, 
-  CheckCircle2, 
+import {
+  FileText,
+  DollarSign,
+  Award,
+  Megaphone,
+  Scale,
+  Settings,
+  CheckCircle2,
   Sparkles,
   ChevronRight,
   ShieldCheck
@@ -121,7 +121,7 @@ export default function AboutPillarsSection() {
   return (
     <section id="pillars" className="w-full bg-[#f8fafc] py-16 sm:py-24 font-sans text-[#0f172a]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Badge & Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
           <div className="inline-flex items-center gap-1.5 rounded-full bg-[#fff5f0] border border-[#f26522]/20 px-3.5 py-1">
@@ -140,7 +140,7 @@ export default function AboutPillarsSection() {
 
         {/* Side-by-Side Interactive Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* LEFT COLUMN: Vertical Navigation List (5 columns) */}
           <div className="lg:col-span-5 space-y-2">
             {pillars.map((item, idx) => {
@@ -151,17 +151,15 @@ export default function AboutPillarsSection() {
                 <button
                   key={item.id}
                   onClick={() => setActivePillar(idx)}
-                  className={`w-full text-left p-4 rounded-xl border transition-all duration-200 flex items-center justify-between group ${
-                    isActive
-                      ? "bg-white border-[#0f2a4a] shadow-md translate-x-1"
-                      : "bg-white/60 border-slate-200/80 hover:bg-white hover:border-slate-300"
-                  }`}
+                  className={`w-full text-left p-4 rounded-md border transition-all duration-200 flex items-center justify-between group ${isActive
+                    ? "bg-white border-[#0f2a4a] shadow-md translate-x-1"
+                    : "bg-white/60 border-slate-200/80 hover:bg-white hover:border-slate-300"
+                    }`}
                 >
                   <div className="flex items-center gap-3.5">
-                    <div 
-                      className={`p-2.5 rounded-lg transition-colors ${
-                        isActive ? "text-white" : "bg-slate-100 text-slate-500 group-hover:bg-slate-200"
-                      }`}
+                    <div
+                      className={`p-2.5 rounded-md transition-colors ${isActive ? "text-white" : "bg-slate-100 text-slate-500 group-hover:bg-slate-200"
+                        }`}
                       style={{ backgroundColor: isActive ? item.accent : undefined }}
                     >
                       <Icon className="w-4 h-4" />
@@ -176,10 +174,9 @@ export default function AboutPillarsSection() {
                     </div>
                   </div>
 
-                  <ChevronRight 
-                    className={`w-4 h-4 transition-transform ${
-                      isActive ? "text-[#f26522] translate-x-1" : "text-slate-300 group-hover:text-slate-400"
-                    }`} 
+                  <ChevronRight
+                    className={`w-4 h-4 transition-transform ${isActive ? "text-[#f26522] translate-x-1" : "text-slate-300 group-hover:text-slate-400"
+                      }`}
                   />
                 </button>
               );
@@ -187,8 +184,8 @@ export default function AboutPillarsSection() {
           </div>
 
           {/* RIGHT COLUMN: Active Pillar Detail Canvas (7 columns) */}
-          <div className="lg:col-span-7 bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6 sticky top-8">
-            
+          <div className="lg:col-span-7 bg-white border border-slate-200/80 rounded-md p-6 sm:p-8 shadow-sm space-y-6 sticky top-8">
+
             {/* Header info for selected pillar */}
             <div className="pb-4 border-b border-slate-100 space-y-2">
               <div className="flex items-center justify-between">
@@ -200,11 +197,11 @@ export default function AboutPillarsSection() {
                   {current.impact}
                 </span>
               </div>
-              
+
               <h3 className="text-2xl font-black text-[#0f2a4a]">
                 {current.title}
               </h3>
-              
+
               <p className="text-xs font-extrabold text-slate-400 italic">
                 "{current.tagline}"
               </p>
@@ -220,16 +217,16 @@ export default function AboutPillarsSection() {
               <span className="text-xs font-black uppercase tracking-wider text-[#0f2a4a] block">
                 Deliverable Scope & Capabilities:
               </span>
-              
+
               <div className="grid grid-cols-1 gap-2.5">
                 {current.deliverables.map((item, idx) => (
-                  <div 
-                    key={idx} 
-                    className="flex items-start gap-3 p-3 rounded-xl bg-[#f8fafc] border border-slate-200/60"
+                  <div
+                    key={idx}
+                    className="flex items-start gap-3 p-3 rounded-md bg-[#f8fafc] border border-slate-200/60"
                   >
-                    <CheckCircle2 
-                      className="w-4 h-4 shrink-0 mt-0.5" 
-                      style={{ color: current.accent }} 
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: current.accent }}
                     />
                     <span className="text-xs font-bold text-[#0f2a4a]">
                       {item}

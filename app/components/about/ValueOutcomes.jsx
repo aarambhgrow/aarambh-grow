@@ -66,8 +66,8 @@ export default function ValueOutcomes() {
 
   return (
     <section className="w-full bg-[#f8fafc] font-sans text-[#03254C] py-14 sm:py-12 px-4 sm:px-8 lg:px-10">
-      <div className="max-w-6xl mx-auto space-y-10">
-        
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-7 space-y-10">
+
         {/* TOP ROW: Header & Big Vision Statement */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-slate-200/80 pb-8">
           <div className="space-y-3 max-w-xl">
@@ -97,7 +97,7 @@ export default function ValueOutcomes() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="relative space-y-4 group bg-white p-5 rounded-lg border border-slate-200/80 shadow-xs"
+                className="relative space-y-4 group bg-white p-5 rounded-md border border-slate-200/80 shadow-xs"
               >
                 {/* Step / Number Indicator */}
                 <div className="flex items-center justify-between">
@@ -138,7 +138,6 @@ export default function ValueOutcomes() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

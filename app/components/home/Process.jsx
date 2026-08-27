@@ -86,12 +86,7 @@ export default function ProcessSection() {
   const current = steps[activeStep] || steps[0];
 
   return (
-    <section className="relative w-full bg-[#f8fafc] py-12 sm:py-16 lg:py-16 font-sans select-none overflow-hidden text-[#0f172a]">
-      {/* Subtle Light Geometric Accent Glows */}
-      <div className="absolute top-0 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-[#f26522]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-[#157327]/5 rounded-full blur-3xl pointer-events-none" />
-
-      {/* Background Decorative Grid Patterns */}
+    <section className="relative w-full bg-[#fafafa] py-12 sm:py-16 lg:py-16 font-sans select-none overflow-hidden text-[#0f172a]">
       <div className="absolute top-6 left-6 opacity-20 pointer-events-none hidden sm:block">
         <div className="grid grid-cols-6 gap-2">
           {Array.from({ length: 24 }).map((_, i) => (
@@ -144,7 +139,7 @@ export default function ProcessSection() {
         {/* TIMELINE INTERACTIVE SELECTOR GRID */}
         <div className="mb-8 sm:mb-10 relative">
           {/* Continuous Light Rail Line (Desktop) */}
-          <div className="hidden lg:block absolute top-1/2 left-8 right-8 h-1 bg-slate-200/80 -translate-y-1/2 z-0 rounded-full" />
+          {/* <div className="hidden lg:block absolute top-1/2 left-8 right-8 h-1 bg-slate-200/80 -translate-y-1/2 z-0 rounded-full" /> */}
 
           <motion.div
             initial="hidden"
@@ -175,19 +170,17 @@ export default function ProcessSection() {
                       setActiveStep(idx);
                     }
                   }}
-                  className={`group relative text-left p-3.5 sm:p-4 rounded-xl transition-all duration-300 cursor-pointer ${
-                    isActive
-                      ? "bg-white border-b-2 border-[#0f2a4a] shadow-lg shadow-slate-200/60 ring-1 ring-slate-200/50"
-                      : "bg-white/70 border border-slate-200/80 hover:bg-white hover:border-slate-300"
-                  }`}
+                  className={`group relative text-left p-3.5 sm:p-4 rounded-md transition-all duration-300 cursor-pointer ${isActive
+                    ? "bg-white border-b-2 border-[#0f2a4a] shadow-lg shadow-slate-200/60 ring-1 ring-slate-200/50"
+                    : "bg-white/70 border border-slate-200/80 hover:bg-white hover:border-slate-300"
+                    }`}
                 >
                   <div className="flex items-center justify-between mb-2.5 sm:mb-3">
                     <span
-                      className={`text-[11px] sm:text-xs font-black px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-lg transition-colors duration-300 ${
-                        isActive
-                          ? "text-white shadow-xs"
-                          : "bg-slate-100 text-slate-600 group-hover:bg-slate-200"
-                      }`}
+                      className={`text-[11px] sm:text-xs font-black px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-md transition-colors duration-300 ${isActive
+                        ? "text-white shadow-xs"
+                        : "bg-slate-100 text-slate-600 group-hover:bg-slate-200"
+                        }`}
                       style={{
                         backgroundColor: isActive ? item.accent : undefined,
                       }}
@@ -196,9 +189,8 @@ export default function ProcessSection() {
                     </span>
 
                     <Icon
-                      className={`w-4 h-4 transition-colors ${
-                        isActive ? "text-[#0f2a4a]" : "text-slate-400 group-hover:text-slate-600"
-                      }`}
+                      className={`w-4 h-4 transition-colors ${isActive ? "text-[#0f2a4a]" : "text-slate-400 group-hover:text-slate-600"
+                        }`}
                     />
                   </div>
 
@@ -217,12 +209,7 @@ export default function ProcessSection() {
         </div>
 
         {/* MAIN FEATURE DISPLAY PANEL */}
-        <div className="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden">
-          {/* Dynamic Ambient Corner Glow */}
-          <div
-            className="absolute -top-24 -right-24 w-72 sm:w-80 h-72 sm:h-80 rounded-full blur-3xl opacity-10 pointer-events-none transition-all duration-500"
-            style={{ backgroundColor: current.accent }}
-          />
+        <div className="bg-white border border-slate-200/80 rounded-md p-5 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden">
 
           <AnimatePresence mode="wait">
             <motion.div
@@ -255,7 +242,7 @@ export default function ProcessSection() {
 
                 {/* Impact Metric Bar */}
                 <div className="pt-1 sm:pt-2 flex items-center gap-3">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg bg-[#f8fafc] border border-slate-200/80 text-xs font-bold text-[#0f2a4a]">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-md bg-[#f8fafc] border border-slate-200/80 text-xs font-bold text-[#0f2a4a]">
                     <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#f26522]" />
                     <span>Strategic Focus: {current.metric}</span>
                   </div>
@@ -264,7 +251,7 @@ export default function ProcessSection() {
 
               {/* RIGHT: DELIVERABLE CHECKLIST CARD */}
               <div className="lg:col-span-5">
-                <div className="bg-[#f8fafc] border border-slate-200/80 rounded-xl p-4 sm:p-6 space-y-3">
+                <div className="bg-[#f8fafc] border border-slate-200/80 rounded-md p-4 sm:p-6 space-y-3">
                   <div className="flex items-center justify-between border-b border-slate-200/60 pb-2.5 sm:pb-3">
                     <span className="text-xs font-black uppercase tracking-wider text-[#0f2a4a]">
                       Phase Deliverables
@@ -279,7 +266,7 @@ export default function ProcessSection() {
                         initial={{ opacity: 0, x: 10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3, delay: idx * 0.08 }}
-                        className="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-lg bg-white border border-slate-200/60 shadow-xs"
+                        className="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-md bg-white border border-slate-200/60 shadow-xs"
                       >
                         <CheckCircle2
                           className="w-4 h-4 shrink-0"
@@ -313,7 +300,7 @@ export default function ProcessSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-8 sm:mt-10 flex justify-center"
         >
-          <div className="inline-flex items-center gap-2 py-2 px-3.5 sm:px-4 bg-white border border-slate-200/80 rounded-xl text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#0f2a4a]/70 cursor-default shadow-xs">
+          <div className="inline-flex items-center gap-2 py-2 px-3.5 sm:px-4 bg-white border border-slate-200/80 rounded-md text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#0f2a4a]/70 cursor-default shadow-xs">
             <span className="w-1.5 h-1.5 rounded-full bg-[#f26522]" />
             <span>Institutional Operational Standard</span>
           </div>

@@ -69,7 +69,7 @@ export default function ContactFormWithMap() {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           variants={containerVariants}
-          className="bg-white rounded-lg sm:rounded-lg border border-slate-100 shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12"
+          className="bg-white rounded-md sm:rounded-md border border-slate-100 shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12"
         >
           {/* LEFT: Contact Form (7 cols) */}
           <div className="lg:col-span-7 p-5 sm:p-8 lg:p-10 space-y-6">
@@ -95,7 +95,7 @@ export default function ContactFormWithMap() {
                     onChange={(e) =>
                       setFormData({ ...formData, fullName: e.target.value })
                     }
-                    className="w-full px-3.5 py-2.5 text-xs rounded-lg bg-slate-50 border border-slate-200 text-[#03254C] focus:outline-none focus:border-[#F26522] focus:bg-white transition-all"
+                    className="w-full px-3.5 py-2.5 text-xs rounded-md bg-slate-50 border border-slate-200 text-[#03254C] focus:outline-none focus:border-[#F26522] focus:bg-white transition-all"
                     required
                   />
                 </motion.div>
@@ -111,7 +111,7 @@ export default function ContactFormWithMap() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full px-3.5 py-2.5 text-xs rounded-lg bg-slate-50 border border-slate-200 text-[#03254C] focus:outline-none focus:border-[#F26522] focus:bg-white transition-all"
+                    className="w-full px-3.5 py-2.5 text-xs rounded-md bg-slate-50 border border-slate-200 text-[#03254C] focus:outline-none focus:border-[#F26522] focus:bg-white transition-all"
                     required
                   />
                 </motion.div>
@@ -129,7 +129,7 @@ export default function ContactFormWithMap() {
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
                     }
-                    className="w-full px-3.5 py-2.5 text-xs rounded-lg bg-slate-50 border border-slate-200 text-[#03254C] focus:outline-none focus:border-[#F26522] focus:bg-white transition-all"
+                    className="w-full px-3.5 py-2.5 text-xs rounded-md bg-slate-50 border border-slate-200 text-[#03254C] focus:outline-none focus:border-[#F26522] focus:bg-white transition-all"
                   />
                 </motion.div>
 
@@ -142,7 +142,7 @@ export default function ContactFormWithMap() {
                     onChange={(e) =>
                       setFormData({ ...formData, subject: e.target.value })
                     }
-                    className="w-full px-3.5 py-2.5 text-xs rounded-lg bg-slate-50 border border-slate-200 text-slate-500 focus:outline-none focus:border-[#F26522] focus:bg-white transition-all"
+                    className="w-full px-3.5 py-2.5 text-xs rounded-md bg-slate-50 border border-slate-200 text-slate-500 focus:outline-none focus:border-[#F26522] focus:bg-white transition-all"
                   >
                     <option value="">Select a subject</option>
                     <option value="consulting">Business Consulting</option>
@@ -163,7 +163,7 @@ export default function ContactFormWithMap() {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full px-3.5 py-2.5 text-xs rounded-lg bg-slate-50 border border-slate-200 text-[#03254C] focus:outline-none focus:border-[#F26522] focus:bg-white transition-all resize-none"
+                  className="w-full px-3.5 py-2.5 text-xs rounded-md bg-slate-50 border border-slate-200 text-[#03254C] focus:outline-none focus:border-[#F26522] focus:bg-white transition-all resize-none"
                   required
                 />
               </motion.div>
@@ -177,7 +177,7 @@ export default function ContactFormWithMap() {
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   disabled={loading}
-                  className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#F26522] hover:bg-[#d85416] disabled:opacity-60 disabled:cursor-not-allowed text-white text-xs font-bold transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                  className="w-full sm:w-auto px-6 py-3 rounded-md bg-[#F26522] hover:bg-[#d85416] disabled:opacity-60 disabled:cursor-not-allowed text-white text-xs font-bold transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer"
                 >
                   <span>{loading ? "Sending..." : "Send Message"}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -221,7 +221,7 @@ export default function ContactFormWithMap() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="relative m-4 sm:m-6 bg-white/95 backdrop-blur-xs p-4 rounded-lg border border-slate-200/80 shadow-lg space-y-2 z-10"
+              className="relative m-4 sm:m-6 bg-white/95 backdrop-blur-xs p-4 rounded-md border border-slate-200/80 shadow-lg space-y-2 z-10"
             >
               <h4 className="text-xs font-black text-[#03254C]">
                 Aarambh Grow Group of Companies

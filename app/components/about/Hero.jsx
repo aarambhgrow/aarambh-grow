@@ -51,9 +51,7 @@ export default function AboutHero() {
   };
 
   return (
-    <section className="relative w-full bg-[#f8fafc] font-sans text-[#03254C] m-0 p-0 overflow-hidden min-h-[440px] lg:min-h-[450px] flex items-center">
-
-      {/* FULL BACKGROUND IMAGE */}
+    <section className="relative max-w-7xl bg-[#f8fafc] font-sans text-[#03254C] m-0 p-0 overflow-hidden min-h-[440px] lg:min-h-[450px] flex items-center">
       <div className="absolute right-0 -top-1 -bottom-1 left-auto w-full lg:w-[65%] z-0 pointer-events-none overflow-hidden flex items-center justify-end">
         <Image
           src="/images/about-bg1.png"
@@ -113,7 +111,7 @@ export default function AboutHero() {
                 <motion.div
                   key={idx}
                   whileHover={{ y: -2, transition: { duration: 0.2 } }}
-                  className="flex items-start gap-3 p-3.5 rounded-lg bg-white border border-slate-200/80 shadow-2xs text-left"
+                  className="flex items-start gap-3 p-3.5 rounded-md bg-white border border-slate-200/80 shadow-2xs text-left"
                 >
                   <div className={`p-2 rounded-md ${item.bgColor} ${item.iconColor} shrink-0`}>
                     <Icon className="w-4 h-4" />
@@ -130,10 +128,8 @@ export default function AboutHero() {
               );
             })}
           </motion.div>
-
         </motion.div>
       </div>
-
     </section>
   );
 }

@@ -26,7 +26,7 @@ export default function ContactMainSection() {
       <div className="max-w-[1200px] mx-auto space-y-4">
 
         {/* LIGHT PREMIUM MAIN CONTAINER */}
-        <div className="bg-white rounded-lg p-5 sm:p-6 border border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(3,37,76,0.05)] space-y-5">
+        <div className="bg-white rounded-md p-5 sm:p-6 border border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(3,37,76,0.05)] space-y-5">
 
           {/* 1. Header & Live Availability Ribbon */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
@@ -40,7 +40,7 @@ export default function ContactMainSection() {
               </h2>
             </div>
 
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-100 self-start sm:self-auto">
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-slate-50 border border-slate-100 self-start sm:self-auto">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#157327] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#157327]"></span>
@@ -60,10 +60,10 @@ export default function ContactMainSection() {
               {/* Call Card */}
               <a
                 href="tel:+919998715799"
-                className="group relative bg-[#f8fafc] hover:bg-white p-3.5 rounded-lg border border-slate-200/80 hover:border-[#157327] hover:shadow-md transition-all duration-200 flex flex-col justify-between"
+                className="group relative bg-[#f8fafc] hover:bg-white p-3.5 rounded-md border border-slate-200/80 hover:border-[#157327] hover:shadow-md transition-all duration-200 flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between">
-                  <div className="p-2 rounded-lg bg-[#157327]/10 text-[#157327]">
+                  <div className="p-2 rounded-md bg-[#157327]/10 text-[#157327]">
                     <Phone className="w-4 h-4" />
                   </div>
                   <ArrowUpRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#157327] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -81,10 +81,10 @@ export default function ContactMainSection() {
               {/* Email Card */}
               <a
                 href="mailto:info@aarambhgrow.group"
-                className="group relative bg-[#f8fafc] hover:bg-white p-3.5 rounded-lg border border-slate-200/80 hover:border-[#F26522] hover:shadow-md transition-all duration-200 flex flex-col justify-between"
+                className="group relative bg-[#f8fafc] hover:bg-white p-3.5 rounded-md border border-slate-200/80 hover:border-[#F26522] hover:shadow-md transition-all duration-200 flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between">
-                  <div className="p-2 rounded-lg bg-[#F26522]/10 text-[#F26522]">
+                  <div className="p-2 rounded-md bg-[#F26522]/10 text-[#F26522]">
                     <Mail className="w-4 h-4" />
                   </div>
                   <ArrowUpRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#F26522] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -104,10 +104,10 @@ export default function ContactMainSection() {
                 href="https://wa.me/919998715799"
                 target="_blank"
                 rel="noreferrer"
-                className="group relative bg-[#f8fafc] hover:bg-white p-3.5 rounded-lg border border-slate-200/80 hover:border-[#F26522] hover:shadow-md transition-all duration-200 flex flex-col justify-between"
+                className="group relative bg-[#f8fafc] hover:bg-white p-3.5 rounded-md border border-slate-200/80 hover:border-[#F26522] hover:shadow-md transition-all duration-200 flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between">
-                  <div className="p-2 rounded-lg bg-[#F26522]/10 text-[#F26522]">
+                  <div className="p-2 rounded-md bg-[#F26522]/10 text-[#F26522]">
                     <MessageCircle className="w-4 h-4" />
                   </div>
                   <ArrowUpRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#F26522] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -125,9 +125,9 @@ export default function ContactMainSection() {
             </div>
 
             {/* HQ Office Panel Accent (4 Cols) */}
-            <div className="lg:col-span-4 bg-[#03254C]/5 p-3.5 rounded-lg border border-[#03254C]/10 flex flex-col justify-between space-y-3">
+            <div className="lg:col-span-4 bg-[#03254C]/5 p-3.5 rounded-md border border-[#03254C]/10 flex flex-col justify-between space-y-3">
               <div className="flex items-start gap-2.5">
-                <div className="p-2 rounded-lg bg-[#157327] text-white shrink-0 mt-0.5 shadow-xs">
+                <div className="p-2 rounded-md bg-[#157327] text-white shrink-0 mt-0.5 shadow-xs">
                   <MapPin className="w-3.5 h-3.5" />
                 </div>
                 <div className="min-w-0">
@@ -144,17 +144,14 @@ export default function ContactMainSection() {
                 href="https://www.google.com/maps/dir/?api=1&destination=813%2C%20Silver%20Rediance-4%2C%20Gota%2C%20Jagatpur%20Road%2C%20Gota%20SG%20Highway%2C%20Gujarat%20382470"
                 target="_blank"
                 rel="noreferrer"
-                className="w-full inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-[#F26522] hover:bg-[#d85416] text-white text-[11px] font-bold transition-colors shadow-xs"
+                className="w-full inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-md bg-[#F26522] hover:bg-[#d85416] text-white text-[11px] font-bold transition-colors shadow-xs"
               >
                 <span>Navigate on Maps</span>
                 <Navigation className="w-3 h-3" />
               </a>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

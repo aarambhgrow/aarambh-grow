@@ -104,7 +104,7 @@ export default function ServicesSection() {
             {(activeTab === "All" || activeTab === "Registration") && (
               <Link
                 href="/services"
-                className="group lg:col-span-6 relative flex flex-col justify-between rounded-lg bg-white border border-slate-100 p-3.5 sm:p-4 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden"
+                className="group lg:col-span-6 relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-3.5 sm:p-4 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center h-full">
                   <div className="sm:col-span-7 flex flex-col justify-between h-full">
@@ -148,7 +148,7 @@ export default function ServicesSection() {
                     </div>
                   </div>
 
-                  <div className="sm:col-span-5 relative h-32 sm:h-full min-h-[130px] bg-gradient-to-tr from-[#f8fafc] to-[#f1f5f9] rounded-xl flex items-center justify-center p-2">
+                  <div className="sm:col-span-5 relative h-32 sm:h-full min-h-[130px] bg-gradient-to-tr from-[#f8fafc] to-[#f1f5f9] rounded-md flex items-center justify-center p-2">
                     <Image
                       src="/images/service-1.png"
                       alt="Registration"
@@ -166,7 +166,7 @@ export default function ServicesSection() {
             {(activeTab === "All" || activeTab === "Finance") && (
               <Link
                 href="/services"
-                className="group lg:col-span-3 relative flex flex-col justify-between rounded-lg bg-white border border-slate-100 p-3.5 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden"
+                className="group lg:col-span-3 relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-3.5 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden"
               >
                 <div>
                   <div className="flex items-center gap-2 mb-1">
@@ -184,7 +184,7 @@ export default function ServicesSection() {
                     Business loans, government subsidy support, investor pitching, and financial planning.
                   </p>
 
-                  <div className="relative h-24 w-full bg-slate-50 rounded-xl flex items-center justify-center mb-2 p-1.5">
+                  <div className="relative h-24 w-full bg-slate-50 rounded-md flex items-center justify-center mb-2 p-1.5">
                     <Image
                       src="/images/service-2.png"
                       alt="Finance"
@@ -208,7 +208,7 @@ export default function ServicesSection() {
             {(activeTab === "All" || activeTab === "Certification") && (
               <Link
                 href="/services"
-                className="group lg:col-span-3 relative flex flex-col justify-between rounded-lg bg-white border border-slate-100 p-3.5 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden"
+                className="group lg:col-span-3 relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-3.5 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden"
               >
                 <div>
                   <div className="flex items-center gap-2 mb-1">
@@ -226,7 +226,7 @@ export default function ServicesSection() {
                     ISO, MSME, FSSAI, Startup India, and trademark approvals to build market authority.
                   </p>
 
-                  <div className="relative h-24 w-full bg-slate-50 rounded-xl flex items-center justify-center mb-2 p-1.5">
+                  <div className="relative h-24 w-full bg-slate-50 rounded-md flex items-center justify-center mb-2 p-1.5">
                     <Image
                       src="/images/service-3.png"
                       alt="Certification"
@@ -253,7 +253,7 @@ export default function ServicesSection() {
             {(activeTab === "All" || activeTab === "Branding") && (
               <Link
                 href="/services"
-                className="group relative flex flex-col justify-between rounded-lg bg-white border border-slate-100 p-5 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden"
+                className="group relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-5 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden"
               >
                 <div className="grid grid-cols-12 gap-3 items-center mb-2">
                   <div className="col-span-6">
@@ -271,7 +271,7 @@ export default function ServicesSection() {
                     </p>
                   </div>
 
-                  <div className="col-span-6 h-28 bg-slate-50 rounded-xl flex items-center justify-center p-2">
+                  <div className="col-span-6 h-28 bg-slate-50 rounded-md flex items-center justify-center p-2">
                     <Image
                       src="/images/service-4.png"
                       alt="Branding"
@@ -295,7 +295,7 @@ export default function ServicesSection() {
             {(activeTab === "All" || activeTab === "Operations") && (
               <Link
                 href="/services"
-                className="group relative flex flex-col justify-between rounded-lg bg-white border border-slate-100 p-5 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden"
+                className="group relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-5 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden"
               >
                 <div className="grid grid-cols-12 gap-3 items-center mb-2">
                   <div className="col-span-6">
@@ -313,7 +313,7 @@ export default function ServicesSection() {
                     </p>
                   </div>
 
-                  <div className="col-span-6 h-28 bg-slate-50 rounded-xl flex items-center justify-center p-2">
+                  <div className="col-span-6 h-28 bg-slate-50 rounded-md flex items-center justify-center p-2">
                     <Image
                       src="/images/service-5.png"
                       alt="Operations"
@@ -337,7 +337,7 @@ export default function ServicesSection() {
             {(activeTab === "All" || activeTab === "Legal & CA") && (
               <Link
                 href="/services"
-                className="group relative flex flex-col justify-between rounded-lg bg-white border border-slate-100 p-5 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden"
+                className="group relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-5 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 overflow-hidden"
               >
                 <div className="grid grid-cols-12 gap-3 items-center mb-2">
                   <div className="col-span-6">
@@ -355,7 +355,7 @@ export default function ServicesSection() {
                     </p>
                   </div>
 
-                  <div className="col-span-6 h-28 bg-slate-50 rounded-xl flex items-center justify-center p-2">
+                  <div className="col-span-6 h-28 bg-slate-50 rounded-md flex items-center justify-center p-2">
                     <Image
                       src="/images/service-6.png"
                       alt="Legal & CA"
@@ -378,9 +378,9 @@ export default function ServicesSection() {
         </div>
 
         {/* Bottom CTA Banner */}
-        <div className="mt-10 rounded-lg bg-gradient-to-r from-[#fff2eb] via-[#fff8f5] to-white border border-[#f26522]/15 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div className="mt-10 rounded-md bg-gradient-to-r from-[#fff2eb] via-[#fff8f5] to-white border border-[#f26522]/15 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-lg bg-white shadow-sm border border-[#f26522]/20 flex items-center justify-center text-[#f26522] shrink-0">
+            <div className="w-14 h-14 rounded-md bg-white shadow-sm border border-[#f26522]/20 flex items-center justify-center text-[#f26522] shrink-0">
               <Headphones className="w-7 h-7" />
             </div>
             <div>

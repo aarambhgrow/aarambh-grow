@@ -113,7 +113,7 @@
 //       </div>
 
 //       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
 //         {/* SECTION BADGE */}
 //         <div className="flex justify-center mb-4">
 //           <div className="inline-flex items-center gap-1.5 rounded-full bg-[#fff5f0] border border-[#f26522]/20 px-3.5 py-1">
@@ -150,7 +150,7 @@
 //                   onClick={() => setActiveStep(idx)}
 //                   onMouseEnter={() => setActiveStep(idx)}
 //                   onMouseLeave={() => setActiveStep(0)} // Reset to 0 when cursor moves away from button
-//                   className={`group relative text-left p-4 rounded-lg transition-all duration-300 cursor-pointer ${
+//                   className={`group relative text-left p-4 rounded-md transition-all duration-300 cursor-pointer ${
 //                     isActive
 //                       ? "bg-white border-b-2 border-[#0f2a4a] shadow-xl shadow-slate-200/50 translate-y-[-2px]"
 //                       : "bg-white/70 border border-slate-200/80 hover:bg-white hover:border-slate-300"
@@ -158,7 +158,7 @@
 //                 >
 //                   <div className="flex items-center justify-between mb-3">
 //                     <span
-//                       className={`text-xs font-black px-2.5 py-1 rounded-lg transition-all duration-300 ${
+//                       className={`text-xs font-black px-2.5 py-1 rounded-md transition-all duration-300 ${
 //                         isActive
 //                           ? "text-white shadow-xs"
 //                           : "bg-slate-100 text-slate-600 group-hover:bg-slate-200"
@@ -192,8 +192,8 @@
 //         </div>
 
 //         {/* MAIN FEATURE DISPLAY PANEL */}
-//         <div className="bg-white border border-slate-200/80 rounded-lg p-6 sm:p-10 shadow-sm relative overflow-hidden">
-          
+//         <div className="bg-white border border-slate-200/80 rounded-md p-6 sm:p-10 shadow-sm relative overflow-hidden">
+
 //           {/* Dynamic Ambient Corner Glow */}
 //           <div
 //             className="absolute -top-24 -right-24 w-80 h-80 rounded-full blur-3xl opacity-10 pointer-events-none transition-all duration-500"
@@ -201,7 +201,7 @@
 //           />
 
 //           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-            
+
 //             {/* LEFT: TEXT CONTENT & STRATEGY */}
 //             <div className="lg:col-span-7 space-y-5">
 //               <div className="flex items-center gap-2">
@@ -224,7 +224,7 @@
 
 //               {/* Impact Metric Bar */}
 //               <div className="pt-2 flex items-center gap-3">
-//                 <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#f8fafc] border border-slate-200/80 text-xs font-bold text-[#0f2a4a]">
+//                 <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-md bg-[#f8fafc] border border-slate-200/80 text-xs font-bold text-[#0f2a4a]">
 //                   <TrendingUp className="w-4 h-4 text-[#f26522]" />
 //                   <span>Strategic Focus: {current.metric}</span>
 //                 </div>
@@ -233,8 +233,8 @@
 
 //             {/* RIGHT: DELIVERABLE CHECKLIST CARD */}
 //             <div className="lg:col-span-5">
-//               <div className="bg-[#f8fafc] border border-slate-200/80 rounded-lg p-5 sm:p-6 space-y-3">
-                
+//               <div className="bg-[#f8fafc] border border-slate-200/80 rounded-md p-5 sm:p-6 space-y-3">
+
 //                 <div className="flex items-center justify-between border-b border-slate-200/60 pb-3">
 //                   <span className="text-xs font-black uppercase tracking-wider text-[#0f2a4a]">
 //                     Phase Deliverables
@@ -246,7 +246,7 @@
 //                   {current.deliverables.map((item, idx) => (
 //                     <div
 //                       key={idx}
-//                       className="flex items-center gap-3 p-3 rounded-lg bg-white border border-slate-200/60 shadow-2xs transition-all duration-300"
+//                       className="flex items-center gap-3 p-3 rounded-md bg-white border border-slate-200/60 shadow-2xs transition-all duration-300"
 //                     >
 //                       <CheckCircle2
 //                         className="w-4 h-4 shrink-0"
@@ -273,7 +273,7 @@
 
 //         {/* STATIC NON-CLICKABLE FOOTER */}
 //         <div className="mt-10 flex justify-center">
-//           <div className="inline-flex items-center gap-2 py-2 px-4 bg-white border border-slate-200/80 rounded-lg text-[11px] font-extrabold uppercase tracking-wider text-[#0f2a4a]/70 cursor-default shadow-xs">
+//           <div className="inline-flex items-center gap-2 py-2 px-4 bg-white border border-slate-200/80 rounded-md text-[11px] font-extrabold uppercase tracking-wider text-[#0f2a4a]/70 cursor-default shadow-xs">
 //             <span className="w-1.5 h-1.5 rounded-full bg-[#f26522]" />
 //             <span>Institutional Operational Standard</span>
 //           </div>
@@ -371,7 +371,7 @@ export default function FullProcessSection() {
   const current = steps[activeStep] || steps[0];
 
   return (
-    <section 
+    <section
       onMouseLeave={() => setActiveStep(0)}
       className="relative w-full bg-[#f8fafc] py-14 sm:py-20 font-sans select-none overflow-hidden text-[#0f172a]"
     >
@@ -405,17 +405,15 @@ export default function FullProcessSection() {
                   key={item.id}
                   onClick={() => setActiveStep(idx)}
                   onMouseEnter={() => setActiveStep(idx)}
-                  className={`group relative text-left p-4 rounded-lg transition-all duration-300 cursor-pointer ${
-                    isActive
+                  className={`group relative text-left p-4 rounded-md transition-all duration-300 cursor-pointer ${isActive
                       ? "bg-white border-b-2 border-[#0f2a4a] shadow-xl shadow-slate-200/50 translate-y-[-2px]"
                       : "bg-white/70 border border-slate-200/80 hover:bg-white hover:border-slate-300"
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center justify-between mb-3">
                     <span
-                      className={`text-xs font-black px-2.5 py-1 rounded-lg transition-all duration-300 ${
-                        isActive ? "text-white" : "bg-slate-100 text-slate-600"
-                      }`}
+                      className={`text-xs font-black px-2.5 py-1 rounded-md transition-all duration-300 ${isActive ? "text-white" : "bg-slate-100 text-slate-600"
+                        }`}
                       style={{ backgroundColor: isActive ? item.accent : undefined }}
                     >
                       {item.id}
@@ -436,7 +434,7 @@ export default function FullProcessSection() {
           </div>
         </div>
 
-        <div className="bg-white border border-slate-200/80 rounded-lg p-6 sm:p-10 shadow-sm relative overflow-hidden">
+        <div className="bg-white border border-slate-200/80 rounded-md p-6 sm:p-10 shadow-sm relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             <div className="lg:col-span-7 space-y-5">
               <div className="flex items-center gap-2">
@@ -452,7 +450,7 @@ export default function FullProcessSection() {
                 {current.description}
               </p>
               <div className="pt-2 flex items-center gap-3">
-                <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#f8fafc] border border-slate-200/80 text-xs font-bold text-[#0f2a4a]">
+                <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-md bg-[#f8fafc] border border-slate-200/80 text-xs font-bold text-[#0f2a4a]">
                   <TrendingUp className="w-4 h-4 text-[#f26522]" />
                   <span>Strategic Focus: {current.metric}</span>
                 </div>
@@ -460,7 +458,7 @@ export default function FullProcessSection() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="bg-[#f8fafc] border border-slate-200/80 rounded-lg p-5 sm:p-6 space-y-3">
+              <div className="bg-[#f8fafc] border border-slate-200/80 rounded-md p-5 sm:p-6 space-y-3">
                 <div className="flex items-center justify-between border-b border-slate-200/60 pb-3">
                   <span className="text-xs font-black uppercase tracking-wider text-[#0f2a4a]">
                     Phase Deliverables
@@ -469,7 +467,7 @@ export default function FullProcessSection() {
                 </div>
                 <div className="space-y-2.5">
                   {current.deliverables.map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-white border border-slate-200/60 shadow-2xs">
+                    <div key={idx} className="flex items-center gap-3 p-3 rounded-md bg-white border border-slate-200/60 shadow-2xs">
                       <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: current.accent }} />
                       <span className="text-xs font-bold text-[#0f2a4a]">{item}</span>
                     </div>
