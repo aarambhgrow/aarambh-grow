@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Lock, ArrowRight } from "lucide-react";
+import { Lock, ArrowRight, CheckCircle2, XCircle } from "lucide-react";
 
 export default function ContactFormWithMap() {
   const [formData, setFormData] = useState({
@@ -14,19 +14,31 @@ export default function ContactFormWithMap() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("idle");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setLoading(true);
     setStatus("");
 
     try {
-      // Process form data locally or pass to your new service here
-      console.log("Form Data Submitted:", formData);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Failed to send message.");
+      }
 
       setStatus("success");
+
       setFormData({
         fullName: "",
         email: "",
@@ -42,7 +54,6 @@ export default function ContactFormWithMap() {
     }
   };
 
-  // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -71,46 +82,36 @@ export default function ContactFormWithMap() {
           variants={containerVariants}
           className="bg-white rounded-md sm:rounded-md border border-slate-100 shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12"
         >
-          {/* LEFT: Contact Form (7 cols) */}
+          {/* LEFT: Contact Form */}
           <div className="lg:col-span-7 p-5 sm:p-8 lg:p-10 space-y-6">
             <motion.div variants={fadeInUp}>
               <h3 className="text-xl sm:text-2xl font-black text-[#03254C]">
                 Send Us a <span className="text-[#F26522]">Message</span>
               </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                Fill out the form and our team will get back to you.
-              </p>
+              <p className="text-xs text-slate-500 mt-1">Fill out the form and our team will get back to you.</p>
             </motion.div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <motion.div variants={fadeInUp}>
-                  <label className="block text-xs font-bold text-[#03254C] mb-1.5">
-                    Full Name
-                  </label>
+                  <label className="block text-xs font-bold text-[#03254C] mb-1.5">Full Name</label>
                   <input
                     type="text"
                     placeholder="Enter your full name"
                     value={formData.fullName}
-                    onChange={(e) =>
-                      setFormData({ ...formData, fullName: e.target.value })
-                    }
+                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     className="w-full px-3.5 py-2.5 text-xs rounded-md bg-slate-50 border border-slate-200 text-[#03254C] focus:outline-none focus:border-[#F26522] focus:bg-white transition-all"
                     required
                   />
                 </motion.div>
 
                 <motion.div variants={fadeInUp}>
-                  <label className="block text-xs font-bold text-[#03254C] mb-1.5">
-                    Email Address
-                  </label>
+                  <label className="block text-xs font-bold text-[#03254C] mb-1.5">Email Address</label>
                   <input
                     type="email"
                     placeholder="Enter your email"
                     value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-3.5 py-2.5 text-xs rounded-md bg-slate-50 border border-slate-200 text-[#03254C] focus:outline-none focus:border-[#F26522] focus:bg-white transition-all"
                     required
                   />
@@ -119,29 +120,21 @@ export default function ContactFormWithMap() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <motion.div variants={fadeInUp}>
-                  <label className="block text-xs font-bold text-[#03254C] mb-1.5">
-                    Phone Number
-                  </label>
+                  <label className="block text-xs font-bold text-[#03254C] mb-1.5">Phone Number</label>
                   <input
                     type="tel"
                     placeholder="Enter your phone number"
                     value={formData.phone}
-                    onChange={(e) =>
-                      setFormData({ ...formData, phone: e.target.value })
-                    }
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-3.5 py-2.5 text-xs rounded-md bg-slate-50 border border-slate-200 text-[#03254C] focus:outline-none focus:border-[#F26522] focus:bg-white transition-all"
                   />
                 </motion.div>
 
                 <motion.div variants={fadeInUp}>
-                  <label className="block text-xs font-bold text-[#03254C] mb-1.5">
-                    Subject
-                  </label>
+                  <label className="block text-xs font-bold text-[#03254C] mb-1.5">Subject</label>
                   <select
                     value={formData.subject}
-                    onChange={(e) =>
-                      setFormData({ ...formData, subject: e.target.value })
-                    }
+                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     className="w-full px-3.5 py-2.5 text-xs rounded-md bg-slate-50 border border-slate-200 text-slate-500 focus:outline-none focus:border-[#F26522] focus:bg-white transition-all"
                   >
                     <option value="">Select a subject</option>
@@ -153,16 +146,12 @@ export default function ContactFormWithMap() {
               </div>
 
               <motion.div variants={fadeInUp}>
-                <label className="block text-xs font-bold text-[#03254C] mb-1.5">
-                  Message
-                </label>
+                <label className="block text-xs font-bold text-[#03254C] mb-1.5">Message</label>
                 <textarea
                   rows={4}
                   placeholder="Type your message here..."
                   value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-3.5 py-2.5 text-xs rounded-md bg-slate-50 border border-slate-200 text-[#03254C] focus:outline-none focus:border-[#F26522] focus:bg-white transition-all resize-none"
                   required
                 />
@@ -180,7 +169,7 @@ export default function ContactFormWithMap() {
                   className="w-full sm:w-auto px-6 py-3 rounded-md bg-[#F26522] hover:bg-[#d85416] disabled:opacity-60 disabled:cursor-not-allowed text-white text-xs font-bold transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer"
                 >
                   <span>{loading ? "Sending..." : "Send Message"}</span>
-                  <ArrowRight className="w-4 h-4" />
+                  {!loading && <ArrowRight className="w-4 h-4" />}
                 </motion.button>
 
                 <div className="flex items-center justify-center sm:justify-start gap-1.5 text-[11px] font-medium text-slate-400">
@@ -190,25 +179,34 @@ export default function ContactFormWithMap() {
               </motion.div>
 
               {status === "success" && (
-                <p className="text-sm font-semibold text-green-600">
-                  Your message has been sent successfully. We will contact you soon.
-                </p>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex items-center gap-2 p-3 rounded-md bg-green-50 border border-green-200"
+                >
+                  <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0" />
+                  <p className="text-xs font-semibold text-green-700">Your message has been sent successfully. We will contact you soon.</p>
+                </motion.div>
               )}
 
               {status === "error" && (
-                <p className="text-sm font-semibold text-red-600">
-                  Something went wrong. Please try again.
-                </p>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex items-center gap-2 p-3 rounded-md bg-red-50 border border-red-200"
+                >
+                  <XCircle className="w-4 h-4 text-red-600 shrink-0" />
+                  <p className="text-xs font-semibold text-red-700">Something went wrong. Please try again or email us directly.</p>
+                </motion.div>
               )}
             </form>
           </div>
 
-          {/* RIGHT: Dark Map Overlay (5 cols) */}
+          {/* RIGHT: Dark Map Overlay */}
           <motion.div
             variants={fadeInUp}
             className="lg:col-span-5 relative min-h-[300px] sm:min-h-[360px] lg:min-h-full bg-[#03254C] overflow-hidden flex flex-col justify-end"
           >
-            {/* Map Iframe */}
             <iframe
               title="Aarambh Grow Group of Companies Location Map"
               src="https://www.google.com/maps?q=813%2C%20Silver%20Rediance-4%2C%20Gota%2C%20Jagatpur%20Road%2C%20Gota%20SG%20Highway%2C%20Gujarat%20382470&output=embed"
@@ -216,16 +214,13 @@ export default function ContactFormWithMap() {
               loading="lazy"
             />
 
-            {/* Location Info Card Overlay */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="relative m-4 sm:m-6 bg-white/95 backdrop-blur-xs p-4 rounded-md border border-slate-200/80 shadow-lg space-y-2 z-10"
             >
-              <h4 className="text-xs font-black text-[#03254C]">
-                Aarambh Grow Group of Companies
-              </h4>
+              <h4 className="text-xs font-black text-[#03254C]">Aarambh Grow Group of Companies</h4>
               <p className="text-[11px] text-slate-600 leading-snug">
                 813, Silver Rediance-4, Gota, Jagatpur Road, Gota SG Highway, Gujarat 382470
               </p>
