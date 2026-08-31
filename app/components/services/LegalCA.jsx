@@ -2,7 +2,15 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, ShieldCheck, Target, FileText, Award, Scale, FileSignature } from "lucide-react";
+import {
+  CheckCircle2,
+  ShieldCheck,
+  Target,
+  FileText,
+  Award,
+  Scale,
+  FileSignature,
+} from "lucide-react";
 
 import { legalData } from "../../data/legal-ca";
 
@@ -154,7 +162,8 @@ export default function Legal() {
                             text-[#03254C]
                         "
           >
-            {legalData?.hero?.title || "Simplified Legal, Compliance & Business Protection Solutions"}
+            {legalData?.hero?.title ||
+              "Simplified Legal, Compliance & Business Protection Solutions"}
           </motion.h1>
 
           {/* ACCENT LINE */}
@@ -307,7 +316,11 @@ export default function Legal() {
                                                 }
                                             `}
                   >
-                    <span className="block">{service?.shortTitle || service?.title || `Service ${index + 1}`}</span>
+                    <span className="block">
+                      {service?.shortTitle ||
+                        service?.title ||
+                        `Service ${index + 1}`}
+                    </span>
                   </button>
                 );
               })}
@@ -407,7 +420,8 @@ export default function Legal() {
                                                 font-bold
                                             "
                     >
-                      {currentService?.number || String(activeTab + 1).padStart(2, "0")}
+                      {currentService?.number ||
+                        String(activeTab + 1).padStart(2, "0")}
                     </span>
 
                     {currentService?.tagline && (
@@ -537,40 +551,41 @@ export default function Legal() {
                     </div>
 
                     <div className="space-y-3.5">
-                      {(currentService?.benefits || []).map((benefit, index) => (
-                        <div
-                          key={`${benefit?.title || "benefit"}-${index}`}
-                          className="
+                      {(currentService?.benefits || []).map(
+                        (benefit, index) => (
+                          <div
+                            key={`${benefit?.title || "benefit"}-${index}`}
+                            className="
                                                             flex
                                                             items-start
                                                             gap-2.5
                                                         "
-                        >
-                          <CheckCircle2
-                            className="
+                          >
+                            <CheckCircle2
+                              className="
                                                                 w-4
                                                                 h-4
                                                                 text-[#157327]
                                                                 shrink-0
                                                                 mt-0.5
                                                             "
-                          />
+                            />
 
-                          <div>
-                            <h4
-                              className="
+                            <div>
+                              <h4
+                                className="
                                                                     text-[11px]
                                                                     sm:text-xs
                                                                     font-bold
                                                                     leading-[1.3]
                                                                     text-[#03254C]
                                                                 "
-                            >
-                              {benefit?.title}
-                            </h4>
+                              >
+                                {benefit?.title}
+                              </h4>
 
-                            <p
-                              className="
+                              <p
+                                className="
                                                                     mt-1
                                                                     text-[10px]
                                                                     sm:text-[11px]
@@ -578,12 +593,13 @@ export default function Legal() {
                                                                     leading-[1.4]
                                                                     text-[#64748B]
                                                                 "
-                            >
-                              {benefit?.desc}
-                            </p>
+                              >
+                                {benefit?.desc}
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ),
+                      )}
                     </div>
                   </motion.div>
 
@@ -965,7 +981,8 @@ export default function Legal() {
                                                 text-[#03254C]
                                             "
                     >
-                      Why Businesses Choose {currentService?.name || currentService?.title}
+                      Why Businesses Choose{" "}
+                      {currentService?.name || currentService?.title}
                     </h3>
                   </div>
 

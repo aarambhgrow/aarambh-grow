@@ -145,7 +145,13 @@ export const brandingData = {
         },
       ],
 
-      suitedFor: ["New Startups", "Scaling Businesses", "Service Businesses", "E-Commerce Retailers", "Corporate Enterprises"],
+      suitedFor: [
+        "New Startups",
+        "Scaling Businesses",
+        "Service Businesses",
+        "E-Commerce Retailers",
+        "Corporate Enterprises",
+      ],
 
       whatWeDo: [
         {
@@ -205,7 +211,8 @@ export const brandingData = {
       shortTitle: "Social Media Marketing",
       title: "Social Media Marketing (SMM)",
       category: "Social Media",
-      tagline: "Turn social channels into powerful brand and engagement platforms",
+      tagline:
+        "Turn social channels into powerful brand and engagement platforms",
 
       description:
         "Social Media Marketing transforms your social channels into active communities and customer acquisition platforms. AarambhGrow develops data-driven social strategies, creates engaging content, manages audience interactions, and helps brands build stronger digital relationships.",
@@ -237,7 +244,13 @@ export const brandingData = {
         },
       ],
 
-      suitedFor: ["Consumer Brands", "Hospitality Businesses", "Retail Businesses", "Professional Services", "Personal Brands"],
+      suitedFor: [
+        "Consumer Brands",
+        "Hospitality Businesses",
+        "Retail Businesses",
+        "Professional Services",
+        "Personal Brands",
+      ],
 
       whatWeDo: [
         {
@@ -266,7 +279,13 @@ export const brandingData = {
         },
       ],
 
-      supportedPlatforms: ["Instagram", "Facebook", "LinkedIn", "YouTube", "X (formerly Twitter)"],
+      supportedPlatforms: [
+        "Instagram",
+        "Facebook",
+        "LinkedIn",
+        "YouTube",
+        "X (formerly Twitter)",
+      ],
 
       whyChoose: [
         {
@@ -299,7 +318,8 @@ export const brandingData = {
       shortTitle: "PPC & Digital Ads",
       title: "Advertising - PPC & Digital Ads",
       category: "Performance Marketing",
-      tagline: "Generate targeted traffic, leads, and measurable business growth",
+      tagline:
+        "Generate targeted traffic, leads, and measurable business growth",
 
       description:
         "Performance advertising provides a direct route to targeted customer acquisition. AarambhGrow develops Google and Meta advertising campaigns designed to reach relevant audiences, generate qualified leads, and optimize advertising investment against measurable business objectives.",
@@ -331,7 +351,13 @@ export const brandingData = {
         },
       ],
 
-      suitedFor: ["Service Businesses", "Real Estate Companies", "E-Commerce Businesses", "High-Growth Startups", "B2B Companies"],
+      suitedFor: [
+        "Service Businesses",
+        "Real Estate Companies",
+        "E-Commerce Businesses",
+        "High-Growth Startups",
+        "B2B Companies",
+      ],
 
       whatWeDo: [
         {
@@ -423,7 +449,13 @@ export const brandingData = {
         },
       ],
 
-      suitedFor: ["Early-Stage Startups", "Rebranding Businesses", "Corporate Companies", "Growing Enterprises", "Personal Brands"],
+      suitedFor: [
+        "Early-Stage Startups",
+        "Rebranding Businesses",
+        "Corporate Companies",
+        "Growing Enterprises",
+        "Personal Brands",
+      ],
 
       whatWeDo: [
         {
@@ -515,7 +547,13 @@ export const brandingData = {
         },
       ],
 
-      suitedFor: ["Startups", "Product Businesses", "Personal Brands", "Corporate Companies", "Marketing Campaigns"],
+      suitedFor: [
+        "Startups",
+        "Product Businesses",
+        "Personal Brands",
+        "Corporate Companies",
+        "Marketing Campaigns",
+      ],
 
       whatWeDo: [
         {
@@ -608,7 +646,13 @@ export const brandingData = {
         },
       ],
 
-      suitedFor: ["Small Businesses", "Growing Businesses", "Sales Teams", "Marketing Teams", "Businesses of All Sizes"],
+      suitedFor: [
+        "Small Businesses",
+        "Growing Businesses",
+        "Sales Teams",
+        "Marketing Teams",
+        "Businesses of All Sizes",
+      ],
 
       whatWeDo: [
         {
@@ -666,7 +710,8 @@ export const brandingData = {
         },
         {
           name: "Business",
-          bestFor: "Teams that need advanced automation, analytics and AI-powered engagement",
+          bestFor:
+            "Teams that need advanced automation, analytics and AI-powered engagement",
           teamMembers: "10 Users",
           pricing: "Contact Us for Pricing",
           billing: ["Monthly", "Yearly"],

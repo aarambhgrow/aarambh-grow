@@ -10,7 +10,13 @@ export const certificationData = {
   categories: [
     {
       title: "Startup Scheme",
-      services: ["Startup India Certificate", "₹0 Tax for 3 Years", "SEED Funding", "SHRAM SUVIDHA", "GeM Registration"],
+      services: [
+        "Startup India Certificate",
+        "₹0 Tax for 3 Years",
+        "SEED Funding",
+        "SHRAM SUVIDHA",
+        "GeM Registration",
+      ],
     },
   ],
   services: [
@@ -53,7 +59,12 @@ export const certificationData = {
         },
       ],
 
-      suitedFor: ["Innovative Startups", "Technology Companies", "Product-Based Businesses", "Early-Stage Ventures"],
+      suitedFor: [
+        "Innovative Startups",
+        "Technology Companies",
+        "Product-Based Businesses",
+        "Early-Stage Ventures",
+      ],
 
       whatWeDo: [
         {
@@ -137,7 +148,12 @@ export const certificationData = {
         },
       ],
 
-      suitedFor: ["DPIIT-Recognized Startups", "Profitable Early-Stage Companies", "Technology Businesses", "Innovation Ventures"],
+      suitedFor: [
+        "DPIIT-Recognized Startups",
+        "Profitable Early-Stage Companies",
+        "Technology Businesses",
+        "Innovation Ventures",
+      ],
 
       whatWeDo: [
         {
@@ -221,7 +237,12 @@ export const certificationData = {
         },
       ],
 
-      suitedFor: ["DPIIT-Recognized Startups", "New Product Ventures", "Technology Innovators", "First-Time Founders"],
+      suitedFor: [
+        "DPIIT-Recognized Startups",
+        "New Product Ventures",
+        "Technology Innovators",
+        "First-Time Founders",
+      ],
 
       whatWeDo: [
         {
@@ -305,7 +326,13 @@ export const certificationData = {
         },
       ],
 
-      suitedFor: ["Manufacturing Businesses", "MSMEs with Employees", "Service Companies", "Construction Firms", "Growing Enterprises"],
+      suitedFor: [
+        "Manufacturing Businesses",
+        "MSMEs with Employees",
+        "Service Companies",
+        "Construction Firms",
+        "Growing Enterprises",
+      ],
 
       whatWeDo: [
         {
@@ -389,7 +416,13 @@ export const certificationData = {
         },
       ],
 
-      suitedFor: ["Product Manufacturers", "Service Providers", "IT & Technology Companies", "MSMEs & Startups", "Suppliers"],
+      suitedFor: [
+        "Product Manufacturers",
+        "Service Providers",
+        "IT & Technology Companies",
+        "MSMEs & Startups",
+        "Suppliers",
+      ],
 
       whatWeDo: [
         {
@@ -473,7 +506,13 @@ export const certificationData = {
         },
       ],
 
-      suitedFor: ["Manufacturers", "IT & Service Companies", "Export-Oriented Businesses", "Healthcare Providers", "Growing Enterprises"],
+      suitedFor: [
+        "Manufacturers",
+        "IT & Service Companies",
+        "Export-Oriented Businesses",
+        "Healthcare Providers",
+        "Growing Enterprises",
+      ],
 
       whatWeDo: [
         {
@@ -529,7 +568,8 @@ export const certificationData = {
       shortTitle: "DUNS Number Registration",
       title: "DUNS Number Registration",
       category: "Global Business Identity",
-      tagline: "Establish a recognized business identity for global opportunities",
+      tagline:
+        "Establish a recognized business identity for global opportunities",
 
       description:
         "A DUNS (Data Universal Numbering System) Number is a unique business identifier issued by Dun & Bradstreet. It is used by organizations and institutions for business identification, supplier verification, and commercial due diligence in various international business contexts.",
@@ -737,7 +777,13 @@ export const certificationData = {
         },
       ],
 
-      suitedFor: ["Restaurants & Cafes", "Food Manufacturers & Processors", "Cloud Kitchens", "Catering Businesses", "Food Startups"],
+      suitedFor: [
+        "Restaurants & Cafes",
+        "Food Manufacturers & Processors",
+        "Cloud Kitchens",
+        "Catering Businesses",
+        "Food Startups",
+      ],
 
       whatWeDo: [
         {

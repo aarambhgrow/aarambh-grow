@@ -51,21 +51,30 @@ function ServicesExplorerInner() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get("category");
-  const initialCategory = categoryParam && categories.includes(categoryParam) ? categoryParam : "Registration";
+  const initialCategory =
+    categoryParam && categories.includes(categoryParam)
+      ? categoryParam
+      : "Registration";
 
   const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [activeSubIndex, setActiveSubIndex] = useState(0);
 
   useEffect(() => {
     const paramNow = searchParams.get("category");
-    if (paramNow && categories.includes(paramNow) && paramNow !== activeCategory) {
+    if (
+      paramNow &&
+      categories.includes(paramNow) &&
+      paramNow !== activeCategory
+    ) {
       setActiveCategory(paramNow);
       setActiveSubIndex(0);
     }
   }, [searchParams]);
 
   const currentCategoryData = serviceData[activeCategory];
-  const activeService = currentCategoryData.subServices[activeSubIndex] || currentCategoryData.subServices[0];
+  const activeService =
+    currentCategoryData.subServices[activeSubIndex] ||
+    currentCategoryData.subServices[0];
 
   const handleCategoryChange = (cat) => {
     setActiveCategory(cat);
@@ -77,7 +86,10 @@ function ServicesExplorerInner() {
   };
 
   return (
-    <section id="services" className="relative w-full bg-[#f8fafc] py-12 lg:py-16 font-sans text-[#0f172a] select-none">
+    <section
+      id="services"
+      className="relative w-full bg-[#f8fafc] py-12 lg:py-16 font-sans text-[#0f172a] select-none"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="w-full overflow-x-auto pb-2 scrollbar-none">
           <div className="flex items-center justify-start md:justify-center gap-2 border-b border-slate-200/80 pb-4 min-w-max">
@@ -93,8 +105,13 @@ function ServicesExplorerInner() {
                       : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200/80"
                   }`}
                 >
-                  <span className={`${isActive ? "text-[#F97316]" : "text-slate-400 group-hover:text-[#03254C]"} transition-colors`}>
-                    <CategoryIcon iconKey={serviceData[cat].icon} className="w-4 h-4" />
+                  <span
+                    className={`${isActive ? "text-[#F97316]" : "text-slate-400 group-hover:text-[#03254C]"} transition-colors`}
+                  >
+                    <CategoryIcon
+                      iconKey={serviceData[cat].icon}
+                      className="w-4 h-4"
+                    />
                   </span>
                   <span>{cat}</span>
                   {isActive && (
@@ -112,10 +129,14 @@ function ServicesExplorerInner() {
           {/* Left Sidebar */}
           <div className="lg:col-span-3 bg-white border border-slate-200/80 rounded-md p-4 shadow-xs space-y-3">
             <div className="flex items-start gap-2.5 pb-3 mb-2 border-b border-slate-100 px-2">
-              <CategoryIcon iconKey={currentCategoryData.icon} className="w-4 h-4 text-[#F97316] shrink-0 mt-0.5" />
+              <CategoryIcon
+                iconKey={currentCategoryData.icon}
+                className="w-4 h-4 text-[#F97316] shrink-0 mt-0.5"
+              />
               <div>
                 <h3 className="text-sm font-semibold text-[#03254C] leading-snug">
-                  {CATEGORY_HEADINGS[activeCategory] || "Complete business solutions"}
+                  {CATEGORY_HEADINGS[activeCategory] ||
+                    "Complete business solutions"}
                 </h3>
               </div>
             </div>
@@ -135,7 +156,9 @@ function ServicesExplorerInner() {
                     <span className="truncate pr-2">{sub.name}</span>
                     <ChevronRight
                       className={`w-3.5 h-3.5 shrink-0 transition-transform ${
-                        isSubActive ? "text-[#F97316] translate-x-0.5" : "text-slate-300 group-hover:text-slate-500"
+                        isSubActive
+                          ? "text-[#F97316] translate-x-0.5"
+                          : "text-slate-300 group-hover:text-slate-500"
                       }`}
                     />
                   </button>
@@ -165,8 +188,12 @@ function ServicesExplorerInner() {
                     <h2 className="text-xl sm:text-2xl lg:text-[32px] font-black text-[#03254C] tracking-tight leading-tight">
                       {activeService.title}
                     </h2>
-                    <p className="text-xs sm:text-sm font-semibold text-[#F97316]">{activeService.tagline}</p>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal pt-1">{activeService.description}</p>
+                    <p className="text-xs sm:text-sm font-semibold text-[#F97316]">
+                      {activeService.tagline}
+                    </p>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal pt-1">
+                      {activeService.description}
+                    </p>
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -174,15 +201,21 @@ function ServicesExplorerInner() {
                     <div>
                       <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-100">
                         <ShieldCheck className="w-4 h-4 text-[#1F8A4D]" />
-                        <h3 className="text-xs font-black uppercase tracking-widest text-[#03254C]">Key Benefits</h3>
+                        <h3 className="text-xs font-black uppercase tracking-widest text-[#03254C]">
+                          Key Benefits
+                        </h3>
                       </div>
                       <div className="space-y-3.5">
                         {activeService.benefits.map((benefit, i) => (
                           <div key={i} className="flex items-start gap-2.5">
                             <CheckCircle2 className="w-4 h-4 text-[#1F8A4D] shrink-0 mt-0.5" />
                             <div>
-                              <h4 className="text-xs font-bold text-[#03254C]">{benefit.title}</h4>
-                              <p className="text-[11px] text-slate-600 leading-normal">{benefit.desc}</p>
+                              <h4 className="text-xs font-bold text-[#03254C]">
+                                {benefit.title}
+                              </h4>
+                              <p className="text-[11px] text-slate-600 leading-normal">
+                                {benefit.desc}
+                              </p>
                             </div>
                           </div>
                         ))}
@@ -193,10 +226,13 @@ function ServicesExplorerInner() {
                     <div>
                       <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-100">
                         <Target className="w-4 h-4 text-[#F97316]" />
-                        <h3 className="text-xs font-black uppercase tracking-widest text-[#03254C]">Best Suited For</h3>
+                        <h3 className="text-xs font-black uppercase tracking-widest text-[#03254C]">
+                          Best Suited For
+                        </h3>
                       </div>
                       <p className="text-[11px] text-slate-500 mb-4 font-medium">
-                        Tailored specifically for entities and professionals looking to optimize this domain:
+                        Tailored specifically for entities and professionals
+                        looking to optimize this domain:
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {activeService.suitedFor.map((item, i) => (
@@ -214,7 +250,9 @@ function ServicesExplorerInner() {
                 <div className="bg-white border border-slate-200/80 rounded-md p-6 sm:p-8 shadow-sm">
                   <div className="flex items-center gap-2 mb-6 pb-3 border-b border-slate-100">
                     <FileText className="w-4 h-4 text-[#03254C]" />
-                    <h3 className="text-xs font-black uppercase tracking-widest text-[#03254C]">How AarambhGrow Supports You</h3>
+                    <h3 className="text-xs font-black uppercase tracking-widest text-[#03254C]">
+                      How AarambhGrow Supports You
+                    </h3>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {activeService.steps.map((step, i) => (
@@ -222,9 +260,15 @@ function ServicesExplorerInner() {
                         key={i}
                         className="bg-slate-50 border border-slate-200/60 rounded-md p-4 space-y-2 hover:border-[#F97316] transition-colors duration-200"
                       >
-                        <span className="text-[10px] font-black px-2 py-0.5 rounded bg-[#03254C] text-white">{step.num}</span>
-                        <h4 className="text-xs font-bold text-[#03254C] pt-1">{step.title}</h4>
-                        <p className="text-[11px] text-slate-600 leading-relaxed">{step.desc}</p>
+                        <span className="text-[10px] font-black px-2 py-0.5 rounded bg-[#03254C] text-white">
+                          {step.num}
+                        </span>
+                        <h4 className="text-xs font-bold text-[#03254C] pt-1">
+                          {step.title}
+                        </h4>
+                        <p className="text-[11px] text-slate-600 leading-relaxed">
+                          {step.desc}
+                        </p>
                       </div>
                     ))}
                   </div>

@@ -3,7 +3,19 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, Phone, X, ArrowUpRight, Building2, BadgeCheck, Banknote, Sparkles, Workflow, Scale } from "lucide-react";
+import {
+  ChevronDown,
+  Menu,
+  Phone,
+  X,
+  ArrowUpRight,
+  Building2,
+  BadgeCheck,
+  Banknote,
+  Sparkles,
+  Workflow,
+  Scale,
+} from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -116,7 +128,9 @@ function DesktopLink({ link, isActive }) {
         }`}
       >
         {/* Text */}
-        <span className="relative z-10 block transition-transform duration-300 ease-out group-hover:-translate-y-0.5">{link.label}</span>
+        <span className="relative z-10 block transition-transform duration-300 ease-out group-hover:-translate-y-0.5">
+          {link.label}
+        </span>
 
         {/* Dropdown Arrow */}
         {hasChildren && (
@@ -137,7 +151,9 @@ function DesktopLink({ link, isActive }) {
       {hasChildren && (
         <div
           className={`invisible absolute top-full z-20 pt-2 opacity-0 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 pointer-events-none group-hover:pointer-events-auto ${
-            isMegaMenu ? "left-1/2 -translate-x-1/2 w-[640px]" : "left-1/2 -translate-x-1/2 w-56"
+            isMegaMenu
+              ? "left-1/2 -translate-x-1/2 w-[640px]"
+              : "left-1/2 -translate-x-1/2 w-56"
           }`}
         >
           {isMegaMenu ? (
@@ -146,9 +162,14 @@ function DesktopLink({ link, isActive }) {
                 <div className="flex items-center gap-2 mb-1">
                   <span className="h-4 w-1 rounded-full bg-[#F26522]" />
 
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-[#03254C]">Explore Services</h3>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-[#03254C]">
+                    Explore Services
+                  </h3>
                 </div>
-                <p className="text-[11px] text-slate-500 mb-4 ml-3">Complete business solutions to start, manage & grow with confidence.</p>
+                <p className="text-[11px] text-slate-500 mb-4 ml-3">
+                  Complete business solutions to start, manage & grow with
+                  confidence.
+                </p>
                 <div className="flex gap-6">
                   <div className="flex-1 flex flex-col gap-1">
                     {link.children.slice(0, 3).map((child) => {
@@ -173,7 +194,9 @@ function DesktopLink({ link, isActive }) {
                             </span>
                           </div>
 
-                          <p className="text-[10px] text-slate-500 leading-tight pl-[30px] mt-0.5">{child.description}</p>
+                          <p className="text-[10px] text-slate-500 leading-tight pl-[30px] mt-0.5">
+                            {child.description}
+                          </p>
                         </Link>
                       );
                     })}
@@ -201,7 +224,9 @@ function DesktopLink({ link, isActive }) {
                             </span>
                           </div>
 
-                          <p className="text-[10px] text-slate-500 leading-tight pl-[30px] mt-0.5">{child.description}</p>
+                          <p className="text-[10px] text-slate-500 leading-tight pl-[30px] mt-0.5">
+                            {child.description}
+                          </p>
                         </Link>
                       );
                     })}
@@ -215,10 +240,13 @@ function DesktopLink({ link, isActive }) {
                 <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-[#157327]/20 rounded-full blur-2xl" />
 
                 <div className="relative z-10">
-                  <h4 className="text-sm font-bold mb-2 text-white">Need Help Deciding?</h4>
+                  <h4 className="text-sm font-bold mb-2 text-white">
+                    Need Help Deciding?
+                  </h4>
 
                   <p className="text-[11px] text-slate-300 leading-relaxed mb-4">
-                    Our experts help you find the right solutions for your business goals.
+                    Our experts help you find the right solutions for your
+                    business goals.
                   </p>
 
                   <Link
@@ -232,7 +260,6 @@ function DesktopLink({ link, isActive }) {
               </div>
             </div>
           ) : (
-
             <div className="overflow-hidden rounded-md border border-slate-100/80 bg-white/95 p-2 shadow-[0_20px_50px_-12px_rgba(3,37,76,0.12)] backdrop-blur-xl transition-all duration-300">
               {link.children.map((child, idx) => (
                 <Link
@@ -243,7 +270,9 @@ function DesktopLink({ link, isActive }) {
                   }}
                   className="group/item flex items-center justify-between rounded-md px-3 py-2.5 text-xs font-semibold text-[#03254C]/80 transition-all duration-200 hover:bg-[#F26522]/10 hover:text-[#F26522] hover:translate-x-1"
                 >
-                  <span className="transition-transform duration-200 group-hover/item:translate-x-0.5">{child.label}</span>
+                  <span className="transition-transform duration-200 group-hover/item:translate-x-0.5">
+                    {child.label}
+                  </span>
 
                   <ArrowUpRight className="h-3.5 w-3.5 opacity-0 transition-all duration-200 -translate-x-1 translate-y-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 group-hover/item:translate-y-0 text-[#157327]" />
                 </Link>
@@ -264,7 +293,6 @@ function MobileLink({ link, onNavigate, isActive }) {
   return (
     <div className="border-b border-slate-100/60 last:border-none">
       <div className="flex w-full items-center justify-between py-0.5">
-        
         <Link
           href={link.href}
           onClick={onNavigate}
@@ -283,7 +311,9 @@ function MobileLink({ link, onNavigate, isActive }) {
             className="p-2.5 text-slate-400 hover:text-[#F26522] transition-colors"
             aria-label="Toggle submenu"
           >
-            <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${open ? "rotate-180 text-[#F26522]" : ""}`} />
+            <ChevronDown
+              className={`h-3.5 w-3.5 transition-transform duration-300 ${open ? "rotate-180 text-[#F26522]" : ""}`}
+            />
           </button>
         )}
       </div>
@@ -369,7 +399,9 @@ export default function Navbar() {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-        scrolled ? "border-b border-slate-200/50 bg-white/85 shadow-xs backdrop-blur-md h-16" : "border-b border-transparent bg-white h-16"
+        scrolled
+          ? "border-b border-slate-200/50 bg-white/85 shadow-xs backdrop-blur-md h-16"
+          : "border-b border-transparent bg-white h-16"
       }`}
     >
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
@@ -377,7 +409,11 @@ export default function Navbar() {
 
         <nav className="hidden items-center gap-2 lg:flex h-full">
           {NAV_LINKS.map((link) => (
-            <DesktopLink key={link.label} link={link} isActive={isLinkActive(link.href)} />
+            <DesktopLink
+              key={link.label}
+              link={link}
+              isActive={isLinkActive(link.href)}
+            />
           ))}
         </nav>
         <div className="hidden items-center gap-5 lg:flex">
@@ -459,7 +495,11 @@ export default function Navbar() {
                 duration: 0.15,
               }}
             >
-              {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+              {mobileOpen ? (
+                <X className="h-4 w-4" />
+              ) : (
+                <Menu className="h-4 w-4" />
+              )}
             </motion.div>
           </AnimatePresence>
         </motion.button>
@@ -488,7 +528,12 @@ export default function Navbar() {
           >
             <nav className="flex flex-col pt-1">
               {NAV_LINKS.map((link) => (
-                <MobileLink key={link.label} link={link} onNavigate={() => setMobileOpen(false)} isActive={isLinkActive(link.href)} />
+                <MobileLink
+                  key={link.label}
+                  link={link}
+                  onNavigate={() => setMobileOpen(false)}
+                  isActive={isLinkActive(link.href)}
+                />
               ))}
             </nav>
             <div className="mt-4 flex flex-col gap-2.5 pt-2 border-t border-slate-100">

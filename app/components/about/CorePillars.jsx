@@ -11,7 +11,7 @@ import {
   Settings,
   Sparkles,
   Check,
-  ShieldCheck
+  ShieldCheck,
 } from "lucide-react";
 
 export default function CorePillars() {
@@ -26,14 +26,15 @@ export default function CorePillars() {
       accent: "#f26522",
       image: "/images/a1.jpg",
       tagline: "Comprehensive Incorporation & Statutory Licensing",
-      description: "End-to-end business setup support to help entrepreneurs establish legally compliant entities and obtain necessary registrations.",
+      description:
+        "End-to-end business setup support to help entrepreneurs establish legally compliant entities and obtain necessary registrations.",
       impact: "Legal Entity Creation",
       deliverables: [
         "Private Limited, LLP, OPC & Section 8 Registration",
         "GST, MSME (Udyam) & Import Export Code (IEC)",
         "Trademark & Intellectual Property Registration",
-        "Shop & Establishment Licensing"
-      ]
+        "Shop & Establishment Licensing",
+      ],
     },
     {
       id: "02",
@@ -43,14 +44,15 @@ export default function CorePillars() {
       accent: "#157327",
       image: "/images/a2.jpg",
       tagline: "Strategic Capital & Financial Management",
-      description: "Guidance and operational management for corporate accounting, tax filings, financial projections, and funding preparation.",
+      description:
+        "Guidance and operational management for corporate accounting, tax filings, financial projections, and funding preparation.",
       impact: "Financial Oversight",
       deliverables: [
         "Accounting & Monthly Bookkeeping Support",
         "Detailed Project Reports (DPR) & Funding Decks",
         "Direct & Indirect Tax Planning and Advisory",
-        "Working Capital Assistance & Banking Documentation"
-      ]
+        "Working Capital Assistance & Banking Documentation",
+      ],
     },
     {
       id: "03",
@@ -60,14 +62,15 @@ export default function CorePillars() {
       accent: "#f26522",
       image: "/images/a3.jpg",
       tagline: "Quality Standards & Regulatory Accreditations",
-      description: "Assistance in acquiring industry-standard certifications and official government recognitions to build market credibility.",
+      description:
+        "Assistance in acquiring industry-standard certifications and official government recognitions to build market credibility.",
       impact: "Regulatory Trust",
       deliverables: [
         "ISO Certifications (9001, 27001, etc.)",
         "Startup India (DPIIT) Recognition",
         "FSSAI Licensing, ZED Certification & BIS Support",
-        "Vendor Empanelment & Government Registration"
-      ]
+        "Vendor Empanelment & Government Registration",
+      ],
     },
     {
       id: "04",
@@ -77,14 +80,15 @@ export default function CorePillars() {
       accent: "#157327",
       image: "/images/a4.jpg",
       tagline: "Market Presence & Expansion Support",
-      description: "Digital presence building and brand positioning assets designed to enhance market reach and client trust.",
+      description:
+        "Digital presence building and brand positioning assets designed to enhance market reach and client trust.",
       impact: "Market Visibility",
       deliverables: [
         "Brand Identity & Corporate Design Setup",
         "Website Architecture & Digital Presence Development",
         "Market Entry Strategy & Advisory",
-        "Marketing Collateral & Promotional Assets"
-      ]
+        "Marketing Collateral & Promotional Assets",
+      ],
     },
     {
       id: "05",
@@ -94,14 +98,15 @@ export default function CorePillars() {
       accent: "#f26522",
       image: "/images/a5.jpg",
       tagline: "Corporate Governance & Statutory Protection",
-      description: "Continuous corporate compliance monitoring and legal drafting to keep operations smooth and fully compliant.",
+      description:
+        "Continuous corporate compliance monitoring and legal drafting to keep operations smooth and fully compliant.",
       impact: "Governance Shield",
       deliverables: [
         "ROC Annual Filings & Secretarial Services",
         "Commercial Contract & Agreement Drafting",
         "Labor Law, EPF, ESIC & Statutory Filings",
-        "Legal Audits & Corporate Risk Advisory"
-      ]
+        "Legal Audits & Corporate Risk Advisory",
+      ],
     },
     {
       id: "06",
@@ -111,23 +116,26 @@ export default function CorePillars() {
       accent: "#157327",
       image: "/images/a6.jpg",
       tagline: "Internal Efficiency & Process Management",
-      description: "Designing internal workflows, standard operating procedures, and administrative frameworks for scalable business execution.",
+      description:
+        "Designing internal workflows, standard operating procedures, and administrative frameworks for scalable business execution.",
       impact: "Operational Efficiency",
       deliverables: [
         "SOP Development & Workflow Optimization",
         "Internal Control & Governance Structuring",
         "Process Efficiency Audits",
-        "Franchise & Branch Operations Setup"
-      ]
-    }
+        "Franchise & Branch Operations Setup",
+      ],
+    },
   ];
 
   const currentPillar = pillars[activePillar] || pillars[0];
 
   return (
-    <section id="pillars" className="w-full bg-[#f8fafc] py-20 font-sans text-[#0f2a4a]">
+    <section
+      id="pillars"
+      className="w-full bg-[#f8fafc] py-20 font-sans text-[#0f2a4a]"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-
         {/* TOP HEADER */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="space-y-2 max-w-lg">
@@ -140,7 +148,8 @@ export default function CorePillars() {
             </h2>
           </div>
           <p className="text-xs text-slate-500 max-w-xs font-medium">
-            Hover over or select a service pillar to explore core operational capabilities and detailed key deliverables.
+            Hover over or select a service pillar to explore core operational
+            capabilities and detailed key deliverables.
           </p>
         </div>
 
@@ -155,18 +164,22 @@ export default function CorePillars() {
                 key={pillar.id}
                 onClick={() => setActivePillar(idx)}
                 onMouseEnter={() => setActivePillar(idx)}
-                className={`group text-left rounded-md transition-all duration-300 relative border cursor-pointer overflow-hidden flex flex-col justify-between ${isActive
+                className={`group text-left rounded-md transition-all duration-300 relative border cursor-pointer overflow-hidden flex flex-col justify-between ${
+                  isActive
                     ? "border-[#0f2a4a] shadow-xl ring-2 ring-[#0f2a4a]/20 -translate-y-1"
                     : "border-slate-200 hover:border-slate-300 hover:shadow-md"
-                  }`}
+                }`}
               >
                 {/* Top Image Preview Banner */}
                 <div className="relative w-full h-24 overflow-hidden bg-slate-900">
                   <img
                     src={pillar.image}
                     alt={pillar.title}
-                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${isActive ? "opacity-90 scale-105" : "opacity-60 group-hover:opacity-80"
-                      }`}
+                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${
+                      isActive
+                        ? "opacity-90 scale-105"
+                        : "opacity-60 group-hover:opacity-80"
+                    }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
@@ -193,15 +206,26 @@ export default function CorePillars() {
                 </div>
 
                 {/* Bottom Card Body */}
-                <div className={`p-3.5 flex-1 flex flex-col justify-between space-y-1 transition-colors duration-300 ${isActive ? "bg-[#0f2a4a] text-white" : "bg-white text-[#0f2a4a]"
-                  }`}>
-                  <h3 className={`text-xs font-black leading-tight ${isActive ? "text-white" : "text-[#0f2a4a]"
-                    }`}>
+                <div
+                  className={`p-3.5 flex-1 flex flex-col justify-between space-y-1 transition-colors duration-300 ${
+                    isActive
+                      ? "bg-[#0f2a4a] text-white"
+                      : "bg-white text-[#0f2a4a]"
+                  }`}
+                >
+                  <h3
+                    className={`text-xs font-black leading-tight ${
+                      isActive ? "text-white" : "text-[#0f2a4a]"
+                    }`}
+                  >
                     {pillar.title}
                   </h3>
 
-                  <p className={`text-[10px] line-clamp-2 leading-tight ${isActive ? "text-slate-300" : "text-slate-500"
-                    }`}>
+                  <p
+                    className={`text-[10px] line-clamp-2 leading-tight ${
+                      isActive ? "text-slate-300" : "text-slate-500"
+                    }`}
+                  >
                     {pillar.tagline}
                   </p>
                 </div>
@@ -221,14 +245,15 @@ export default function CorePillars() {
             className="bg-white rounded-md border border-slate-200 p-6 sm:p-10 shadow-sm overflow-hidden"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-
               {/* Left Side: Summary & Details */}
               <div className="lg:col-span-5 space-y-4 flex flex-col justify-between">
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
                     <span
                       className="px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider rounded-md text-white"
-                      style={{ backgroundColor: currentPillar?.accent || "#f26522" }}
+                      style={{
+                        backgroundColor: currentPillar?.accent || "#f26522",
+                      }}
                     >
                       Pillar {currentPillar?.id}
                     </span>

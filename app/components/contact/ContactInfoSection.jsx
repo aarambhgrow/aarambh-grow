@@ -24,10 +24,8 @@ export default function ContactMainSection() {
   return (
     <section className="w-full bg-[#f8fafc] font-sans text-[#03254C] py-4 px-4 sm:px-8 lg:px-12">
       <div className="max-w-[1200px] mx-auto space-y-4">
-
         {/* LIGHT PREMIUM MAIN CONTAINER */}
         <div className="bg-white rounded-md p-5 sm:p-6 border border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(3,37,76,0.05)] space-y-5">
-
           {/* 1. Header & Live Availability Ribbon */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
             <div className="space-y-1">
@@ -46,17 +44,18 @@ export default function ContactMainSection() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#157327]"></span>
               </span>
               <span className="text-[11px] font-bold text-[#03254C]">
-                Active Hours: <span className="text-slate-500 font-normal">Mon–Sat, 9 AM – 7 PM</span>
+                Active Hours:{" "}
+                <span className="text-slate-500 font-normal">
+                  Mon–Sat, 9 AM – 7 PM
+                </span>
               </span>
             </div>
           </div>
 
           {/* 2. Interactive Channel Cards + HQ Strip Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-3.5">
-
             {/* Quick Action Pills (8 Cols) */}
             <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
-
               {/* Call Card */}
               <a
                 href="tel:+919998715799"
@@ -121,7 +120,6 @@ export default function ContactMainSection() {
                   </p>
                 </div>
               </a>
-
             </div>
 
             {/* HQ Office Panel Accent (4 Cols) */}
@@ -135,7 +133,8 @@ export default function ContactMainSection() {
                     Visit Headquarters
                   </span>
                   <p className="text-[11px] font-semibold text-[#03254C] leading-snug mt-0.5">
-                    813, Silver Rediance-4, Gota, Jagatpur Road, Gota SG Highway, Gujarat 382470
+                    813, Silver Rediance-4, Gota, Jagatpur Road, Gota SG
+                    Highway, Gujarat 382470
                   </p>
                 </div>
               </div>

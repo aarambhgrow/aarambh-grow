@@ -21,7 +21,9 @@ import { operationData } from "../../data/operation";
 export default function Operations() {
   const [activeTab, setActiveTab] = useState(0);
 
-  const services = Array.isArray(operationData?.services) ? operationData.services : [];
+  const services = Array.isArray(operationData?.services)
+    ? operationData.services
+    : [];
 
   const currentService = services[activeTab] || services[0];
 
@@ -34,11 +36,14 @@ export default function Operations() {
       <section className="w-full bg-[#F8FAFC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-md border border-red-200 bg-red-50 p-6">
-            <h2 className="text-lg font-bold text-red-700">Operations data not found</h2>
+            <h2 className="text-lg font-bold text-red-700">
+              Operations data not found
+            </h2>
 
             <p className="mt-2 text-sm text-red-600">
-              Please check your <strong>data/operation.js</strong> file and make sure the <strong>services</strong> array contains your
-              operations services.
+              Please check your <strong>data/operation.js</strong> file and make
+              sure the <strong>services</strong> array contains your operations
+              services.
             </p>
           </div>
         </div>
@@ -376,7 +381,9 @@ export default function Operations() {
                                             `}
                     />
 
-                    <span className="leading-[1.35]">{service.shortTitle || service.title || service.name}</span>
+                    <span className="leading-[1.35]">
+                      {service.shortTitle || service.title || service.name}
+                    </span>
                   </button>
                 );
               })}
@@ -932,7 +939,8 @@ export default function Operations() {
                                                 text-[#03254C]
                                             "
                     >
-                      Why Businesses Choose {currentService.name || currentService.title}
+                      Why Businesses Choose{" "}
+                      {currentService.name || currentService.title}
                     </h3>
                   </div>
 
@@ -945,7 +953,8 @@ export default function Operations() {
                                         "
                   >
                     {(currentService.whyChoose || []).map((item, index) => {
-                      const title = typeof item === "string" ? item : item?.title;
+                      const title =
+                        typeof item === "string" ? item : item?.title;
 
                       const desc = typeof item === "string" ? "" : item?.desc;
 

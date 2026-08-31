@@ -114,14 +114,16 @@ export default function Preloader() {
       <div
         className="absolute top-0 right-0 w-1/2 h-full pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse at 85% 25%, rgba(249,115,22,0.08) 0%, transparent 65%)",
+          background:
+            "radial-gradient(ellipse at 85% 25%, rgba(249,115,22,0.08) 0%, transparent 65%)",
           filter: "blur(60px)",
         }}
       />
       <div
         className="absolute bottom-0 left-0 w-1/2 h-full pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse at 15% 80%, rgba(34,197,94,0.08) 0%, transparent 65%)",
+          background:
+            "radial-gradient(ellipse at 15% 80%, rgba(34,197,94,0.08) 0%, transparent 65%)",
           filter: "blur(60px)",
         }}
       />
@@ -129,7 +131,8 @@ export default function Preloader() {
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/3 h-1/3 pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(22,58,112,0.05) 0%, transparent 70%)",
+          background:
+            "radial-gradient(circle, rgba(22,58,112,0.05) 0%, transparent 70%)",
           filter: "blur(40px)",
           animation: "ag-glow 3s ease-in-out infinite",
         }}
@@ -184,7 +187,8 @@ export default function Preloader() {
             className="h-full rounded-full transition-all duration-100 ease-out"
             style={{
               width: `${phase === "entering" ? 0 : progress}%`,
-              background: "linear-gradient(to right, #f97316, #ffffff, #22c55e)",
+              background:
+                "linear-gradient(to right, #f97316, #ffffff, #22c55e)",
               boxShadow: "0 0 10px rgba(34, 197, 94, 0.4)",
             }}
           />

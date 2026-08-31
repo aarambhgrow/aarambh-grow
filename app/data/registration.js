@@ -8,7 +8,13 @@ export const registrationData = {
       "Choose the right business structure and establish your venture on a strong legal and professional foundation. AarambhGrow provides end-to-end registration support designed around your business goals.",
   },
 
-  categories: ["Company Registration", "Trademark Registration", "GST Registration", "MSME / Udyam Registration", "GeM Registration"],
+  categories: [
+    "Company Registration",
+    "Trademark Registration",
+    "GST Registration",
+    "MSME / Udyam Registration",
+    "GeM Registration",
+  ],
 
   subCategories: [
     "Limited Liability Partnership (LLP)",
@@ -25,7 +31,8 @@ export const registrationData = {
       shortTitle: "LLP Registration",
       title: "Limited Liability Partnership (LLP) Registration",
 
-      tagline: "Combine the flexibility of a partnership with the protection of limited liability.",
+      tagline:
+        "Combine the flexibility of a partnership with the protection of limited liability.",
 
       description:
         "A Limited Liability Partnership bridges the gap between the informal freedom of a traditional partnership and the security of a corporate veil. It gives co-founders a structured environment to collaborate while shielding their personal wealth from business debts.",
@@ -110,7 +117,8 @@ export const registrationData = {
       shortTitle: "Proprietorship",
       title: "Proprietorship Registration",
 
-      tagline: "A simple and practical structure for entrepreneurs who want direct business ownership.",
+      tagline:
+        "A simple and practical structure for entrepreneurs who want direct business ownership.",
 
       description:
         "A Sole Proprietorship is the fastest, most direct route to commercial ownership. Managed entirely by a single decision-maker, it provides total operational freedom with minimal regulatory red tape, making it the ultimate launchpad for solo entrepreneurs and independent vendors.",
@@ -191,7 +199,8 @@ export const registrationData = {
       shortTitle: "Private Limited",
       title: "Private Limited Company Registration",
 
-      tagline: "Build a credible, scalable and investment-ready business structure.",
+      tagline:
+        "Build a credible, scalable and investment-ready business structure.",
 
       description:
         "A Private Limited Company stands as the gold standard of corporate credibility in India. Built for scalability, it offers ironclad liability protection and positions your enterprise as an elite, investor-ready entity capable of capturing massive market share.",
@@ -276,7 +285,8 @@ export const registrationData = {
       shortTitle: "Partnership Firm",
       title: "Partnership Firm Registration",
 
-      tagline: "Bring partners, capital and expertise together under a clear business framework.",
+      tagline:
+        "Bring partners, capital and expertise together under a clear business framework.",
 
       description:
         "A Partnership Firm brings together like-minded individuals to combine their capital, talents, and visions under a unified commercial banner. It is a time-tested model for co-founders and traditional enterprises seeking shared execution without corporate complexity.",
@@ -300,7 +310,12 @@ export const registrationData = {
         },
       ],
 
-      suitedFor: ["Family-Run Enterprises", "Traditional Trading Houses", "Small Collaborative Teams", "Local Service Businesses"],
+      suitedFor: [
+        "Family-Run Enterprises",
+        "Traditional Trading Houses",
+        "Small Collaborative Teams",
+        "Local Service Businesses",
+      ],
 
       whatWeDo: [
         {
@@ -356,7 +371,8 @@ export const registrationData = {
       shortTitle: "Trademark",
       title: "Trademark Registration",
 
-      tagline: "Protect your brand identity and create a stronger foundation for long-term brand value.",
+      tagline:
+        "Protect your brand identity and create a stronger foundation for long-term brand value.",
 
       description:
         "A Trademark acts as your company’s ultimate commercial shield, locking down legal ownership over your unique brand name, corporate logo, and market identifiers to block imitation and secure your market position.",
@@ -453,7 +469,8 @@ export const registrationData = {
       shortTitle: "GST Registration",
       title: "GST Registration",
 
-      tagline: "Establish your tax identity and prepare your business for compliant commercial operations.",
+      tagline:
+        "Establish your tax identity and prepare your business for compliant commercial operations.",
 
       description:
         "GST Registration establishes your official tax identity for indirect commerce. Essential for cross-state operations and digital marketplaces, it clears the path for legal tax collection and valuable credit claims.",
@@ -485,7 +502,12 @@ export const registrationData = {
         },
       ],
 
-      suitedFor: ["Wholesalers & Retail Traders", "Industrial Manufacturers", "Digital Service Providers", "E-Commerce Merchants"],
+      suitedFor: [
+        "Wholesalers & Retail Traders",
+        "Industrial Manufacturers",
+        "Digital Service Providers",
+        "E-Commerce Merchants",
+      ],
 
       whatWeDo: [
         {
@@ -545,7 +567,8 @@ export const registrationData = {
       shortTitle: "MSME / Udyam",
       title: "MSME / Udyam Registration",
 
-      tagline: "Give your eligible enterprise a recognized identity and explore available business support opportunities.",
+      tagline:
+        "Give your eligible enterprise a recognized identity and explore available business support opportunities.",
 
       description:
         "MSME / Udyam Registration officially classifies your venture as a recognized small or medium enterprise, opening the gateway to state-backed financial schemes, priority lending rates, and exclusive business subsidies.",
@@ -577,7 +600,12 @@ export const registrationData = {
         },
       ],
 
-      suitedFor: ["Micro-Scale Enterprises", "Small Industrial Units", "Growing Service Providers", "Innovative Startups"],
+      suitedFor: [
+        "Micro-Scale Enterprises",
+        "Small Industrial Units",
+        "Growing Service Providers",
+        "Innovative Startups",
+      ],
 
       whatWeDo: [
         {
@@ -637,7 +665,8 @@ export const registrationData = {
       shortTitle: "GeM Registration",
       title: "GeM Registration",
 
-      tagline: "Take your products and services closer to institutional procurement opportunities.",
+      tagline:
+        "Take your products and services closer to institutional procurement opportunities.",
 
       description:
         "The Government e-Marketplace (GeM) connects your business directly to the world's largest institutional buyer—the Government of India. Registration unlocks a high-volume, transparent channel to supply ministries, PSUs, and public bodies without middlemen.",

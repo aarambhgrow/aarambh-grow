@@ -30,7 +30,11 @@ export default function ConsultancyServicesHero() {
     },
   ];
 
-  const highlights = ["15+ Years Expertise", "Global Frameworks", "Dedicated Partners"];
+  const highlights = [
+    "15+ Years Expertise",
+    "Global Frameworks",
+    "Dedicated Partners",
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -88,14 +92,19 @@ export default function ConsultancyServicesHero() {
           <motion.div variants={fadeInUp} className="space-y-1">
             <h1 className="text-xl sm:text-2xl lg:text-[32px] xl:text-[36px] font-extrabold tracking-tight text-[#03254C] leading-[1.12]">
               Expert Consulting for <br className="hidden sm:inline" />
-              <span className="text-[#157327]">Measurable Enterprise</span> <span className="text-[#F26522]">Growth</span>
+              <span className="text-[#157327]">Measurable Enterprise</span>{" "}
+              <span className="text-[#F26522]">Growth</span>
             </h1>
             <div className="w-10 h-0.5 sm:h-1 bg-gradient-to-r from-[#F26522] to-[#157327] rounded-full mt-1.5 mx-auto lg:mx-0" />
           </motion.div>
 
           {/* Subheadline / Description */}
-          <motion.p variants={fadeInUp} className="text-xs sm:text-sm font-normal text-[#475569] leading-relaxed max-w-lg mx-auto lg:mx-0">
-            We deliver actionable insights and execution power to resolve complex business challenges and drive profitability.
+          <motion.p
+            variants={fadeInUp}
+            className="text-xs sm:text-sm font-normal text-[#475569] leading-relaxed max-w-lg mx-auto lg:mx-0"
+          >
+            We deliver actionable insights and execution power to resolve
+            complex business challenges and drive profitability.
           </motion.p>
 
           {/* Trust Highlights Row */}
@@ -104,7 +113,10 @@ export default function ConsultancyServicesHero() {
             className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-0.5 text-[11px] font-medium text-[#03254C]"
           >
             {highlights.map((item, idx) => (
-              <div key={idx} className="flex items-center gap-1.5 bg-white/80 px-2 py-0.5 rounded-md border border-slate-200 shadow-2xs">
+              <div
+                key={idx}
+                className="flex items-center gap-1.5 bg-white/80 px-2 py-0.5 rounded-md border border-slate-200 shadow-2xs"
+              >
                 <CheckCircle2 className="w-3 h-3 text-[#157327]" />
                 <span>{item}</span>
               </div>
@@ -112,7 +124,10 @@ export default function ConsultancyServicesHero() {
           </motion.div>
 
           {/* Core Service Categories Grid */}
-          <motion.div variants={fadeInUp} className="pt-1.5 grid grid-cols-1 sm:grid-cols-3 gap-2.5 max-w-2xl mx-auto lg:mx-0">
+          <motion.div
+            variants={fadeInUp}
+            className="pt-1.5 grid grid-cols-1 sm:grid-cols-3 gap-2.5 max-w-2xl mx-auto lg:mx-0"
+          >
             {serviceCategories.map((item, idx) => {
               const Icon = item.icon;
               return (
@@ -121,12 +136,18 @@ export default function ConsultancyServicesHero() {
                   whileHover={{ y: -2, transition: { duration: 0.2 } }}
                   className="flex items-start gap-2.5 p-2.5 rounded-md bg-white border border-slate-200/90 shadow-2xs text-left"
                 >
-                  <div className={`p-1.5 rounded-md ${item.bgColor} ${item.iconColor} shrink-0`}>
+                  <div
+                    className={`p-1.5 rounded-md ${item.bgColor} ${item.iconColor} shrink-0`}
+                  >
                     <Icon className="w-3.5 h-3.5" />
                   </div>
                   <div>
-                    <h4 className="text-[11px] sm:text-xs font-bold text-[#03254C]">{item.title}</h4>
-                    <p className="text-[10px] font-normal text-[#64748B] mt-0.5 leading-tight">{item.description}</p>
+                    <h4 className="text-[11px] sm:text-xs font-bold text-[#03254C]">
+                      {item.title}
+                    </h4>
+                    <p className="text-[10px] font-normal text-[#64748B] mt-0.5 leading-tight">
+                      {item.description}
+                    </p>
                   </div>
                 </motion.div>
               );

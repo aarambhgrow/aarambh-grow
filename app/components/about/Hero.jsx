@@ -86,19 +86,27 @@ export default function AboutHero() {
           <motion.div variants={fadeInUp} className="space-y-2">
             <h1 className="text-2xl sm:text-3xl lg:text-[36px] xl:text-[40px] font-extrabold tracking-tight text-[#03254C] leading-[1.15]">
               Fueling the Ambition <br className="hidden sm:inline" />
-              <span className="text-[#157327]">of Tomorrow's</span> <span className="text-[#F26522]">Enterprises</span>
+              <span className="text-[#157327]">of Tomorrow's</span>{" "}
+              <span className="text-[#F26522]">Enterprises</span>
             </h1>
             <div className="w-12 h-1 bg-gradient-to-r from-[#F26522] to-[#157327] rounded-full mt-2.5 mx-auto lg:mx-0" />
           </motion.div>
 
           {/* Subheadline / Brand Manifesto */}
-          <motion.p variants={fadeInUp} className="text-xs sm:text-sm font-normal text-[#475569] leading-relaxed max-w-lg mx-auto lg:mx-0">
-            We bridge the gap between vision and execution, empowering founders to build sustainable, legally robust organizations without
+          <motion.p
+            variants={fadeInUp}
+            className="text-xs sm:text-sm font-normal text-[#475569] leading-relaxed max-w-lg mx-auto lg:mx-0"
+          >
+            We bridge the gap between vision and execution, empowering founders
+            to build sustainable, legally robust organizations without
             bureaucratic hurdles.
           </motion.p>
 
           {/* Feature Cards Grid */}
-          <motion.div variants={fadeInUp} className="pt-2.5 grid grid-cols-1 sm:grid-cols-3 gap-3.5 max-w-2xl mx-auto lg:mx-0">
+          <motion.div
+            variants={fadeInUp}
+            className="pt-2.5 grid grid-cols-1 sm:grid-cols-3 gap-3.5 max-w-2xl mx-auto lg:mx-0"
+          >
             {features.map((item, idx) => {
               const Icon = item.icon;
               return (
@@ -107,12 +115,18 @@ export default function AboutHero() {
                   whileHover={{ y: -2, transition: { duration: 0.2 } }}
                   className="flex items-start gap-3 p-3.5 rounded-md bg-white border border-slate-200/80 shadow-2xs text-left"
                 >
-                  <div className={`p-2 rounded-md ${item.bgColor} ${item.iconColor} shrink-0`}>
+                  <div
+                    className={`p-2 rounded-md ${item.bgColor} ${item.iconColor} shrink-0`}
+                  >
                     <Icon className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-[#03254C]">{item.title}</h4>
-                    <p className="text-[10px] sm:text-[11px] font-normal text-[#64748B] mt-0.5 leading-tight">{item.description}</p>
+                    <h4 className="text-xs font-bold text-[#03254C]">
+                      {item.title}
+                    </h4>
+                    <p className="text-[10px] sm:text-[11px] font-normal text-[#64748B] mt-0.5 leading-tight">
+                      {item.description}
+                    </p>
                   </div>
                 </motion.div>
               );

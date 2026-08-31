@@ -2,7 +2,14 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Award, Compass, Zap, Sparkles, ArrowRight, ShieldCheck } from "lucide-react";
+import {
+  Award,
+  Compass,
+  Zap,
+  Sparkles,
+  ArrowRight,
+  ShieldCheck,
+} from "lucide-react";
 
 export default function WhyGetInTouchSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -49,7 +56,6 @@ export default function WhyGetInTouchSection() {
   return (
     <section className="w-full bg-[#F8FAFC] font-sans text-[#03254C] py-8 sm:py-10 px-4 sm:px-8 lg:px-12">
       <div className="max-w-6xl mx-auto space-y-5">
-
         {/* COMPACT LIGHT HEADER */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-slate-200/80 pb-4">
           <div>
@@ -62,13 +68,13 @@ export default function WhyGetInTouchSection() {
             </h2>
           </div>
           <p className="text-[11px] sm:text-xs text-slate-500 max-w-sm leading-relaxed">
-            Straightforward guidance, reduced risk, and transparent timelines designed specifically for your business growth.
+            Straightforward guidance, reduced risk, and transparent timelines
+            designed specifically for your business growth.
           </p>
         </div>
 
         {/* ULTRA-COMPACT 2-COLUMN PREMIUM INTERACTION LAYOUT */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
-
           {/* LEFT: Interactive Feature Selectors (7 Cols) */}
           <div className="lg:col-span-7 flex flex-col justify-between gap-2.5">
             {features.map((item, idx) => {
@@ -79,22 +85,25 @@ export default function WhyGetInTouchSection() {
                 <div
                   key={item.id}
                   onClick={() => setActiveIndex(idx)}
-                  className={`group relative p-3.5 sm:p-4 rounded-md border transition-all duration-300 cursor-pointer flex items-center justify-between ${isActive
+                  className={`group relative p-3.5 sm:p-4 rounded-md border transition-all duration-300 cursor-pointer flex items-center justify-between ${
+                    isActive
                       ? "bg-white border-slate-300 shadow-sm ring-1 ring-slate-200"
                       : "bg-white/60 border-slate-200/70 hover:bg-white hover:border-slate-300"
-                    }`}
+                  }`}
                 >
                   {/* Left Accent Bar */}
                   <div
-                    className={`absolute left-0 top-2 bottom-2 w-1 rounded-r-full transition-all duration-300 ${isActive ? "opacity-100" : "opacity-0"
-                      }`}
+                    className={`absolute left-0 top-2 bottom-2 w-1 rounded-r-full transition-all duration-300 ${
+                      isActive ? "opacity-100" : "opacity-0"
+                    }`}
                     style={{ backgroundColor: item.accent }}
                   />
 
                   <div className="flex items-center gap-3 pl-1">
                     <div
-                      className={`p-2 rounded-md transition-colors ${isActive ? "text-white" : "text-slate-500 bg-slate-100"
-                        }`}
+                      className={`p-2 rounded-md transition-colors ${
+                        isActive ? "text-white" : "text-slate-500 bg-slate-100"
+                      }`}
                       style={{
                         backgroundColor: isActive ? item.accent : undefined,
                       }}
@@ -107,9 +116,7 @@ export default function WhyGetInTouchSection() {
                         <h3 className="text-xs sm:text-sm font-bold text-[#03254C]">
                           {item.title}
                         </h3>
-                        <span
-                          className="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-slate-100 text-slate-600"
-                        >
+                        <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-slate-100 text-slate-600">
                           {item.badge}
                         </span>
                       </div>
@@ -120,10 +127,11 @@ export default function WhyGetInTouchSection() {
                   </div>
 
                   <ArrowRight
-                    className={`w-3.5 h-3.5 transition-transform duration-300 shrink-0 ${isActive
+                    className={`w-3.5 h-3.5 transition-transform duration-300 shrink-0 ${
+                      isActive
                         ? "opacity-100 translate-x-0.5"
                         : "opacity-0 group-hover:opacity-40"
-                      }`}
+                    }`}
                     style={{ color: item.accent }}
                   />
                 </div>

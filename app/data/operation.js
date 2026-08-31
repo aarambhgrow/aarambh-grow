@@ -45,7 +45,13 @@ export const operationData = {
         },
       ],
 
-      suitedFor: ["Growing Startups", "MSMEs Scaling Teams", "Service Companies", "Technology Businesses", "Expanding Organizations"],
+      suitedFor: [
+        "Growing Startups",
+        "MSMEs Scaling Teams",
+        "Service Companies",
+        "Technology Businesses",
+        "Expanding Organizations",
+      ],
 
       whatWeDo: [
         {
@@ -135,7 +141,13 @@ export const operationData = {
         },
       ],
 
-      suitedFor: ["Sales-Driven Businesses", "Service Agencies", "B2B Companies", "Customer-Focused Startups", "Growing Teams"],
+      suitedFor: [
+        "Sales-Driven Businesses",
+        "Service Agencies",
+        "B2B Companies",
+        "Customer-Focused Startups",
+        "Growing Teams",
+      ],
 
       whatWeDo: [
         {
@@ -321,7 +333,13 @@ export const operationData = {
         },
       ],
 
-      suitedFor: ["Service Businesses", "B2B Companies", "Agencies", "Growth-Stage Startups", "Sales Teams"],
+      suitedFor: [
+        "Service Businesses",
+        "B2B Companies",
+        "Agencies",
+        "Growth-Stage Startups",
+        "Sales Teams",
+      ],
 
       whatWeDo: [
         {
@@ -411,7 +429,13 @@ export const operationData = {
         },
       ],
 
-      suitedFor: ["E-commerce Businesses", "SaaS Companies", "Service Agencies", "Customer-Focused Brands", "B2B Companies"],
+      suitedFor: [
+        "E-commerce Businesses",
+        "SaaS Companies",
+        "Service Agencies",
+        "Customer-Focused Brands",
+        "B2B Companies",
+      ],
 
       whatWeDo: [
         {

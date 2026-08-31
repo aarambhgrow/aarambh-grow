@@ -6,18 +6,18 @@ import CTASection from "../../components/layout/CTA";
 import Footer from "../../components/layout/Footer";
 
 export default function FinancePage() {
-    return (
-        <>
-            <Navbar />
+  return (
+    <>
+      <Navbar />
 
-            <main className="min-h-screen">
-                <Hero />
-                <Finance />
-                <FAQ />
-                <CTASection />
-            </main>
+      <main className="min-h-screen">
+        <Hero />
+        <Finance />
+        <FAQ />
+        <CTASection />
+      </main>
 
-            <Footer />
-        </>
-    );
+      <Footer />
+    </>
+  );
 }

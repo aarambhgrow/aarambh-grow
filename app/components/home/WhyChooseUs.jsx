@@ -53,7 +53,8 @@ export default function WhyChooseUs() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="relative w-full min-h-[480px] lg:min-h-0 lg:aspect-[15/9] flex flex-col justify-center py-8 px-5 sm:px-8 lg:px-10 overflow-hidden shadow-md lg:shadow-none border-y border-slate-200/60 lg:border-none bg-[#fafafa] lg:bg-transparent">
+        className="relative w-full min-h-[480px] lg:min-h-0 lg:aspect-[15/9] flex flex-col justify-center py-8 px-5 sm:px-8 lg:px-10 overflow-hidden shadow-md lg:shadow-none border-y border-slate-200/60 lg:border-none bg-[#fafafa] lg:bg-transparent"
+      >
         {/* FULL BACKGROUND IMAGE — Visible on laptop, hidden on mobile */}
         <Image
           src="/images/why.png"
@@ -96,7 +97,8 @@ export default function WhyChooseUs() {
             </h2>
 
             <p className="text-[11px] sm:text-[12px] lg:text-[13px] font-normal text-[#64748B] leading-snug max-w-lg mx-auto lg:mx-0">
-              We simplify your business journey with expert guidance, transparent processes, and technology-driven solutions.
+              We simplify your business journey with expert guidance,
+              transparent processes, and technology-driven solutions.
             </p>
 
             {/* Feature Bullet Points */}
@@ -113,7 +115,9 @@ export default function WhyChooseUs() {
                   <div className="w-3.5 h-3.5 rounded-full bg-[#F26522] flex items-center justify-center shrink-0 shadow-2xs">
                     <Check className="w-2 h-2 text-white stroke-[3]" />
                   </div>
-                  <span className="text-[11px] sm:text-[12px] font-semibold font-heading text-[#0F2A4A] text-left">{item}</span>
+                  <span className="text-[11px] sm:text-[12px] font-semibold font-heading text-[#0F2A4A] text-left">
+                    {item}
+                  </span>
                 </motion.div>
               ))}
             </div>
@@ -136,11 +140,19 @@ export default function WhyChooseUs() {
                   whileTap={{ scale: 0.98 }}
                   className="bg-white/95 lg:bg-white/90 backdrop-blur-xs rounded-md p-2.5 sm:p-3 border border-[#E2E8F0] shadow-2xs flex flex-col items-center justify-center text-center transition-transform duration-200"
                 >
-                  <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full ${stat.iconBg} flex items-center justify-center mb-1 shadow-2xs`}>
-                    <Icon className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${stat.iconColor}`} />
+                  <div
+                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full ${stat.iconBg} flex items-center justify-center mb-1 shadow-2xs`}
+                  >
+                    <Icon
+                      className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${stat.iconColor}`}
+                    />
                   </div>
-                  <span className="text-[15px] sm:text-[18px] font-bold font-heading text-[#0F2A4A] leading-none mb-0.5">{stat.value}</span>
-                  <span className="text-[10px] sm:text-[11px] font-normal text-[#64748B]">{stat.label}</span>
+                  <span className="text-[15px] sm:text-[18px] font-bold font-heading text-[#0F2A4A] leading-none mb-0.5">
+                    {stat.value}
+                  </span>
+                  <span className="text-[10px] sm:text-[11px] font-normal text-[#64748B]">
+                    {stat.label}
+                  </span>
                 </motion.div>
               );
             })}

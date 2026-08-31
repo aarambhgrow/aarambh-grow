@@ -50,7 +50,13 @@ export const legalData = {
         },
       ],
 
-      suitedFor: ["Private Limited Companies", "LLPs", "Partnership Firms", "Startups", "Growing Businesses"],
+      suitedFor: [
+        "Private Limited Companies",
+        "LLPs",
+        "Partnership Firms",
+        "Startups",
+        "Growing Businesses",
+      ],
 
       whatWeDo: [
         {
@@ -156,7 +162,13 @@ export const legalData = {
         },
       ],
 
-      suitedFor: ["MSMEs", "Manufacturing Companies", "Service Businesses", "Startups", "Growing Enterprises"],
+      suitedFor: [
+        "MSMEs",
+        "Manufacturing Companies",
+        "Service Businesses",
+        "Startups",
+        "Growing Enterprises",
+      ],
 
       whatWeDo: [
         {
@@ -262,7 +274,13 @@ export const legalData = {
         },
       ],
 
-      suitedFor: ["Retail Businesses", "Food & Hospitality Businesses", "Manufacturing Units", "Service Providers", "Professional Firms"],
+      suitedFor: [
+        "Retail Businesses",
+        "Food & Hospitality Businesses",
+        "Manufacturing Units",
+        "Service Providers",
+        "Professional Firms",
+      ],
 
       whatWeDo: [
         {
@@ -376,7 +394,13 @@ export const legalData = {
         },
       ],
 
-      suitedFor: ["All Businesses", "Startups", "Agencies & Freelancers", "MSMEs", "Technology Companies"],
+      suitedFor: [
+        "All Businesses",
+        "Startups",
+        "Agencies & Freelancers",
+        "MSMEs",
+        "Technology Companies",
+      ],
 
       whatWeDo: [
         {
@@ -491,7 +515,13 @@ export const legalData = {
         },
       ],
 
-      suitedFor: ["Technology Companies", "Product Innovators", "Creative Businesses", "R&D Enterprises", "Startups with Unique Solutions"],
+      suitedFor: [
+        "Technology Companies",
+        "Product Innovators",
+        "Creative Businesses",
+        "R&D Enterprises",
+        "Startups with Unique Solutions",
+      ],
 
       whatWeDo: [
         {

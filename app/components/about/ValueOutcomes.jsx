@@ -18,48 +18,42 @@ export default function ValueOutcomes() {
       num: "01",
       icon: Map,
       title: "Business Direction",
-      description:
-        "A clear direction for business setup and expansion.",
+      description: "A clear direction for business setup and expansion.",
       accent: "#157327",
     },
     {
       num: "02",
       icon: ShieldCheck,
       title: "Simplified Compliance",
-      description:
-        "Simplified registrations and regulatory compliance.",
+      description: "Simplified registrations and regulatory compliance.",
       accent: "#F26522",
     },
     {
       num: "03",
       icon: BadgePercent,
       title: "Financial Advisory",
-      description:
-        "Better financial planning and business advisory.",
+      description: "Better financial planning and business advisory.",
       accent: "#157327",
     },
     {
       num: "04",
       icon: TrendingUp,
       title: "Brand Positioning",
-      description:
-        "Stronger brand positioning and digital presence.",
+      description: "Stronger brand positioning and digital presence.",
       accent: "#F26522",
     },
     {
       num: "05",
       icon: Award,
       title: "Tailored Guidance",
-      description:
-        "Expert guidance tailored to your business goals.",
+      description: "Expert guidance tailored to your business goals.",
       accent: "#157327",
     },
     {
       num: "06",
       icon: Headphones,
       title: "Reliable Support",
-      description:
-        "Reliable support whenever your business needs it.",
+      description: "Reliable support whenever your business needs it.",
       accent: "#F26522",
     },
   ];
@@ -67,7 +61,6 @@ export default function ValueOutcomes() {
   return (
     <section className="w-full bg-[#f8fafc] font-sans text-[#03254C] py-14 sm:py-12 px-4 sm:px-8 lg:px-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-7 space-y-10">
-
         {/* TOP ROW: Header & Big Vision Statement */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-slate-200/80 pb-8">
           <div className="space-y-3 max-w-xl">
@@ -82,7 +75,10 @@ export default function ValueOutcomes() {
           </div>
 
           <p className="text-sm text-slate-600 max-w-sm leading-relaxed">
-            The right business partner doesn't just solve today's challenges, they help prepare your business for tomorrow's opportunities. When you choose AarambhGrow, you gain access to a team that works alongside you.
+            The right business partner doesn't just solve today's challenges,
+            they help prepare your business for tomorrow's opportunities. When
+            you choose AarambhGrow, you gain access to a team that works
+            alongside you.
           </p>
         </div>
 

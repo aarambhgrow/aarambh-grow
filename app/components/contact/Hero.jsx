@@ -54,7 +54,6 @@ export default function ContactHero() {
   return (
     <section className="relative w-full bg-[#f8fafc] font-sans text-[#03254C] overflow-hidden  m-0 p-0">
       <div className="w-full flex items-center relative p-0 m-0 py-8 sm:py-12 lg:py-16">
-
         {/* LEFT SIDE: Text Content with Framer Motion Animations */}
         <motion.div
           className="w-full lg:w-3/5 space-y-5 text-center lg:text-left px-6 sm:px-12 lg:pl-16 lg:pr-8 z-10"
@@ -87,7 +86,9 @@ export default function ContactHero() {
             variants={fadeInUp}
             className="text-xs sm:text-sm font-normal text-[#475569] leading-relaxed max-w-xl mx-auto lg:mx-0"
           >
-            Have questions about business setup, legal compliance, financial advisory, or digital scaling? Reach out to our expert consultants today—we are here to guide your journey.
+            Have questions about business setup, legal compliance, financial
+            advisory, or digital scaling? Reach out to our expert consultants
+            today—we are here to guide your journey.
           </motion.p>
 
           {/* Feature Cards Grid */}
@@ -104,7 +105,9 @@ export default function ContactHero() {
                   transition={{ duration: 0.2 }}
                   className="flex items-start gap-3 p-3.5 rounded-md bg-white border border-slate-200/70 shadow-xs text-left"
                 >
-                  <div className={`p-2.5 rounded-md ${item.bgColor} ${item.iconColor} shrink-0`}>
+                  <div
+                    className={`p-2.5 rounded-md ${item.bgColor} ${item.iconColor} shrink-0`}
+                  >
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
@@ -119,7 +122,6 @@ export default function ContactHero() {
               );
             })}
           </motion.div>
-
         </motion.div>
 
         {/* RIGHT SIDE: Graphic Flush to Top & Right */}
@@ -133,7 +135,6 @@ export default function ContactHero() {
             className="object-contain object-right-top mix-blend-multiply p-0 scale-105 origin-top-right"
           />
         </div>
-
       </div>
     </section>
   );

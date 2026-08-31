@@ -65,10 +65,7 @@ export default function ServicesSection() {
       <div className="absolute top-10 left-10 opacity-20 pointer-events-none hidden md:block">
         <div className="grid grid-cols-6 gap-2">
           {Array.from({ length: 24 }).map((_, i) => (
-            <div
-              key={i}
-              className="w-1.5 h-1.5 rounded-full bg-[#f26522]"
-            />
+            <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#f26522]" />
           ))}
         </div>
       </div>
@@ -76,10 +73,7 @@ export default function ServicesSection() {
       <div className="absolute top-10 right-10 opacity-20 pointer-events-none hidden md:block">
         <div className="grid grid-cols-6 gap-2">
           {Array.from({ length: 24 }).map((_, i) => (
-            <div
-              key={i}
-              className="w-1.5 h-1.5 rounded-full bg-[#157327]"
-            />
+            <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#157327]" />
           ))}
         </div>
       </div>
@@ -94,7 +88,6 @@ export default function ServicesSection() {
         variants={containerVariants}
         className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
       >
-
         <motion.div
           variants={fadeUpVariants}
           className="text-center flex flex-col items-center max-w-3xl mx-auto mb-8 sm:mb-12"
@@ -108,10 +101,9 @@ export default function ServicesSection() {
 
           <div
             ref={headerRef}
-            className={`text-center max-w-3xl mx-auto space-y-4 transition-all duration-700 delay-150 ease-out ${isInView
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-6"
-              }`}
+            className={`text-center max-w-3xl mx-auto space-y-4 transition-all duration-700 delay-150 ease-out ${
+              isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
           >
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#0f2a4a] leading-tight tracking-tight transition-colors duration-300 hover:text-[#f26522]">
               Business Solutions Designed
@@ -129,7 +121,6 @@ export default function ServicesSection() {
 
         <motion.div layout className="space-y-4 sm:space-y-6">
           <AnimatePresence mode="popLayout">
-
             <motion.div
               layout
               key={`top-group-${activeTab}`}
@@ -151,187 +142,173 @@ export default function ServicesSection() {
               }}
               className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch"
             >
-
-              {(activeTab === "All" ||
-                activeTab === "Registration") && (
-                  <motion.div
-                    layout
-                    className="lg:col-span-6 flex"
+              {(activeTab === "All" || activeTab === "Registration") && (
+                <motion.div layout className="lg:col-span-6 flex">
+                  <Link
+                    href="/services/registration"
+                    className="group w-full relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-4 sm:p-6 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
                   >
-                    <Link
-                      href="/services/registration"
-                      className="group w-full relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-4 sm:p-6 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
-                    >
-                      <div className="flex flex-col sm:grid sm:grid-cols-12 gap-4 h-full">
-                        <div className="sm:col-span-7 flex flex-col justify-between order-1">
-                          <div>
-                            <div className="flex items-center gap-2 mb-2">
-                              <FileText className="w-4 h-4 text-[#f26522] shrink-0" />
-                              <span className="text-xs font-extrabold text-[#f26522]">
-                                01 —
+                    <div className="flex flex-col sm:grid sm:grid-cols-12 gap-4 h-full">
+                      <div className="sm:col-span-7 flex flex-col justify-between order-1">
+                        <div>
+                          <div className="flex items-center gap-2 mb-2">
+                            <FileText className="w-4 h-4 text-[#f26522] shrink-0" />
+                            <span className="text-xs font-extrabold text-[#f26522]">
+                              01 —
+                            </span>
+                          </div>
+
+                          <h3 className="text-lg font-black text-[#0f2a4a] mb-1.5 group-hover:text-[#f26522] transition-colors duration-300">
+                            Registration
+                          </h3>
+
+                          <p className="text-xs text-slate-500 leading-relaxed mb-3">
+                            Start your company with ease. We handle Private
+                            Limited, LLP, OPC, MSME, and all essential business
+                            registrations.
+                          </p>
+
+                          <ul className="space-y-1.5 text-xs font-semibold text-slate-700 mb-4 sm:mb-2">
+                            <li className="flex items-center gap-2">
+                              <span className="text-[#f26522] font-bold">
+                                ✓
                               </span>
-                            </div>
+                              Private Limited Company
+                            </li>
 
-                            <h3 className="text-lg font-black text-[#0f2a4a] mb-1.5 group-hover:text-[#f26522] transition-colors duration-300">
-                              Registration
-                            </h3>
+                            <li className="flex items-center gap-2">
+                              <span className="text-[#f26522] font-bold">
+                                ✓
+                              </span>
+                              LLP & Partnership Setup
+                            </li>
 
-                            <p className="text-xs text-slate-500 leading-relaxed mb-3">
-                              Start your company with ease. We handle Private
-                              Limited, LLP, OPC, MSME, and all essential
-                              business registrations.
-                            </p>
-
-                            <ul className="space-y-1.5 text-xs font-semibold text-slate-700 mb-4 sm:mb-2">
-                              <li className="flex items-center gap-2">
-                                <span className="text-[#f26522] font-bold">
-                                  ✓
-                                </span>
-                                Private Limited Company
-                              </li>
-
-                              <li className="flex items-center gap-2">
-                                <span className="text-[#f26522] font-bold">
-                                  ✓
-                                </span>
-                                LLP & Partnership Setup
-                              </li>
-
-                              <li className="flex items-center gap-2">
-                                <span className="text-[#f26522] font-bold">
-                                  ✓
-                                </span>
-                                One Person Company (OPC)
-                              </li>
-                            </ul>
-                          </div>
-
-                          <div className="hidden sm:inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#f26522] transition-colors duration-300 mt-2">
-                            <span>Learn More</span>
-                            <div className="w-5 h-5 rounded-full bg-[#f26522] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                              <ArrowRight className="w-3 h-3" />
-                            </div>
-                          </div>
+                            <li className="flex items-center gap-2">
+                              <span className="text-[#f26522] font-bold">
+                                ✓
+                              </span>
+                              One Person Company (OPC)
+                            </li>
+                          </ul>
                         </div>
 
-                        <div className="sm:col-span-5 relative h-36 sm:h-full min-h-[130px] w-full bg-slate-50/80 rounded-md flex items-center justify-center p-3 order-2">
-                          <Image
-                            src="/images/service-1.png"
-                            alt="Registration"
-                            width={280}
-                            height={220}
-                            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                            priority
-                          />
-                        </div>
-
-                        <div className="flex sm:hidden items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#f26522] transition-colors duration-300 order-3 pt-1">
+                        <div className="hidden sm:inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#f26522] transition-colors duration-300 mt-2">
                           <span>Learn More</span>
-                          <div className="w-5 h-5 rounded-full bg-[#f26522] text-white flex items-center justify-center">
+                          <div className="w-5 h-5 rounded-full bg-[#f26522] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
                             <ArrowRight className="w-3 h-3" />
                           </div>
                         </div>
                       </div>
-                    </Link>
-                  </motion.div>
-                )}
 
-              {(activeTab === "All" ||
-                activeTab === "Finance") && (
-                  <motion.div
-                    layout
-                    className="lg:col-span-3 flex"
-                  >
-                    <Link
-                      href="/services/finance"
-                      className="group w-full relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-4 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
-                    >
-                      <div>
-
-                        <div className="flex items-center gap-2 mb-2">
-                          <IndianRupee className="w-4 h-4 text-[#157327] shrink-0" />
-                          <span className="text-xs font-extrabold text-[#157327]">
-                            02 —
-                          </span>
-                        </div>
-
-                        <h3 className="text-base font-black text-[#0f2a4a] mb-1.5 group-hover:text-[#157327] transition-colors duration-300">
-                          Finance
-                        </h3>
-
-                        <p className="text-xs text-slate-500 leading-relaxed mb-3">
-                          Business loans, government subsidy support, investor
-                          pitching, and financial planning.
-                        </p>
-
-                        <div className="relative h-32 sm:h-28 w-full bg-slate-50/80 rounded-md flex items-center justify-center mb-3 p-2">
-                          <Image
-                            src="/images/service-2.png"
-                            alt="Finance"
-                            width={200}
-                            height={140}
-                            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                          />
-                        </div>
+                      <div className="sm:col-span-5 relative h-36 sm:h-full min-h-[130px] w-full bg-slate-50/80 rounded-md flex items-center justify-center p-3 order-2">
+                        <Image
+                          src="/images/service-1.png"
+                          alt="Registration"
+                          width={280}
+                          height={220}
+                          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                          priority
+                        />
                       </div>
 
-                      <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#157327] transition-colors duration-300 mt-auto">
+                      <div className="flex sm:hidden items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#f26522] transition-colors duration-300 order-3 pt-1">
                         <span>Learn More</span>
-                        <div className="w-5 h-5 rounded-full bg-[#157327] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <div className="w-5 h-5 rounded-full bg-[#f26522] text-white flex items-center justify-center">
                           <ArrowRight className="w-3 h-3" />
                         </div>
                       </div>
-                    </Link>
-                  </motion.div>
-                )}
+                    </div>
+                  </Link>
+                </motion.div>
+              )}
 
-              {(activeTab === "All" ||
-                activeTab === "Certification") && (
-                  <motion.div
-                    layout
-                    className="lg:col-span-3 flex"
+              {(activeTab === "All" || activeTab === "Finance") && (
+                <motion.div layout className="lg:col-span-3 flex">
+                  <Link
+                    href="/services/finance"
+                    className="group w-full relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-4 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
                   >
-                    <Link
-                      href="/services/certification"
-                      className="group w-full relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-4 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
-                    >
-                      <div>
-                        <div className="flex items-center gap-2 mb-2">
-                          <Award className="w-4 h-4 text-[#f26522] shrink-0" />
-                          <span className="text-xs font-extrabold text-[#f26522]">
-                            03 —
-                          </span>
-                        </div>
-
-                        <h3 className="text-base font-black text-[#0f2a4a] mb-1.5 group-hover:text-[#f26522] transition-colors duration-300">
-                          Certification
-                        </h3>
-
-                        <p className="text-xs text-slate-500 leading-relaxed mb-3">
-                          ISO, MSME, FSSAI, Startup India, and trademark
-                          approvals to build market authority.
-                        </p>
-
-                        <div className="relative h-32 sm:h-28 w-full bg-slate-50/80 rounded-md flex items-center justify-center mb-3 p-2">
-                          <Image
-                            src="/images/service-3.png"
-                            alt="Certification"
-                            width={200}
-                            height={140}
-                            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                          />
-                        </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <IndianRupee className="w-4 h-4 text-[#157327] shrink-0" />
+                        <span className="text-xs font-extrabold text-[#157327]">
+                          02 —
+                        </span>
                       </div>
 
-                      <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#f26522] transition-colors duration-300 mt-auto">
-                        <span>Learn More</span>
-                        <div className="w-5 h-5 rounded-full bg-[#f26522] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                          <ArrowRight className="w-3 h-3" />
-                        </div>
+                      <h3 className="text-base font-black text-[#0f2a4a] mb-1.5 group-hover:text-[#157327] transition-colors duration-300">
+                        Finance
+                      </h3>
+
+                      <p className="text-xs text-slate-500 leading-relaxed mb-3">
+                        Business loans, government subsidy support, investor
+                        pitching, and financial planning.
+                      </p>
+
+                      <div className="relative h-32 sm:h-28 w-full bg-slate-50/80 rounded-md flex items-center justify-center mb-3 p-2">
+                        <Image
+                          src="/images/service-2.png"
+                          alt="Finance"
+                          width={200}
+                          height={140}
+                          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        />
                       </div>
-                    </Link>
-                  </motion.div>
-                )}
+                    </div>
+
+                    <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#157327] transition-colors duration-300 mt-auto">
+                      <span>Learn More</span>
+                      <div className="w-5 h-5 rounded-full bg-[#157327] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <ArrowRight className="w-3 h-3" />
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              )}
+
+              {(activeTab === "All" || activeTab === "Certification") && (
+                <motion.div layout className="lg:col-span-3 flex">
+                  <Link
+                    href="/services/certification"
+                    className="group w-full relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-4 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  >
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <Award className="w-4 h-4 text-[#f26522] shrink-0" />
+                        <span className="text-xs font-extrabold text-[#f26522]">
+                          03 —
+                        </span>
+                      </div>
+
+                      <h3 className="text-base font-black text-[#0f2a4a] mb-1.5 group-hover:text-[#f26522] transition-colors duration-300">
+                        Certification
+                      </h3>
+
+                      <p className="text-xs text-slate-500 leading-relaxed mb-3">
+                        ISO, MSME, FSSAI, Startup India, and trademark approvals
+                        to build market authority.
+                      </p>
+
+                      <div className="relative h-32 sm:h-28 w-full bg-slate-50/80 rounded-md flex items-center justify-center mb-3 p-2">
+                        <Image
+                          src="/images/service-3.png"
+                          alt="Certification"
+                          width={200}
+                          height={140}
+                          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#f26522] transition-colors duration-300 mt-auto">
+                      <span>Learn More</span>
+                      <div className="w-5 h-5 rounded-full bg-[#f26522] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <ArrowRight className="w-3 h-3" />
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              )}
             </motion.div>
 
             <motion.div
@@ -356,146 +333,142 @@ export default function ServicesSection() {
               }}
               className="grid grid-cols-1 md:grid-cols-3 gap-4"
             >
-
-              {(activeTab === "All" ||
-                activeTab === "Branding") && (
-                  <motion.div layout className="flex">
-                    <Link
-                      href="/services/branding"
-                      className="group w-full relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-4 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
-                    >
-                      <div className="flex flex-col sm:grid sm:grid-cols-12 gap-3 items-center mb-3">
-                        <div className="w-full sm:col-span-6">
-                          <div className="flex items-center gap-2 mb-1.5">
-                            <Palette className="w-4 h-4 text-[#157327] shrink-0" />
-                            <span className="text-xs font-extrabold text-[#157327]">
-                              04 —
-                            </span>
-                          </div>
-
-                          <h3 className="text-base font-black text-[#0f2a4a] mb-1 group-hover:text-[#157327] transition-colors duration-300">
-                            Branding
-                          </h3>
-
-                          <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed mb-3 sm:mb-0">
-                            Brand positioning, identity design, digital
-                            strategy, and high-impact UI/UX experiences.
-                          </p>
+              {(activeTab === "All" || activeTab === "Branding") && (
+                <motion.div layout className="flex">
+                  <Link
+                    href="/services/branding"
+                    className="group w-full relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-4 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  >
+                    <div className="flex flex-col sm:grid sm:grid-cols-12 gap-3 items-center mb-3">
+                      <div className="w-full sm:col-span-6">
+                        <div className="flex items-center gap-2 mb-1.5">
+                          <Palette className="w-4 h-4 text-[#157327] shrink-0" />
+                          <span className="text-xs font-extrabold text-[#157327]">
+                            04 —
+                          </span>
                         </div>
 
-                        <div className="w-full sm:col-span-6 h-32 sm:h-28 bg-slate-50/80 rounded-md flex items-center justify-center p-2">
-                          <Image
-                            src="/images/service-4.png"
-                            alt="Branding"
-                            width={160}
-                            height={120}
-                            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                          />
-                        </div>
+                        <h3 className="text-base font-black text-[#0f2a4a] mb-1 group-hover:text-[#157327] transition-colors duration-300">
+                          Branding
+                        </h3>
+
+                        <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed mb-3 sm:mb-0">
+                          Brand positioning, identity design, digital strategy,
+                          and high-impact UI/UX experiences.
+                        </p>
                       </div>
 
-                      <div className="mt-auto inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#157327] transition-colors duration-300">
-                        <span>Learn More</span>
-                        <div className="w-5 h-5 rounded-full bg-[#157327] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                          <ArrowRight className="w-2.5 h-2.5" />
-                        </div>
+                      <div className="w-full sm:col-span-6 h-32 sm:h-28 bg-slate-50/80 rounded-md flex items-center justify-center p-2">
+                        <Image
+                          src="/images/service-4.png"
+                          alt="Branding"
+                          width={160}
+                          height={120}
+                          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        />
                       </div>
-                    </Link>
-                  </motion.div>
-                )}
+                    </div>
 
-              {(activeTab === "All" ||
-                activeTab === "Operations") && (
-                  <motion.div layout className="flex">
-                    <Link
-                      href="/services/operations"
-                      className="group w-full relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-4 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
-                    >
-                      <div className="flex flex-col sm:grid sm:grid-cols-12 gap-3 items-center mb-3">
-                        <div className="w-full sm:col-span-6">
-                          <div className="flex items-center gap-2 mb-1.5">
-                            <Settings className="w-4 h-4 text-[#f26522] shrink-0" />
-                            <span className="text-xs font-extrabold text-[#f26522]">
-                              05 —
-                            </span>
-                          </div>
+                    <div className="mt-auto inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#157327] transition-colors duration-300">
+                      <span>Learn More</span>
+                      <div className="w-5 h-5 rounded-full bg-[#157327] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <ArrowRight className="w-2.5 h-2.5" />
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              )}
 
-                          <h3 className="text-base font-black text-[#0f2a4a] mb-1 group-hover:text-[#f26522] transition-colors duration-300">
-                            Operations
-                          </h3>
-
-                          <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed mb-3 sm:mb-0">
-                            Streamline operations, workflow automation, team
-                            structure, and business consulting.
-                          </p>
+              {(activeTab === "All" || activeTab === "Operations") && (
+                <motion.div layout className="flex">
+                  <Link
+                    href="/services/operations"
+                    className="group w-full relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-4 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  >
+                    <div className="flex flex-col sm:grid sm:grid-cols-12 gap-3 items-center mb-3">
+                      <div className="w-full sm:col-span-6">
+                        <div className="flex items-center gap-2 mb-1.5">
+                          <Settings className="w-4 h-4 text-[#f26522] shrink-0" />
+                          <span className="text-xs font-extrabold text-[#f26522]">
+                            05 —
+                          </span>
                         </div>
 
-                        <div className="w-full sm:col-span-6 h-32 sm:h-28 bg-slate-50/80 rounded-md flex items-center justify-center p-2">
-                          <Image
-                            src="/images/service-5.png"
-                            alt="Operations"
-                            width={160}
-                            height={120}
-                            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                          />
-                        </div>
+                        <h3 className="text-base font-black text-[#0f2a4a] mb-1 group-hover:text-[#f26522] transition-colors duration-300">
+                          Operations
+                        </h3>
+
+                        <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed mb-3 sm:mb-0">
+                          Streamline operations, workflow automation, team
+                          structure, and business consulting.
+                        </p>
                       </div>
 
-                      <div className="mt-auto inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#f26522] transition-colors duration-300">
-                        <span>Learn More</span>
-                        <div className="w-5 h-5 rounded-full bg-[#f26522] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                          <ArrowRight className="w-2.5 h-2.5" />
-                        </div>
+                      <div className="w-full sm:col-span-6 h-32 sm:h-28 bg-slate-50/80 rounded-md flex items-center justify-center p-2">
+                        <Image
+                          src="/images/service-5.png"
+                          alt="Operations"
+                          width={160}
+                          height={120}
+                          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        />
                       </div>
-                    </Link>
-                  </motion.div>
-                )}
+                    </div>
 
-              {(activeTab === "All" ||
-                activeTab === "Legal & CA") && (
-                  <motion.div layout className="flex">
-                    <Link
-                      href="/services/legal-ca"
-                      className="group w-full relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-4 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
-                    >
-                      <div className="flex flex-col sm:grid sm:grid-cols-12 gap-3 items-center mb-3">
-                        <div className="w-full sm:col-span-6">
-                          <div className="flex items-center gap-2 mb-1.5">
-                            <Scale className="w-4 h-4 text-[#157327] shrink-0" />
-                            <span className="text-xs font-extrabold text-[#157327]">
-                              06 —
-                            </span>
-                          </div>
-
-                          <h3 className="text-base font-black text-[#0f2a4a] mb-1 group-hover:text-[#157327] transition-colors duration-300">
-                            Legal & CA
-                          </h3>
-
-                          <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed mb-3 sm:mb-0">
-                            GST filings, income tax returns, ROC filings,
-                            legal drafting, and audit compliance.
-                          </p>
-                        </div>
-
-                        <div className="w-full sm:col-span-6 h-32 sm:h-28 bg-slate-50/80 rounded-md flex items-center justify-center p-2">
-                          <Image
-                            src="/images/service-6.png"
-                            alt="Legal & CA"
-                            width={160}
-                            height={120}
-                            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                          />
-                        </div>
+                    <div className="mt-auto inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#f26522] transition-colors duration-300">
+                      <span>Learn More</span>
+                      <div className="w-5 h-5 rounded-full bg-[#f26522] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <ArrowRight className="w-2.5 h-2.5" />
                       </div>
-                      <div className="mt-auto inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#157327] transition-colors duration-300">
-                        <span>Learn More</span>
-                        <div className="w-5 h-5 rounded-full bg-[#157327] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
-                          <ArrowRight className="w-2.5 h-2.5" />
+                    </div>
+                  </Link>
+                </motion.div>
+              )}
+
+              {(activeTab === "All" || activeTab === "Legal & CA") && (
+                <motion.div layout className="flex">
+                  <Link
+                    href="/services/legal-ca"
+                    className="group w-full relative flex flex-col justify-between rounded-md bg-white border border-slate-100 p-4 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  >
+                    <div className="flex flex-col sm:grid sm:grid-cols-12 gap-3 items-center mb-3">
+                      <div className="w-full sm:col-span-6">
+                        <div className="flex items-center gap-2 mb-1.5">
+                          <Scale className="w-4 h-4 text-[#157327] shrink-0" />
+                          <span className="text-xs font-extrabold text-[#157327]">
+                            06 —
+                          </span>
                         </div>
+
+                        <h3 className="text-base font-black text-[#0f2a4a] mb-1 group-hover:text-[#157327] transition-colors duration-300">
+                          Legal & CA
+                        </h3>
+
+                        <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed mb-3 sm:mb-0">
+                          GST filings, income tax returns, ROC filings, legal
+                          drafting, and audit compliance.
+                        </p>
                       </div>
-                    </Link>
-                  </motion.div>
-                )}
+
+                      <div className="w-full sm:col-span-6 h-32 sm:h-28 bg-slate-50/80 rounded-md flex items-center justify-center p-2">
+                        <Image
+                          src="/images/service-6.png"
+                          alt="Legal & CA"
+                          width={160}
+                          height={120}
+                          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                    </div>
+                    <div className="mt-auto inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#157327] transition-colors duration-300">
+                      <span>Learn More</span>
+                      <div className="w-5 h-5 rounded-full bg-[#157327] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <ArrowRight className="w-2.5 h-2.5" />
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              )}
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -534,7 +507,6 @@ export default function ServicesSection() {
             </Link>
 
             <div className="hidden lg:flex items-center gap-2 shrink-0">
-
               <div className="flex -space-x-2">
                 {avatars.map((avatar, idx) => (
                   <div
@@ -553,9 +525,7 @@ export default function ServicesSection() {
               </div>
 
               <div className="text-left">
-                <p className="text-xs font-black text-[#0f2a4a]">
-                  1000+
-                </p>
+                <p className="text-xs font-black text-[#0f2a4a]">1000+</p>
                 <p className="text-[10px] text-slate-400 font-medium">
                   Businesses Trust Us
                 </p>

@@ -87,7 +87,7 @@
 //   const current = steps[activeStep] || steps[0];
 
 //   return (
-//     <section 
+//     <section
 //       onMouseLeave={() => setActiveStep(0)} // Resets back to Phase 01 when cursor leaves the component area
 //       className="relative w-full bg-[#f8fafc] py-14 sm:py-20 font-sans select-none overflow-hidden text-[#0f172a]"
 //     >
@@ -390,7 +390,8 @@ export default function FullProcessSection() {
             Simple Process. Powerful Results.
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-            An engineered four-stage execution rail built to navigate regulatory complexity with absolute clarity.
+            An engineered four-stage execution rail built to navigate regulatory
+            complexity with absolute clarity.
           </p>
         </div>
 
@@ -405,20 +406,26 @@ export default function FullProcessSection() {
                   key={item.id}
                   onClick={() => setActiveStep(idx)}
                   onMouseEnter={() => setActiveStep(idx)}
-                  className={`group relative text-left p-4 rounded-md transition-all duration-300 cursor-pointer ${isActive
+                  className={`group relative text-left p-4 rounded-md transition-all duration-300 cursor-pointer ${
+                    isActive
                       ? "bg-white border-b-2 border-[#0f2a4a] shadow-xl shadow-slate-200/50 translate-y-[-2px]"
                       : "bg-white/70 border border-slate-200/80 hover:bg-white hover:border-slate-300"
-                    }`}
+                  }`}
                 >
                   <div className="flex items-center justify-between mb-3">
                     <span
-                      className={`text-xs font-black px-2.5 py-1 rounded-md transition-all duration-300 ${isActive ? "text-white" : "bg-slate-100 text-slate-600"
-                        }`}
-                      style={{ backgroundColor: isActive ? item.accent : undefined }}
+                      className={`text-xs font-black px-2.5 py-1 rounded-md transition-all duration-300 ${
+                        isActive ? "text-white" : "bg-slate-100 text-slate-600"
+                      }`}
+                      style={{
+                        backgroundColor: isActive ? item.accent : undefined,
+                      }}
                     >
                       {item.id}
                     </span>
-                    <Icon className={`w-4 h-4 ${isActive ? "text-[#0f2a4a]" : "text-slate-400"}`} />
+                    <Icon
+                      className={`w-4 h-4 ${isActive ? "text-[#0f2a4a]" : "text-slate-400"}`}
+                    />
                   </div>
                   <div className="space-y-0.5">
                     <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block">
@@ -438,7 +445,10 @@ export default function FullProcessSection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             <div className="lg:col-span-7 space-y-5">
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full animate-pulse" style={{ backgroundColor: current.accent }} />
+                <span
+                  className="w-2.5 h-2.5 rounded-full animate-pulse"
+                  style={{ backgroundColor: current.accent }}
+                />
                 <span className="text-xs font-black uppercase tracking-wider text-[#0f2a4a]">
                   {current.badge} • {current.subtitle}
                 </span>
@@ -467,15 +477,25 @@ export default function FullProcessSection() {
                 </div>
                 <div className="space-y-2.5">
                   {current.deliverables.map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-3 p-3 rounded-md bg-white border border-slate-200/60 shadow-2xs">
-                      <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: current.accent }} />
-                      <span className="text-xs font-bold text-[#0f2a4a]">{item}</span>
+                    <div
+                      key={idx}
+                      className="flex items-center gap-3 p-3 rounded-md bg-white border border-slate-200/60 shadow-2xs"
+                    >
+                      <CheckCircle2
+                        className="w-4 h-4 shrink-0"
+                        style={{ color: current.accent }}
+                      />
+                      <span className="text-xs font-bold text-[#0f2a4a]">
+                        {item}
+                      </span>
                     </div>
                   ))}
                 </div>
                 <div className="pt-2 flex items-center justify-between text-[11px] font-bold text-slate-400">
                   <span>Methodology Execution</span>
-                  <span className="text-[#0f2a4a] font-black">Step {current.id} of 04</span>
+                  <span className="text-[#0f2a4a] font-black">
+                    Step {current.id} of 04
+                  </span>
                 </div>
               </div>
             </div>

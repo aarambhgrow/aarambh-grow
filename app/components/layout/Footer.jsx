@@ -3,13 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Building2,
-  ArrowUpRight,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Building2, ArrowUpRight } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -107,7 +101,7 @@ export default function Footer() {
         backgroundImage: "url('/images/footer-bg.png')",
         backgroundPosition: "top center",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "100% 370px"
+        backgroundSize: "100% 370px",
       }}
     >
       {/* Main Corporate Body */}
@@ -120,7 +114,10 @@ export default function Footer() {
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* Brand Profile (3 Cols) */}
-          <motion.div variants={itemVariants} className="lg:col-span-3 space-y-4">
+          <motion.div
+            variants={itemVariants}
+            className="lg:col-span-3 space-y-4"
+          >
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -135,7 +132,10 @@ export default function Footer() {
               />
             </motion.div>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Aarambh Grow empowers entrepreneurs, startups, MSMEs, and growing businesses with expert consultancy, strategic solutions, and end-to-end support to build, strengthen, and scale their businesses sustainably.
+              Aarambh Grow empowers entrepreneurs, startups, MSMEs, and growing
+              businesses with expert consultancy, strategic solutions, and
+              end-to-end support to build, strengthen, and scale their
+              businesses sustainably.
             </p>
           </motion.div>
 
@@ -160,7 +160,9 @@ export default function Footer() {
                       className="group flex items-center gap-2 px-2.5 py-1.5 rounded-r-lg text-slate-400 hover:text-white bg-transparent hover:bg-gradient-to-r hover:from-[#F97316]/20 hover:to-transparent transition-all duration-200 border-l-2 border-transparent hover:border-[#F97316] whitespace-nowrap"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-slate-600 group-hover:bg-[#F97316] group-hover:scale-125 transition-all duration-200 shrink-0" />
-                      <span className="font-medium tracking-wide">{link.label}</span>
+                      <span className="font-medium tracking-wide">
+                        {link.label}
+                      </span>
                     </a>
                   </motion.li>
                 ))}
@@ -183,7 +185,9 @@ export default function Footer() {
                       className="group flex items-center gap-2 px-2.5 py-1.5 rounded-r-lg text-slate-400 hover:text-white bg-transparent hover:bg-gradient-to-r hover:from-[#1F8A4D]/20 hover:to-transparent transition-all duration-200 border-l-2 border-transparent hover:border-[#1F8A4D] whitespace-nowrap"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-slate-600 group-hover:bg-[#1F8A4D] group-hover:scale-125 transition-all duration-200 shrink-0" />
-                      <span className="font-medium tracking-wide">{link.label}</span>
+                      <span className="font-medium tracking-wide">
+                        {link.label}
+                      </span>
                     </a>
                   </motion.li>
                 ))}
@@ -197,7 +201,8 @@ export default function Footer() {
             className="lg:col-span-4 lg:border-l lg:border-slate-800/80 lg:pl-6"
           >
             <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-3 flex items-center gap-2">
-              <Building2 size={14} className="text-[#F97316]" /> Registered Office
+              <Building2 size={14} className="text-[#F97316]" /> Registered
+              Office
             </h4>
 
             <motion.div
@@ -205,7 +210,8 @@ export default function Footer() {
               className="bg-white/5 border border-white/10 rounded-md p-4 space-y-3.5 hover:border-white/20 transition-all duration-300 hover:shadow-lg"
             >
               <p className="text-xs text-slate-300 leading-relaxed">
-                813, Silver Rediance-4, Gota, Jagatpur Road, Gota SG Highway, Gujarat 382470
+                813, Silver Rediance-4, Gota, Jagatpur Road, Gota SG Highway,
+                Gujarat 382470
               </p>
 
               <motion.a
@@ -320,10 +326,23 @@ export default function Footer() {
       {/* Copyright Line */}
       <div className="border-t border-slate-800/80 bg-[#051120] py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-3 text-xs text-slate-500 text-center sm:text-left">
-          <p>© {currentYear} Aarambh Grow Group of Companies. All rights reserved.</p>
+          <p>
+            © {currentYear} Aarambh Grow Group of Companies. All rights
+            reserved.
+          </p>
           <div className="flex justify-center gap-5">
-            <a href="#" className="hover:text-slate-300 transition-colors duration-200 hover:underline underline-offset-4">Privacy Policy</a>
-            <a href="#" className="hover:text-slate-300 transition-colors duration-200 hover:underline underline-offset-4">Terms of Service</a>
+            <a
+              href="#"
+              className="hover:text-slate-300 transition-colors duration-200 hover:underline underline-offset-4"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              className="hover:text-slate-300 transition-colors duration-200 hover:underline underline-offset-4"
+            >
+              Terms of Service
+            </a>
           </div>
         </div>
       </div>

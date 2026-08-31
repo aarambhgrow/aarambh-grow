@@ -2,7 +2,15 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, ShieldCheck, Target, FileText, Award, ChevronDown, BadgeCheck } from "lucide-react";
+import {
+  CheckCircle2,
+  ShieldCheck,
+  Target,
+  FileText,
+  Award,
+  ChevronDown,
+  BadgeCheck,
+} from "lucide-react";
 
 import { certificationData } from "../../data/certification";
 
@@ -15,9 +23,13 @@ export default function Certification() {
     |--------------------------------------------------------------------------
     */
 
-  const services = Array.isArray(certificationData?.services) ? certificationData.services : [];
+  const services = Array.isArray(certificationData?.services)
+    ? certificationData.services
+    : [];
 
-  const categories = Array.isArray(certificationData?.categories) ? certificationData.categories : [];
+  const categories = Array.isArray(certificationData?.categories)
+    ? certificationData.categories
+    : [];
 
   /*
     |--------------------------------------------------------------------------
@@ -61,7 +73,11 @@ export default function Certification() {
     |
     */
 
-  const categoryServiceNames = new Set(categories.flatMap((category) => (Array.isArray(category?.services) ? category.services : [])));
+  const categoryServiceNames = new Set(
+    categories.flatMap((category) =>
+      Array.isArray(category?.services) ? category.services : [],
+    ),
+  );
 
   /*
     |--------------------------------------------------------------------------
@@ -91,7 +107,9 @@ export default function Certification() {
     |--------------------------------------------------------------------------
     */
 
-  const [openCategory, setOpenCategory] = useState(categories?.[0]?.title || "");
+  const [openCategory, setOpenCategory] = useState(
+    categories?.[0]?.title || "",
+  );
 
   /*
     |--------------------------------------------------------------------------
@@ -104,10 +122,13 @@ export default function Certification() {
       <section className="w-full bg-[#F8FAFC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-md border border-red-200 bg-red-50 p-6">
-            <h2 className="text-lg font-bold text-red-700">Certification data not found</h2>
+            <h2 className="text-lg font-bold text-red-700">
+              Certification data not found
+            </h2>
 
             <p className="mt-2 text-sm text-red-600">
-              Please check your <strong>data/certification.js</strong> file and make sure the <strong>services</strong> array contains your
+              Please check your <strong>data/certification.js</strong> file and
+              make sure the <strong>services</strong> array contains your
               certification services.
             </p>
           </div>
@@ -383,7 +404,9 @@ export default function Certification() {
               {categories.map((category) => {
                 const isOpen = openCategory === category.title;
 
-                const categoryServices = Array.isArray(category?.services) ? category.services : [];
+                const categoryServices = Array.isArray(category?.services)
+                  ? category.services
+                  : [];
 
                 return (
                   <div
@@ -399,7 +422,9 @@ export default function Certification() {
 
                     <button
                       type="button"
-                      onClick={() => setOpenCategory(isOpen ? "" : category.title)}
+                      onClick={() =>
+                        setOpenCategory(isOpen ? "" : category.title)
+                      }
                       className="
                                                 w-full
                                                 flex
@@ -475,7 +500,12 @@ export default function Certification() {
                               <button
                                 type="button"
                                 key={service.id || serviceIndex}
-                                onClick={() => handleServiceClick(serviceIndex, category.title)}
+                                onClick={() =>
+                                  handleServiceClick(
+                                    serviceIndex,
+                                    category.title,
+                                  )
+                                }
                                 className={`
                                                                         w-full
                                                                         text-left
@@ -494,7 +524,9 @@ export default function Certification() {
                                                                         }
                                                                     `}
                               >
-                                {service.shortTitle || service.title || service.name}
+                                {service.shortTitle ||
+                                  service.title ||
+                                  service.name}
                               </button>
                             );
                           })}
@@ -521,7 +553,9 @@ export default function Certification() {
                                 "
               >
                 {standaloneServices.map((service) => {
-                  const serviceIndex = services.findIndex((item) => item.id === service.id);
+                  const serviceIndex = services.findIndex(
+                    (item) => item.id === service.id,
+                  );
 
                   const isActive = activeTab === serviceIndex;
 
@@ -1097,7 +1131,8 @@ export default function Certification() {
                                                 text-[#03254C]
                                             "
                     >
-                      Why Businesses Choose {currentService.name || currentService.title}
+                      Why Businesses Choose{" "}
+                      {currentService.name || currentService.title}
                     </h3>
                   </div>
 
@@ -1110,7 +1145,8 @@ export default function Certification() {
                                         "
                   >
                     {(currentService.whyChoose || []).map((item, index) => {
-                      const title = typeof item === "string" ? item : item?.title;
+                      const title =
+                        typeof item === "string" ? item : item?.title;
 
                       const desc = typeof item === "string" ? "" : item?.desc;
 
@@ -1269,7 +1305,9 @@ export default function Certification() {
                                                         text-white
                                                     "
                         >
-                          {currentService.category || currentService.name || currentService.title}
+                          {currentService.category ||
+                            currentService.name ||
+                            currentService.title}
                         </h3>
                       </div>
                     </div>

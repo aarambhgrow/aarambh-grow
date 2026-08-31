@@ -132,7 +132,8 @@ export default function ProcessSection() {
             Simple Process & Powerful Results
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal max-w-xl mx-auto">
-            An engineered four-stage execution rail built to navigate regulatory complexity with absolute clarity.
+            An engineered four-stage execution rail built to navigate regulatory
+            complexity with absolute clarity.
           </p>
         </motion.div>
 
@@ -160,7 +161,11 @@ export default function ProcessSection() {
                   key={item.id}
                   variants={{
                     hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 0.4 },
+                    },
                   }}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.97 }}
@@ -170,17 +175,19 @@ export default function ProcessSection() {
                       setActiveStep(idx);
                     }
                   }}
-                  className={`group relative text-left p-3.5 sm:p-4 rounded-md transition-all duration-300 cursor-pointer ${isActive
-                    ? "bg-white border-b-2 border-[#0f2a4a] shadow-lg shadow-slate-200/60 ring-1 ring-slate-200/50"
-                    : "bg-white/70 border border-slate-200/80 hover:bg-white hover:border-slate-300"
-                    }`}
+                  className={`group relative text-left p-3.5 sm:p-4 rounded-md transition-all duration-300 cursor-pointer ${
+                    isActive
+                      ? "bg-white border-b-2 border-[#0f2a4a] shadow-lg shadow-slate-200/60 ring-1 ring-slate-200/50"
+                      : "bg-white/70 border border-slate-200/80 hover:bg-white hover:border-slate-300"
+                  }`}
                 >
                   <div className="flex items-center justify-between mb-2.5 sm:mb-3">
                     <span
-                      className={`text-[11px] sm:text-xs font-black px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-md transition-colors duration-300 ${isActive
-                        ? "text-white shadow-xs"
-                        : "bg-slate-100 text-slate-600 group-hover:bg-slate-200"
-                        }`}
+                      className={`text-[11px] sm:text-xs font-black px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-md transition-colors duration-300 ${
+                        isActive
+                          ? "text-white shadow-xs"
+                          : "bg-slate-100 text-slate-600 group-hover:bg-slate-200"
+                      }`}
                       style={{
                         backgroundColor: isActive ? item.accent : undefined,
                       }}
@@ -189,8 +196,11 @@ export default function ProcessSection() {
                     </span>
 
                     <Icon
-                      className={`w-4 h-4 transition-colors ${isActive ? "text-[#0f2a4a]" : "text-slate-400 group-hover:text-slate-600"
-                        }`}
+                      className={`w-4 h-4 transition-colors ${
+                        isActive
+                          ? "text-[#0f2a4a]"
+                          : "text-slate-400 group-hover:text-slate-600"
+                      }`}
                     />
                   </div>
 
@@ -210,7 +220,6 @@ export default function ProcessSection() {
 
         {/* MAIN FEATURE DISPLAY PANEL */}
         <div className="bg-white border border-slate-200/80 rounded-md p-5 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden">
-
           <AnimatePresence mode="wait">
             <motion.div
               key={activeStep}

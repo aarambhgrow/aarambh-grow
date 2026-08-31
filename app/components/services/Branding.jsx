@@ -22,39 +22,30 @@ import { brandingData } from "../../data/branding";
 
 export default function Branding() {
   const [activeTab, setActiveTab] = useState(0);
-
-  const services = Array.isArray(brandingData?.services) ? brandingData.services : [];
-
+  const services = Array.isArray(brandingData?.services)
+    ? brandingData.services
+    : [];
   const currentService = services[activeTab] || services[0];
-
-  /*
-    |--------------------------------------------------------------------------
-    | SAFETY CHECK
-    |--------------------------------------------------------------------------
-    */
 
   if (!brandingData || !services.length || !currentService) {
     return (
       <section className="w-full bg-[#F8FAFC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-md border border-red-200 bg-red-50 p-6">
-            <h2 className="text-lg font-bold text-red-700">Branding data not found</h2>
+            <h2 className="text-lg font-bold text-red-700">
+              Branding data not found
+            </h2>
 
             <p className="mt-2 text-sm text-red-600">
-              Please check your <strong>data/branding.js</strong> file and make sure the <strong>services</strong> array contains your
-              branding services.
+              Please check your <strong>data/branding.js</strong> file and make
+              sure the <strong>services</strong> array contains your branding
+              services.
             </p>
           </div>
         </div>
       </section>
     );
   }
-
-  /*
-    |--------------------------------------------------------------------------
-    | SERVICE CLICK
-    |--------------------------------------------------------------------------
-    */
 
   const handleServiceClick = (index) => {
     if (index < 0 || index >= services.length) return;
@@ -70,12 +61,6 @@ export default function Branding() {
       }, 100);
     }
   };
-
-  /*
-    |--------------------------------------------------------------------------
-    | ANIMATIONS
-    |--------------------------------------------------------------------------
-    */
 
   const containerVariants = {
     hidden: {},
@@ -119,25 +104,20 @@ export default function Branding() {
     },
   };
 
-  /*
-    |--------------------------------------------------------------------------
-    | SERVICE ICON
-    |--------------------------------------------------------------------------
-    */
-
   const getServiceIcon = (service) => {
     const id = service?.id?.toLowerCase() || "";
-    const title = service?.title?.toLowerCase() || service?.name?.toLowerCase() || "";
-
+    const title =
+      service?.title?.toLowerCase() || service?.name?.toLowerCase() || "";
     const value = `${id} ${title}`;
 
     if (value.includes("seo")) return Search;
     if (value.includes("website")) return Globe;
     if (value.includes("social")) return MessageCircle;
-    if (value.includes("advertising") || value.includes("ads")) return Megaphone;
+    if (value.includes("advertising") || value.includes("ads"))
+      return Megaphone;
     if (value.includes("branding")) return Palette;
     if (value.includes("video")) return Video;
-    if (value.includes("aarambhreach")) return MessageCircle;
+    if (value.includes(".*rambhreach")) return MessageCircle;
 
     return WalletCards;
   };
@@ -145,22 +125,9 @@ export default function Branding() {
   return (
     <section
       id="branding"
-      className="
-                relative
-                w-full
-                bg-[#F8FAFC]
-                text-[#03254C]
-                font-sans
-                py-10
-                sm:py-12
-                lg:py-16
-            "
+      className="relative w-full bg-[#F8FAFC] text-[#03254C] font-sans py-10 sm:py-12 lg:py-16"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* =====================================================
-                    INTRO
-                ===================================================== */}
-
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -173,8 +140,7 @@ export default function Branding() {
         >
           <motion.div variants={fadeUp} className="mb-3 sm:mb-4">
             <span
-              className="
-                                inline-flex
+              className="                                inline-flex
                                 items-center
                                 gap-2
                                 px-3
@@ -388,7 +354,9 @@ export default function Branding() {
                                             `}
                     />
 
-                    <span className="leading-[1.35]">{service.shortTitle || service.title || service.name}</span>
+                    <span className="leading-[1.35]">
+                      {service.shortTitle || service.title || service.name}
+                    </span>
                   </button>
                 );
               })}
@@ -768,12 +736,13 @@ export default function Branding() {
                                     SUPPORTED PLATFORMS
                                 ================================================= */}
 
-                {Array.isArray(currentService.supportedPlatforms) && currentService.supportedPlatforms.length > 0 && (
-                  <motion.div
-                    variants={cardVariants}
-                    initial="hidden"
-                    animate="visible"
-                    className="
+                {Array.isArray(currentService.supportedPlatforms) &&
+                  currentService.supportedPlatforms.length > 0 && (
+                    <motion.div
+                      variants={cardVariants}
+                      initial="hidden"
+                      animate="visible"
+                      className="
                                                 bg-white
                                                 border
                                                 border-[#E2E8F0]
@@ -782,9 +751,9 @@ export default function Branding() {
                                                 sm:p-6
                                                 shadow-[0_2px_10px_rgba(15,23,42,0.025)]
                                             "
-                  >
-                    <div
-                      className="
+                    >
+                      <div
+                        className="
                                                     flex
                                                     items-center
                                                     gap-3
@@ -793,9 +762,9 @@ export default function Branding() {
                                                     border-b
                                                     border-[#E2E8F0]
                                                 "
-                    >
-                      <div
-                        className="
+                      >
+                        <div
+                          className="
                                                         w-8
                                                         h-8
                                                         rounded-md
@@ -804,18 +773,18 @@ export default function Branding() {
                                                         items-center
                                                         justify-center
                                                     "
-                      >
-                        <Globe
-                          className="
+                        >
+                          <Globe
+                            className="
                                                             w-4
                                                             h-4
                                                             text-[#03254C]
                                                         "
-                        />
-                      </div>
+                          />
+                        </div>
 
-                      <h3
-                        className="
+                        <h3
+                          className="
                                                         text-[10px]
                                                         sm:text-[11px]
                                                         font-bold
@@ -823,16 +792,17 @@ export default function Branding() {
                                                         tracking-[0.1em]
                                                         text-[#03254C]
                                                     "
-                      >
-                        Supported Platforms
-                      </h3>
-                    </div>
+                        >
+                          Supported Platforms
+                        </h3>
+                      </div>
 
-                    <div className="flex flex-wrap gap-2">
-                      {currentService.supportedPlatforms.map((platform, index) => (
-                        <span
-                          key={`${platform}-${index}`}
-                          className="
+                      <div className="flex flex-wrap gap-2">
+                        {currentService.supportedPlatforms.map(
+                          (platform, index) => (
+                            <span
+                              key={`${platform}-${index}`}
+                              className="
                                                                 px-3
                                                                 py-1.5
                                                                 rounded-md
@@ -844,17 +814,14 @@ export default function Branding() {
                                                                 font-semibold
                                                                 text-[#03254C]
                                                             "
-                        >
-                          {platform}
-                        </span>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-
-                {/* =================================================
-                                    WHAT AARAMBHGROW DOES
-                                ================================================= */}
+                            >
+                              {platform}
+                            </span>
+                          ),
+                        )}
+                      </div>
+                    </motion.div>
+                  )}
 
                 <motion.div
                   variants={cardVariants}
@@ -911,7 +878,7 @@ export default function Branding() {
                                                 text-[#03254C]
                                             "
                     >
-                      What Aarambh Grow Does
+                      What .*rambh Grow Does
                     </h3>
                   </div>
 
@@ -974,10 +941,6 @@ export default function Branding() {
                   </div>
                 </motion.div>
 
-                {/* =================================================
-                                    AARAMBHREACH PLANS
-                                ================================================= */}
-
                 {currentService.plans?.length > 0 && (
                   <motion.div
                     variants={cardVariants}
@@ -1034,7 +997,7 @@ export default function Branding() {
                                                     text-[#03254C]
                                                 "
                       >
-                        AarambhReach Plans
+                        .*rambhReach Plans
                       </h3>
                     </div>
 
@@ -1148,10 +1111,6 @@ export default function Branding() {
                   </motion.div>
                 )}
 
-                {/* =================================================
-                                    PLATFORM FEATURES
-                                ================================================= */}
-
                 {currentService.features?.length > 0 && (
                   <motion.div
                     variants={cardVariants}
@@ -1261,10 +1220,6 @@ export default function Branding() {
                   </motion.div>
                 )}
 
-                {/* =================================================
-                                    TRIAL
-                                ================================================= */}
-
                 {currentService.trial && (
                   <motion.div
                     variants={cardVariants}
@@ -1324,10 +1279,6 @@ export default function Branding() {
                     </div>
                   </motion.div>
                 )}
-
-                {/* =================================================
-                                    DELIVERABLES
-                                ================================================= */}
 
                 {currentService.deliverables?.length > 0 && (
                   <motion.div
@@ -1439,10 +1390,6 @@ export default function Branding() {
                   </motion.div>
                 )}
 
-                {/* =================================================
-                                    WHY BUSINESSES CHOOSE
-                                ================================================= */}
-
                 <motion.div
                   variants={cardVariants}
                   initial="hidden"
@@ -1498,7 +1445,8 @@ export default function Branding() {
                                                 text-[#03254C]
                                             "
                     >
-                      Why Businesses Choose {currentService.name || currentService.title}
+                      Why Businesses Choose{" "}
+                      {currentService.name || currentService.title}
                     </h3>
                   </div>
 
@@ -1511,7 +1459,8 @@ export default function Branding() {
                                         "
                   >
                     {(currentService.whyChoose || []).map((item, index) => {
-                      const title = typeof item === "string" ? item : item?.title;
+                      const title =
+                        typeof item === "string" ? item : item?.title;
 
                       const desc = typeof item === "string" ? "" : item?.desc;
 
@@ -1582,10 +1531,6 @@ export default function Branding() {
                   </div>
                 </motion.div>
 
-                {/* =================================================
-                                    SERVICE CATEGORY FOOTER
-                                ================================================= */}
-
                 <motion.div
                   variants={cardVariants}
                   initial="hidden"
@@ -1631,48 +1576,16 @@ export default function Branding() {
                                                 gap-3
                                             "
                     >
-                      <div
-                        className="
-                                                    w-9
-                                                    h-9
-                                                    rounded-md
-                                                    bg-white/10
-                                                    flex
-                                                    items-center
-                                                    justify-center
-                                                "
-                      >
-                        <Palette
-                          className="
-                                                        w-4
-                                                        h-4
-                                                        text-white
-                                                    "
-                        />
+                      <div className="w-9 h-9 rounded-md bg-white/10 flex items-center justify-center">
+                        <Palette className="w-4 h-4 text-white " />
                       </div>
 
                       <div>
-                        <p
-                          className="
-                                                        text-[9px]
-                                                        uppercase
-                                                        tracking-[0.12em]
-                                                        font-semibold
-                                                        text-white/60
-                                                    "
-                        >
+                        <p className="text-[9px] uppercase tracking-[0.12em] font-semibold text-white/60">
                           Service
                         </p>
 
-                        <h3
-                          className="
-                                                        mt-0.5
-                                                        text-sm
-                                                        sm:text-base
-                                                        font-bold
-                                                        text-white
-                                                    "
-                        >
+                        <h3 className="mt-0.5 text-sm sm:text-base font-bold text-white">
                           {currentService.name || currentService.title}
                         </h3>
                       </div>

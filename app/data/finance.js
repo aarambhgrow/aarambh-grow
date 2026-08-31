@@ -33,7 +33,11 @@ export const financeData = {
     },
     {
       title: "Equity",
-      services: ["AI First Fund (Telangana)", "Sustainability Sprint", "Startup Support Scheme (SSS)"],
+      services: [
+        "AI First Fund (Telangana)",
+        "Sustainability Sprint",
+        "Startup Support Scheme (SSS)",
+      ],
     },
   ],
 
@@ -168,7 +172,12 @@ export const financeData = {
         },
       ],
 
-      suitedFor: ["AI & ML Startups", "SaaS & Automation Companies", "Deep-Tech Ventures", "Data-Driven Businesses"],
+      suitedFor: [
+        "AI & ML Startups",
+        "SaaS & Automation Companies",
+        "Deep-Tech Ventures",
+        "Data-Driven Businesses",
+      ],
 
       whatWeDo: [
         {
@@ -255,7 +264,12 @@ export const financeData = {
         },
       ],
 
-      suitedFor: ["Growth-Stage Startups", "Market-Ready MSMEs", "Expanding Businesses", "Revenue-Generating Companies"],
+      suitedFor: [
+        "Growth-Stage Startups",
+        "Market-Ready MSMEs",
+        "Expanding Businesses",
+        "Revenue-Generating Companies",
+      ],
 
       whatWeDo: [
         {
@@ -342,7 +356,12 @@ export const financeData = {
         },
       ],
 
-      suitedFor: ["First-Time Founders", "Student Entrepreneurs", "Innovation-Focused Startups", "Pre-Revenue Ventures"],
+      suitedFor: [
+        "First-Time Founders",
+        "Student Entrepreneurs",
+        "Innovation-Focused Startups",
+        "Pre-Revenue Ventures",
+      ],
 
       whatWeDo: [
         {
@@ -429,7 +448,12 @@ export const financeData = {
         },
       ],
 
-      suitedFor: ["Textile Manufacturers", "Garment & Apparel Businesses", "Export-Oriented Units", "Handloom & Powerloom Units"],
+      suitedFor: [
+        "Textile Manufacturers",
+        "Garment & Apparel Businesses",
+        "Export-Oriented Units",
+        "Handloom & Powerloom Units",
+      ],
 
       whatWeDo: [
         {
@@ -516,7 +540,12 @@ export const financeData = {
         },
       ],
 
-      suitedFor: ["MedTech Startups", "Healthcare Technology Innovators", "Medical Device Companies", "Health-AI Businesses"],
+      suitedFor: [
+        "MedTech Startups",
+        "Healthcare Technology Innovators",
+        "Medical Device Companies",
+        "Health-AI Businesses",
+      ],
 
       whatWeDo: [
         {
@@ -603,7 +632,12 @@ export const financeData = {
         },
       ],
 
-      suitedFor: ["Agritech Startups", "Food Technology Businesses", "Farming Solution Providers", "Rural Innovation Ventures"],
+      suitedFor: [
+        "Agritech Startups",
+        "Food Technology Businesses",
+        "Farming Solution Providers",
+        "Rural Innovation Ventures",
+      ],
 
       whatWeDo: [
         {
@@ -690,7 +724,12 @@ export const financeData = {
         },
       ],
 
-      suitedFor: ["Scalable Startups", "Growth-Stage Businesses", "Revenue-Generating Companies", "Technology-First Ventures"],
+      suitedFor: [
+        "Scalable Startups",
+        "Growth-Stage Businesses",
+        "Revenue-Generating Companies",
+        "Technology-First Ventures",
+      ],
 
       whatWeDo: [
         {
@@ -777,7 +816,12 @@ export const financeData = {
         },
       ],
 
-      suitedFor: ["FinTech Startups", "Financial Inclusion Businesses", "Social Enterprises", "Rural Technology Providers"],
+      suitedFor: [
+        "FinTech Startups",
+        "Financial Inclusion Businesses",
+        "Social Enterprises",
+        "Rural Technology Providers",
+      ],
 
       whatWeDo: [
         {
@@ -864,7 +908,12 @@ export const financeData = {
         },
       ],
 
-      suitedFor: ["Established MSMEs", "Growth-Stage Startups", "Expansion-Ready Companies", "High-Revenue Businesses"],
+      suitedFor: [
+        "Established MSMEs",
+        "Growth-Stage Startups",
+        "Expansion-Ready Companies",
+        "High-Revenue Businesses",
+      ],
 
       whatWeDo: [
         {
@@ -1043,7 +1092,12 @@ export const financeData = {
         },
       ],
 
-      suitedFor: ["CleanTech Startups", "Renewable Energy Businesses", "Circular Economy Ventures", "Climate-Tech Innovators"],
+      suitedFor: [
+        "CleanTech Startups",
+        "Renewable Energy Businesses",
+        "Circular Economy Ventures",
+        "Climate-Tech Innovators",
+      ],
 
       whatWeDo: [
         {
@@ -1226,7 +1280,13 @@ export const financeData = {
         },
       ],
 
-      suitedFor: ["Small & Medium Businesses", "Manufacturers", "Retail Enterprises", "Service Providers", "Expanding Companies"],
+      suitedFor: [
+        "Small & Medium Businesses",
+        "Manufacturers",
+        "Retail Enterprises",
+        "Service Providers",
+        "Expanding Companies",
+      ],
 
       whatWeDo: [
         {
@@ -1321,7 +1381,12 @@ export const financeData = {
         },
       ],
 
-      suitedFor: ["Tech & SaaS Startups", "AI & Deep-Tech Companies", "Scalable Consumer Businesses", "High-Growth Ventures"],
+      suitedFor: [
+        "Tech & SaaS Startups",
+        "AI & Deep-Tech Companies",
+        "Scalable Consumer Businesses",
+        "High-Growth Ventures",
+      ],
 
       whatWeDo: [
         {

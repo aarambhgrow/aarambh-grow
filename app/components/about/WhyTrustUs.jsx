@@ -56,8 +56,12 @@ export default function WhyTrustUs() {
                 >
                   <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-sm font-bold text-[#03254C]">{item.title}</h3>
-                <p className="text-xs text-slate-500 leading-relaxed font-normal">{item.desc}</p>
+                <h3 className="text-sm font-bold text-[#03254C]">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed font-normal">
+                  {item.desc}
+                </p>
               </motion.div>
             );
           })}
