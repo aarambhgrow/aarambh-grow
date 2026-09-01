@@ -19,7 +19,7 @@ export async function POST(request) {
 
     const { data, error } = await resend.emails.send({
       from: process.env.EMAIL_FROM,
-      to: [process.env.EMAIL_TO],
+      to: process.env.EMAIL_TO,
       replyTo: email,
       subject: subject
         ? `New Contact Inquiry - ${subject}`
