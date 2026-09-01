@@ -1,3 +1,5 @@
+<div align="right"><img src="https://img.shields.io/badge/production-live-brightgreen"></div>
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
