@@ -2,15 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  CheckCircle2,
-  ShieldCheck,
-  Target,
-  FileText,
-  Award,
-  Scale,
-  FileSignature,
-} from "lucide-react";
+import { CheckCircle2, ShieldCheck, Target, FileText, Award, Scale, FileSignature } from "lucide-react";
 
 import { legalData } from "../../data/legal-ca";
 
@@ -162,8 +154,7 @@ export default function Legal() {
                             text-[#03254C]
                         "
           >
-            {legalData?.hero?.title ||
-              "Simplified Legal, Compliance & Business Protection Solutions"}
+            GST, ITR & ROC Compliance Services – AarambhGrow Legal & CA
           </motion.h1>
 
           {/* ACCENT LINE */}
@@ -201,6 +192,164 @@ export default function Legal() {
             {legalData?.hero?.description || ""}
           </motion.p>
         </motion.div>
+
+        {/* =====================================
+                    SEO LEGAL & CA CONTENT
+                ===================================== */}
+
+        <div className="max-w-4xl mb-8 sm:mb-10 space-y-7">
+          <div>
+            <h2
+              className="
+                                text-[20px]
+                                sm:text-[24px]
+                                lg:text-[28px]
+                                font-extrabold
+                                tracking-[-0.02em]
+                                leading-[1.2]
+                                text-[#03254C]
+                                mb-2
+                            "
+            >
+              GST Registration & Monthly/Quarterly Filing
+            </h2>
+
+            <p
+              className="
+                                text-[12px]
+                                sm:text-[13px]
+                                lg:text-[14px]
+                                leading-[1.65]
+                                text-[#475569]
+                            "
+            >
+              GST registration helps eligible businesses operate within the applicable tax framework and maintain proper compliance.
+              AarambhGrow supports businesses with GST registration and monthly or quarterly GST return filing based on their applicable
+              requirements.
+            </p>
+          </div>
+
+          <div>
+            <h2
+              className="
+                                text-[20px]
+                                sm:text-[24px]
+                                lg:text-[28px]
+                                font-extrabold
+                                tracking-[-0.02em]
+                                leading-[1.2]
+                                text-[#03254C]
+                                mb-2
+                            "
+            >
+              Income Tax Return (ITR) Filing
+            </h2>
+
+            <p
+              className="
+                                text-[12px]
+                                sm:text-[13px]
+                                lg:text-[14px]
+                                leading-[1.65]
+                                text-[#475569]
+                            "
+            >
+              Accurate income tax return filing helps businesses and professionals meet their applicable income tax obligations. AarambhGrow
+              provides ITR filing support with proper documentation and compliance guidance based on the taxpayer's requirements.
+            </p>
+          </div>
+
+          <div>
+            <h2
+              className="
+                                text-[20px]
+                                sm:text-[24px]
+                                lg:text-[28px]
+                                font-extrabold
+                                tracking-[-0.02em]
+                                leading-[1.2]
+                                text-[#03254C]
+                                mb-2
+                            "
+            >
+              ROC Annual Filing & Compliance
+            </h2>
+
+            <p
+              className="
+                                text-[12px]
+                                sm:text-[13px]
+                                lg:text-[14px]
+                                leading-[1.65]
+                                text-[#475569]
+                            "
+            >
+              Companies are required to complete applicable annual filings and maintain statutory records with the Registrar of Companies.
+              AarambhGrow supports ROC annual filing and ongoing compliance to help businesses maintain their required corporate records.
+            </p>
+          </div>
+
+          <div>
+            <h2
+              className="
+                                text-[20px]
+                                sm:text-[24px]
+                                lg:text-[28px]
+                                font-extrabold
+                                tracking-[-0.02em]
+                                leading-[1.2]
+                                text-[#03254C]
+                                mb-2
+                            "
+            >
+              Legal Drafting (Agreements, Contracts)
+            </h2>
+
+            <p
+              className="
+                                text-[12px]
+                                sm:text-[13px]
+                                lg:text-[14px]
+                                leading-[1.65]
+                                text-[#475569]
+                            "
+            >
+              Clear legal agreements and contracts help businesses establish responsibilities, terms, and obligations between parties.
+              AarambhGrow supports legal drafting for business agreements, contracts, and other documentation based on specific business
+              requirements.
+            </p>
+          </div>
+
+          <div>
+            <h2
+              className="
+                                text-[20px]
+                                sm:text-[24px]
+                                lg:text-[28px]
+                                font-extrabold
+                                tracking-[-0.02em]
+                                leading-[1.2]
+                                text-[#03254C]
+                                mb-2
+                            "
+            >
+              Statutory Audit Support
+            </h2>
+
+            <p
+              className="
+                                text-[12px]
+                                sm:text-[13px]
+                                lg:text-[14px]
+                                leading-[1.65]
+                                text-[#475569]
+                            "
+            >
+              Statutory audit support helps businesses organize relevant financial information and documentation required during the audit
+              process. AarambhGrow assists businesses with documentation, compliance coordination, and other audit-related support.
+            </p>
+          </div>
+        </div>
 
         {/* =====================================
                     MAIN LAYOUT
@@ -316,11 +465,7 @@ export default function Legal() {
                                                 }
                                             `}
                   >
-                    <span className="block">
-                      {service?.shortTitle ||
-                        service?.title ||
-                        `Service ${index + 1}`}
-                    </span>
+                    <span className="block">{service?.shortTitle || service?.title || `Service ${index + 1}`}</span>
                   </button>
                 );
               })}
@@ -420,8 +565,7 @@ export default function Legal() {
                                                 font-bold
                                             "
                     >
-                      {currentService?.number ||
-                        String(activeTab + 1).padStart(2, "0")}
+                      {currentService?.number || String(activeTab + 1).padStart(2, "0")}
                     </span>
 
                     {currentService?.tagline && (
@@ -551,41 +695,40 @@ export default function Legal() {
                     </div>
 
                     <div className="space-y-3.5">
-                      {(currentService?.benefits || []).map(
-                        (benefit, index) => (
-                          <div
-                            key={`${benefit?.title || "benefit"}-${index}`}
-                            className="
+                      {(currentService?.benefits || []).map((benefit, index) => (
+                        <div
+                          key={`${benefit?.title || "benefit"}-${index}`}
+                          className="
                                                             flex
                                                             items-start
                                                             gap-2.5
                                                         "
-                          >
-                            <CheckCircle2
-                              className="
+                        >
+                          <CheckCircle2
+                            className="
                                                                 w-4
                                                                 h-4
                                                                 text-[#157327]
                                                                 shrink-0
                                                                 mt-0.5
                                                             "
-                            />
+                          />
 
-                            <div>
-                              <h4
-                                className="
+                          <div>
+                            <h4
+                              className="
                                                                     text-[11px]
                                                                     sm:text-xs
                                                                     font-bold
                                                                     leading-[1.3]
                                                                     text-[#03254C]
                                                                 "
-                              >
-                                {benefit?.title}
-                              </h4>
+                            >
+                              {benefit?.title}
+                            </h4>
 
-                              <p
-                                className="
+                            <p
+                              className="
                                                                     mt-1
                                                                     text-[10px]
                                                                     sm:text-[11px]
@@ -593,13 +736,12 @@ export default function Legal() {
                                                                     leading-[1.4]
                                                                     text-[#64748B]
                                                                 "
-                              >
-                                {benefit?.desc}
-                              </p>
-                            </div>
+                            >
+                              {benefit?.desc}
+                            </p>
                           </div>
-                        ),
-                      )}
+                        </div>
+                      ))}
                     </div>
                   </motion.div>
 
@@ -981,8 +1123,7 @@ export default function Legal() {
                                                 text-[#03254C]
                                             "
                     >
-                      Why Businesses Choose{" "}
-                      {currentService?.name || currentService?.title}
+                      Why Businesses Choose {currentService?.name || currentService?.title}
                     </h3>
                   </div>
 

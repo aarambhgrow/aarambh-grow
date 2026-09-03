@@ -102,7 +102,7 @@ function Logo() {
       >
         <Image
           src="/images/home-logo.png"
-          alt="Aarambh Grow"
+          alt="AarambhGrow Group of Companies"
           width={130}
           height={30}
           priority

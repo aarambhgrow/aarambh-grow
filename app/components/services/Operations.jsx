@@ -21,9 +21,7 @@ import { operationData } from "../../data/operation";
 export default function Operations() {
   const [activeTab, setActiveTab] = useState(0);
 
-  const services = Array.isArray(operationData?.services)
-    ? operationData.services
-    : [];
+  const services = Array.isArray(operationData?.services) ? operationData.services : [];
 
   const currentService = services[activeTab] || services[0];
 
@@ -36,14 +34,11 @@ export default function Operations() {
       <section className="w-full bg-[#F8FAFC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-md border border-red-200 bg-red-50 p-6">
-            <h2 className="text-lg font-bold text-red-700">
-              Operations data not found
-            </h2>
+            <h2 className="text-lg font-bold text-red-700">Operations data not found</h2>
 
             <p className="mt-2 text-sm text-red-600">
-              Please check your <strong>data/operation.js</strong> file and make
-              sure the <strong>services</strong> array contains your operations
-              services.
+              Please check your <strong>data/operation.js</strong> file and make sure the <strong>services</strong> array contains your
+              operations services.
             </p>
           </div>
         </div>
@@ -198,7 +193,7 @@ export default function Operations() {
                             text-[#03254C]
                         "
           >
-            {operationData.hero?.title}
+            Business Process Improvement & Operations Consulting – AarambhGrow
           </motion.h1>
 
           <motion.div
@@ -232,6 +227,135 @@ export default function Operations() {
             {operationData.hero?.description}
           </motion.p>
         </motion.div>
+
+        {/* =====================================================
+                    SEO OPERATIONS CONTENT
+                ===================================================== */}
+
+        <div className="max-w-4xl mb-8 sm:mb-10 space-y-7">
+          <div>
+            <h2
+              className="
+                                text-[20px]
+                                sm:text-[24px]
+                                lg:text-[28px]
+                                font-extrabold
+                                tracking-[-0.02em]
+                                leading-[1.2]
+                                text-[#03254C]
+                                mb-2
+                            "
+            >
+              Process Audits
+            </h2>
+
+            <p
+              className="
+                                text-[12px]
+                                sm:text-[13px]
+                                lg:text-[14px]
+                                leading-[1.65]
+                                text-[#475569]
+                            "
+            >
+              Process audits help identify workflow gaps, unnecessary steps, bottlenecks, and areas where business operations can be
+              improved. AarambhGrow reviews existing processes and provides practical recommendations to improve efficiency, consistency,
+              and productivity.
+            </p>
+          </div>
+
+          <div>
+            <h2
+              className="
+                                text-[20px]
+                                sm:text-[24px]
+                                lg:text-[28px]
+                                font-extrabold
+                                tracking-[-0.02em]
+                                leading-[1.2]
+                                text-[#03254C]
+                                mb-2
+                            "
+            >
+              Workflow Automation Tools Used
+            </h2>
+
+            <p
+              className="
+                                text-[12px]
+                                sm:text-[13px]
+                                lg:text-[14px]
+                                leading-[1.65]
+                                text-[#475569]
+                            "
+            >
+              Workflow automation helps reduce repetitive manual tasks and create more structured business processes. AarambhGrow helps
+              businesses identify suitable automation opportunities and streamline workflows using relevant digital tools and systems.
+            </p>
+          </div>
+
+          <div>
+            <h2
+              className="
+                                text-[20px]
+                                sm:text-[24px]
+                                lg:text-[28px]
+                                font-extrabold
+                                tracking-[-0.02em]
+                                leading-[1.2]
+                                text-[#03254C]
+                                mb-2
+                            "
+            >
+              Team / Organization Structuring
+            </h2>
+
+            <p
+              className="
+                                text-[12px]
+                                sm:text-[13px]
+                                lg:text-[14px]
+                                leading-[1.65]
+                                text-[#475569]
+                            "
+            >
+              Effective team structuring creates clear responsibilities, reporting relationships, and workflows across an organization.
+              AarambhGrow supports businesses in structuring teams and roles to improve coordination, accountability, and operational
+              efficiency.
+            </p>
+          </div>
+
+          <div>
+            <h2
+              className="
+                                text-[20px]
+                                sm:text-[24px]
+                                lg:text-[28px]
+                                font-extrabold
+                                tracking-[-0.02em]
+                                leading-[1.2]
+                                text-[#03254C]
+                                mb-2
+                            "
+            >
+              SOP Documentation
+            </h2>
+
+            <p
+              className="
+                                text-[12px]
+                                sm:text-[13px]
+                                lg:text-[14px]
+                                leading-[1.65]
+                                text-[#475569]
+                            "
+            >
+              Standard Operating Procedures provide employees with clear and consistent instructions for recurring business activities.
+              AarambhGrow helps document important workflows and operating procedures so teams can follow structured and repeatable
+              processes.
+            </p>
+          </div>
+        </div>
 
         {/* =====================================================
                     MAIN GRID
@@ -381,9 +505,7 @@ export default function Operations() {
                                             `}
                     />
 
-                    <span className="leading-[1.35]">
-                      {service.shortTitle || service.title || service.name}
-                    </span>
+                    <span className="leading-[1.35]">{service.shortTitle || service.title || service.name}</span>
                   </button>
                 );
               })}
@@ -758,10 +880,6 @@ export default function Operations() {
                   </motion.div>
                 </div>
 
-                {/* =================================================
-                                    WHAT AARAMBH GROW DOES
-                                ================================================= */}
-
                 <motion.div
                   variants={cardVariants}
                   initial="hidden"
@@ -817,7 +935,7 @@ export default function Operations() {
                                                 text-[#03254C]
                                             "
                     >
-                      What Aarambh Grow Does
+                      What AarambhGrow Does
                     </h3>
                   </div>
 
@@ -939,8 +1057,7 @@ export default function Operations() {
                                                 text-[#03254C]
                                             "
                     >
-                      Why Businesses Choose{" "}
-                      {currentService.name || currentService.title}
+                      Why Businesses Choose {currentService.name || currentService.title}
                     </h3>
                   </div>
 
@@ -953,8 +1070,7 @@ export default function Operations() {
                                         "
                   >
                     {(currentService.whyChoose || []).map((item, index) => {
-                      const title =
-                        typeof item === "string" ? item : item?.title;
+                      const title = typeof item === "string" ? item : item?.title;
 
                       const desc = typeof item === "string" ? "" : item?.desc;
 
@@ -1022,104 +1138,6 @@ export default function Operations() {
                         </motion.div>
                       );
                     })}
-                  </div>
-                </motion.div>
-
-                {/* =================================================
-                                    SERVICE FOOTER
-                                ================================================= */}
-
-                <motion.div
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  className="
-                                        bg-[#03254C]
-                                        rounded-md
-                                        p-5
-                                        sm:p-6
-                                        relative
-                                        overflow-hidden
-                                    "
-                >
-                  <div
-                    className="
-                                            absolute
-                                            -right-16
-                                            -top-16
-                                            w-40
-                                            h-40
-                                            rounded-full
-                                            bg-[#157327]/20
-                                        "
-                  />
-
-                  <div
-                    className="
-                                            absolute
-                                            -left-20
-                                            -bottom-20
-                                            w-48
-                                            h-48
-                                            rounded-full
-                                            bg-[#F26522]/10
-                                        "
-                  />
-
-                  <div className="relative">
-                    <div
-                      className="
-                                                flex
-                                                items-center
-                                                gap-3
-                                            "
-                    >
-                      <div
-                        className="
-                                                    w-9
-                                                    h-9
-                                                    rounded-md
-                                                    bg-white/10
-                                                    flex
-                                                    items-center
-                                                    justify-center
-                                                "
-                      >
-                        <Settings
-                          className="
-                                                        w-4
-                                                        h-4
-                                                        text-white
-                                                    "
-                        />
-                      </div>
-
-                      <div>
-                        <p
-                          className="
-                                                        text-[9px]
-                                                        uppercase
-                                                        tracking-[0.12em]
-                                                        font-semibold
-                                                        text-white/60
-                                                    "
-                        >
-                          Business Solution
-                        </p>
-
-                        <h3
-                          className="
-                                                        mt-0.5
-                                                        text-sm
-                                                        sm:text-base
-                                                        font-bold
-                                                        text-white
-                                                    "
-                        >
-                          {currentService.name || currentService.title}
-                        </h3>
-                      </div>
-                    </div>
                   </div>
                 </motion.div>
               </motion.article>

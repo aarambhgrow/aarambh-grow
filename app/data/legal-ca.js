@@ -21,7 +21,7 @@ export const legalData = {
       title: "Post Registration Compliance",
 
       description:
-        "Registering your enterprise is only the initial milestone — every established commercial entity in India must execute continuous statutory obligations to preserve active corporate standing, avoid heavy financial penalties, and operate without regulatory interference. Aarambh Grow's post-registration compliance management encompasses annual ROC submissions, statutory tax returns, financial statements, board meetings, corporate registers, and critical government reporting mandates completed with absolute precision every year.",
+        "Registering your enterprise is only the initial milestone — every established commercial entity in India must execute continuous statutory obligations to preserve active corporate standing, avoid heavy financial penalties, and operate without regulatory interference. AarambhGrow's post-registration compliance management encompasses annual ROC submissions, statutory tax returns, financial statements, board meetings, corporate registers, and critical government reporting mandates completed with absolute precision every year.",
 
       benefits: [
         {
@@ -133,7 +133,7 @@ export const legalData = {
       title: "Legal Compliance",
 
       description:
-        "Legal compliance represents the overarching framework of statutes, regulations, and duties that every commercial organization must follow to operate lawfully and ethically in India. From Goods and Services Tax (GST) and Tax Deducted at Source (TDS) filings to labor law adherence, environmental mandates, and sector-specific rules — the national regulatory ecosystem is intricate and continuously evolving. Aarambh Grow delivers structured legal compliance support to ensure your business remains firmly aligned with every applicable law.",
+        "Legal compliance represents the overarching framework of statutes, regulations, and duties that every commercial organization must follow to operate lawfully and ethically in India. From Goods and Services Tax (GST) and Tax Deducted at Source (TDS) filings to labor law adherence, environmental mandates, and sector-specific rules — the national regulatory ecosystem is intricate and continuously evolving. AarambhGrow delivers structured legal compliance support to ensure your business remains firmly aligned with every applicable law.",
 
       benefits: [
         {
@@ -245,7 +245,7 @@ export const legalData = {
       title: "Business Licences",
 
       description:
-        "Business licenses are legally compulsory permits that authorize an enterprise to function within designated commercial sectors, geographic zones, and operational categories. Operating without necessary licenses exposes a company to immediate closure orders, heavy fines, and criminal charges. Aarambh Grow assists enterprises in navigating India's multi-tiered licensing framework — identifying every applicable permit, managing documentation, and securing complete operating authorization.",
+        "Business licenses are legally compulsory permits that authorize an enterprise to function within designated commercial sectors, geographic zones, and operational categories. Operating without necessary licenses exposes a company to immediate closure orders, heavy fines, and criminal charges. AarambhGrow assists enterprises in navigating India's multi-tiered licensing framework — identifying every applicable permit, managing documentation, and securing complete operating authorization.",
 
       benefits: [
         {
@@ -365,7 +365,7 @@ export const legalData = {
       title: "Agreement Drafting",
 
       description:
-        "Business agreements form the legal backbone of every commercial relationship — defining rights, duties, risk allocations, and remedies that govern daily trade. A poorly formulated or absent contract invites commercial disputes, financial losses, and expensive litigation. Aarambh Grow drafts professionally structured, legally precise agreements designed to safeguard your enterprise interests, establish absolute clarity, and build durable commercial foundations.",
+        "Business agreements form the legal backbone of every commercial relationship — defining rights, duties, risk allocations, and remedies that govern daily trade. A poorly formulated or absent contract invites commercial disputes, financial losses, and expensive litigation. AarambhGrow drafts professionally structured, legally precise agreements designed to safeguard your enterprise interests, establish absolute clarity, and build durable commercial foundations.",
 
       benefits: [
         {
@@ -486,7 +486,7 @@ export const legalData = {
       title: "Patent & Intellectual Property (IP)",
 
       description:
-        "Intellectual Property rights convert your innovations, creative works, distinctive brand identity, and technical inventions into protected, monetizable corporate assets. Without formal IP protection, your core business differentiators — your proprietary technology, brand, and creative property — remain vulnerable to copying and commercial exploitation. Aarambh Grow assists businesses in identifying, registering, and enforcing comprehensive IP protections that transform innovation into sustainable competitive advantages.",
+        "Intellectual Property rights convert your innovations, creative works, distinctive brand identity, and technical inventions into protected, monetizable corporate assets. Without formal IP protection, your core business differentiators — your proprietary technology, brand, and creative property — remain vulnerable to copying and commercial exploitation. AarambhGrow assists businesses in identifying, registering, and enforcing comprehensive IP protections that transform innovation into sustainable competitive advantages.",
 
       benefits: [
         {

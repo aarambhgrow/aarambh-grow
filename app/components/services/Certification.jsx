@@ -2,15 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  CheckCircle2,
-  ShieldCheck,
-  Target,
-  FileText,
-  Award,
-  ChevronDown,
-  BadgeCheck,
-} from "lucide-react";
+import { CheckCircle2, ShieldCheck, Target, FileText, Award, ChevronDown, BadgeCheck } from "lucide-react";
 
 import { certificationData } from "../../data/certification";
 
@@ -23,13 +15,9 @@ export default function Certification() {
     |--------------------------------------------------------------------------
     */
 
-  const services = Array.isArray(certificationData?.services)
-    ? certificationData.services
-    : [];
+  const services = Array.isArray(certificationData?.services) ? certificationData.services : [];
 
-  const categories = Array.isArray(certificationData?.categories)
-    ? certificationData.categories
-    : [];
+  const categories = Array.isArray(certificationData?.categories) ? certificationData.categories : [];
 
   /*
     |--------------------------------------------------------------------------
@@ -73,11 +61,7 @@ export default function Certification() {
     |
     */
 
-  const categoryServiceNames = new Set(
-    categories.flatMap((category) =>
-      Array.isArray(category?.services) ? category.services : [],
-    ),
-  );
+  const categoryServiceNames = new Set(categories.flatMap((category) => (Array.isArray(category?.services) ? category.services : [])));
 
   /*
     |--------------------------------------------------------------------------
@@ -107,9 +91,7 @@ export default function Certification() {
     |--------------------------------------------------------------------------
     */
 
-  const [openCategory, setOpenCategory] = useState(
-    categories?.[0]?.title || "",
-  );
+  const [openCategory, setOpenCategory] = useState(categories?.[0]?.title || "");
 
   /*
     |--------------------------------------------------------------------------
@@ -122,13 +104,10 @@ export default function Certification() {
       <section className="w-full bg-[#F8FAFC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-md border border-red-200 bg-red-50 p-6">
-            <h2 className="text-lg font-bold text-red-700">
-              Certification data not found
-            </h2>
+            <h2 className="text-lg font-bold text-red-700">Certification data not found</h2>
 
             <p className="mt-2 text-sm text-red-600">
-              Please check your <strong>data/certification.js</strong> file and
-              make sure the <strong>services</strong> array contains your
+              Please check your <strong>data/certification.js</strong> file and make sure the <strong>services</strong> array contains your
               certification services.
             </p>
           </div>
@@ -278,7 +257,7 @@ export default function Certification() {
                             text-[#03254C]
                         "
           >
-            {certificationData.hero?.title}
+            Business Certifications – ISO, FSSAI, Startup India & Trademark
           </motion.h1>
 
           <motion.div
@@ -312,6 +291,72 @@ export default function Certification() {
             {certificationData.hero?.description}
           </motion.p>
         </motion.div>
+
+        {/* =====================================================
+                    SEO CERTIFICATION CONTENT
+                ===================================================== */}
+
+        <div className="max-w-4xl mb-8 sm:mb-10 space-y-7">
+          <div>
+            <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-extrabold tracking-[-0.02em] leading-[1.2] text-[#03254C] mb-2">
+              ISO 9001 Certification
+            </h2>
+            <p className="text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.65] text-[#475569]">
+              ISO 9001 certification helps businesses establish a structured quality management system and demonstrate a commitment to
+              consistent processes. AarambhGrow provides guidance on documentation, implementation, and certification requirements.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-extrabold tracking-[-0.02em] leading-[1.2] text-[#03254C] mb-2">
+              FSSAI License
+            </h2>
+            <p className="text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.65] text-[#475569]">
+              FSSAI licensing is required for eligible food businesses operating in India. AarambhGrow helps businesses understand the
+              applicable license requirements, prepare documentation, and complete the registration process.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-extrabold tracking-[-0.02em] leading-[1.2] text-[#03254C] mb-2">
+              Startup India DPIIT Recognition
+            </h2>
+            <p className="text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.65] text-[#475569]">
+              Startup India DPIIT recognition can help eligible startups access applicable government benefits and support programs.
+              AarambhGrow assists founders with the documentation and application process for recognition.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-extrabold tracking-[-0.02em] leading-[1.2] text-[#03254C] mb-2">
+              Udyam/MSME Registration
+            </h2>
+            <p className="text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.65] text-[#475569]">
+              Udyam/MSME registration provides eligible micro, small, and medium enterprises with formal recognition under the MSME
+              framework. AarambhGrow supports businesses with registration guidance and the required documentation.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-extrabold tracking-[-0.02em] leading-[1.2] text-[#03254C] mb-2">
+              Trademark Registration
+            </h2>
+            <p className="text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.65] text-[#475569]">
+              Trademark registration helps businesses protect eligible brand names, logos, and other distinctive marks. AarambhGrow provides
+              guidance on the application process, documentation, and trademark registration requirements.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-extrabold tracking-[-0.02em] leading-[1.2] text-[#03254C] mb-2">
+              ZED Certification
+            </h2>
+            <p className="text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.65] text-[#475569]">
+              ZED certification supports eligible MSMEs in improving quality, productivity, and responsible business practices. AarambhGrow
+              helps businesses understand the certification process and prepare for applicable requirements.
+            </p>
+          </div>
+        </div>
 
         {/* =====================================================
                     MAIN GRID
@@ -404,9 +449,7 @@ export default function Certification() {
               {categories.map((category) => {
                 const isOpen = openCategory === category.title;
 
-                const categoryServices = Array.isArray(category?.services)
-                  ? category.services
-                  : [];
+                const categoryServices = Array.isArray(category?.services) ? category.services : [];
 
                 return (
                   <div
@@ -422,9 +465,7 @@ export default function Certification() {
 
                     <button
                       type="button"
-                      onClick={() =>
-                        setOpenCategory(isOpen ? "" : category.title)
-                      }
+                      onClick={() => setOpenCategory(isOpen ? "" : category.title)}
                       className="
                                                 w-full
                                                 flex
@@ -500,12 +541,7 @@ export default function Certification() {
                               <button
                                 type="button"
                                 key={service.id || serviceIndex}
-                                onClick={() =>
-                                  handleServiceClick(
-                                    serviceIndex,
-                                    category.title,
-                                  )
-                                }
+                                onClick={() => handleServiceClick(serviceIndex, category.title)}
                                 className={`
                                                                         w-full
                                                                         text-left
@@ -524,9 +560,7 @@ export default function Certification() {
                                                                         }
                                                                     `}
                               >
-                                {service.shortTitle ||
-                                  service.title ||
-                                  service.name}
+                                {service.shortTitle || service.title || service.name}
                               </button>
                             );
                           })}
@@ -553,9 +587,7 @@ export default function Certification() {
                                 "
               >
                 {standaloneServices.map((service) => {
-                  const serviceIndex = services.findIndex(
-                    (item) => item.id === service.id,
-                  );
+                  const serviceIndex = services.findIndex((item) => item.id === service.id);
 
                   const isActive = activeTab === serviceIndex;
 
@@ -1014,7 +1046,7 @@ export default function Certification() {
                                                 text-[#03254C]
                                             "
                     >
-                      What Aarambh Grow Does
+                      What AarambhGrow Does
                     </h3>
                   </div>
 
@@ -1131,8 +1163,7 @@ export default function Certification() {
                                                 text-[#03254C]
                                             "
                     >
-                      Why Businesses Choose{" "}
-                      {currentService.name || currentService.title}
+                      Why Businesses Choose {currentService.name || currentService.title}
                     </h3>
                   </div>
 
@@ -1145,8 +1176,7 @@ export default function Certification() {
                                         "
                   >
                     {(currentService.whyChoose || []).map((item, index) => {
-                      const title =
-                        typeof item === "string" ? item : item?.title;
+                      const title = typeof item === "string" ? item : item?.title;
 
                       const desc = typeof item === "string" ? "" : item?.desc;
 
@@ -1211,106 +1241,6 @@ export default function Certification() {
                         </motion.div>
                       );
                     })}
-                  </div>
-                </motion.div>
-
-                {/* =================================================
-                                    CERTIFICATION CATEGORY
-                                ================================================= */}
-
-                <motion.div
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  className="
-                                        bg-[#03254C]
-                                        rounded-md
-                                        p-5
-                                        sm:p-6
-                                        relative
-                                        overflow-hidden
-                                    "
-                >
-                  <div
-                    className="
-                                            absolute
-                                            -right-16
-                                            -top-16
-                                            w-40
-                                            h-40
-                                            rounded-full
-                                            bg-[#157327]/20
-                                        "
-                  />
-
-                  <div
-                    className="
-                                            absolute
-                                            -left-20
-                                            -bottom-20
-                                            w-48
-                                            h-48
-                                            rounded-full
-                                            bg-[#F26522]/10
-                                        "
-                  />
-
-                  <div className="relative">
-                    <div
-                      className="
-                                                flex
-                                                items-center
-                                                gap-3
-                                            "
-                    >
-                      <div
-                        className="
-                                                    w-9
-                                                    h-9
-                                                    rounded-md
-                                                    bg-white/10
-                                                    flex
-                                                    items-center
-                                                    justify-center
-                                                "
-                      >
-                        <BadgeCheck
-                          className="
-                                                        w-4
-                                                        h-4
-                                                        text-white
-                                                    "
-                        />
-                      </div>
-
-                      <div>
-                        <p
-                          className="
-                                                        text-[9px]
-                                                        uppercase
-                                                        tracking-[0.12em]
-                                                        font-semibold
-                                                        text-white/60
-                                                    "
-                        >
-                          Certification Category
-                        </p>
-
-                        <h3
-                          className="
-                                                        mt-0.5
-                                                        text-sm
-                                                        sm:text-base
-                                                        font-bold
-                                                        text-white
-                                                    "
-                        >
-                          {currentService.category ||
-                            currentService.name ||
-                            currentService.title}
-                        </h3>
-                      </div>
-                    </div>
                   </div>
                 </motion.div>
               </motion.article>

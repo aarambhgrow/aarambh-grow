@@ -2,16 +2,7 @@
 
 import React, { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  CheckCircle2,
-  ShieldCheck,
-  Target,
-  FileText,
-  Award,
-  ChevronDown,
-  WalletCards,
-  IndianRupee,
-} from "lucide-react";
+import { CheckCircle2, ShieldCheck, Target, FileText, Award, ChevronDown, WalletCards, IndianRupee } from "lucide-react";
 
 import { financeData } from "../../data/finance";
 
@@ -22,9 +13,7 @@ export default function Finance() {
     |--------------------------------------------------------------------------
     */
 
-  const services = Array.isArray(financeData?.services)
-    ? financeData.services
-    : [];
+  const services = Array.isArray(financeData?.services) ? financeData.services : [];
 
   /*
     |--------------------------------------------------------------------------
@@ -32,9 +21,7 @@ export default function Finance() {
     |--------------------------------------------------------------------------
     */
 
-  const categories = Array.isArray(financeData?.categories)
-    ? financeData.categories
-    : [];
+  const categories = Array.isArray(financeData?.categories) ? financeData.categories : [];
 
   /*
     |--------------------------------------------------------------------------
@@ -53,11 +40,7 @@ export default function Finance() {
     | Extra protection in case the IDs change.
     */
 
-  const standaloneServiceNames = [
-    "MSME Loans",
-    "VC / Angel",
-    "Venture Capital (VC) & Angel Investment",
-  ];
+  const standaloneServiceNames = ["MSME Loans", "VC / Angel", "Venture Capital (VC) & Angel Investment"];
 
   /*
     |--------------------------------------------------------------------------
@@ -72,18 +55,11 @@ export default function Finance() {
       .toLowerCase()
       .trim();
 
-    const serviceName = String(
-      service.name || service.title || service.shortTitle || "",
-    )
+    const serviceName = String(service.name || service.title || service.shortTitle || "")
       .toLowerCase()
       .trim();
 
-    return (
-      standaloneServiceIds.includes(serviceId) ||
-      standaloneServiceNames.some(
-        (name) => name.toLowerCase().trim() === serviceName,
-      )
-    );
+    return standaloneServiceIds.includes(serviceId) || standaloneServiceNames.some((name) => name.toLowerCase().trim() === serviceName);
   };
 
   /*
@@ -138,10 +114,7 @@ export default function Finance() {
                     ----------------------------------------------------------
                     */
 
-          return (
-            service.category?.toLowerCase().trim() ===
-            category.title?.toLowerCase().trim()
-          );
+          return service.category?.toLowerCase().trim() === category.title?.toLowerCase().trim();
         });
 
         return {
@@ -178,9 +151,7 @@ export default function Finance() {
     |--------------------------------------------------------------------------
     */
 
-  const [openCategory, setOpenCategory] = useState(
-    categoryNavigation?.[0]?.title || "",
-  );
+  const [openCategory, setOpenCategory] = useState(categoryNavigation?.[0]?.title || "");
 
   /*
     |--------------------------------------------------------------------------
@@ -193,14 +164,11 @@ export default function Finance() {
       <section className="w-full bg-[#F8FAFC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-md border border-red-200 bg-red-50 p-6">
-            <h2 className="text-lg font-bold text-red-700">
-              Finance data not found
-            </h2>
+            <h2 className="text-lg font-bold text-red-700">Finance data not found</h2>
 
             <p className="mt-2 text-sm text-red-600">
-              Please check your <strong>data/finance.js</strong> file and make
-              sure the <strong>services</strong> array contains your finance
-              services.
+              Please check your <strong>data/finance.js</strong> file and make sure the <strong>services</strong> array contains your
+              finance services.
             </p>
           </div>
         </div>
@@ -358,7 +326,7 @@ export default function Finance() {
                             text-[#03254C]
                         "
           >
-            {financeData.hero?.title}
+            Business Loans, Subsidies & Financial Consulting
           </motion.h1>
 
           <motion.div
@@ -392,6 +360,75 @@ export default function Finance() {
             {financeData.hero?.description}
           </motion.p>
         </motion.div>
+
+        {/* =====================================================
+                    SEO CONTENT
+                ===================================================== */}
+
+        <div className="max-w-4xl mb-10 sm:mb-12 space-y-8">
+          <div>
+            <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-extrabold tracking-[-0.02em] leading-[1.2] text-[#03254C] mb-3">
+              MSME/Udyam Loans
+            </h2>
+            <p className="text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.75] text-[#475569]">
+              MSME/Udyam loans can help eligible micro, small, and medium businesses access finance for business growth and operational
+              needs. AarambhGrow helps businesses understand suitable funding options and prepare the required information for the
+              application process.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-extrabold tracking-[-0.02em] leading-[1.2] text-[#03254C] mb-3">
+              CGTMSE Collateral-Free Funding
+            </h2>
+            <p className="text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.75] text-[#475569]">
+              CGTMSE-backed funding can support eligible businesses seeking credit without relying on traditional collateral requirements,
+              subject to applicable lender and scheme conditions. AarambhGrow assists businesses with understanding the funding route,
+              documentation, and application preparation.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-extrabold tracking-[-0.02em] leading-[1.2] text-[#03254C] mb-3">
+              Mudra Loan
+            </h2>
+            <p className="text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.75] text-[#475569]">
+              Mudra Loan options can help eligible micro and small businesses access finance for starting or expanding business activities.
+              AarambhGrow provides guidance on the applicable funding option, documentation, and application process.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-extrabold tracking-[-0.02em] leading-[1.2] text-[#03254C] mb-3">
+              Stand-Up India
+            </h2>
+            <p className="text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.75] text-[#475569]">
+              Stand-Up India provides a funding route for eligible entrepreneurs under the applicable scheme guidelines. AarambhGrow helps
+              businesses understand the requirements and prepare the information needed for the funding application.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-extrabold tracking-[-0.02em] leading-[1.2] text-[#03254C] mb-3">
+              Seed Funding & Investor Pitching
+            </h2>
+            <p className="text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.75] text-[#475569]">
+              Seed funding and investor pitching can help startups present their business opportunity to potential investors. AarambhGrow
+              supports businesses with funding preparation and investor pitch assistance to communicate their business model, growth plans,
+              and funding requirements clearly.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-extrabold tracking-[-0.02em] leading-[1.2] text-[#03254C] mb-3">
+              Working Capital / Cash Credit
+            </h2>
+            <p className="text-[12px] sm:text-[13px] lg:text-[14px] leading-[1.75] text-[#475569]">
+              Working capital and cash credit facilities can help businesses manage day-to-day operating requirements and cash-flow needs.
+              AarambhGrow helps businesses identify suitable finance options and prepare for the lender application process.
+            </p>
+          </div>
+        </div>
 
         {/* =====================================================
                     MAIN GRID
@@ -498,9 +535,7 @@ export default function Finance() {
 
                     <button
                       type="button"
-                      onClick={() =>
-                        setOpenCategory(isOpen ? "" : category.title)
-                      }
+                      onClick={() => setOpenCategory(isOpen ? "" : category.title)}
                       className="
                                                     w-full
                                                     flex
@@ -564,9 +599,7 @@ export default function Finance() {
                                                         "
                         >
                           {category.services.map((service) => {
-                            const serviceIndex = services.findIndex(
-                              (item) => item.id === service.id,
-                            );
+                            const serviceIndex = services.findIndex((item) => item.id === service.id);
 
                             const isActive = activeTab === serviceIndex;
 
@@ -574,12 +607,7 @@ export default function Finance() {
                               <button
                                 type="button"
                                 key={service.id}
-                                onClick={() =>
-                                  handleServiceClick(
-                                    serviceIndex,
-                                    category.title,
-                                  )
-                                }
+                                onClick={() => handleServiceClick(serviceIndex, category.title)}
                                 className={`
                                                                             w-full
                                                                             text-left
@@ -598,9 +626,7 @@ export default function Finance() {
                                                                             }
                                                                         `}
                               >
-                                {service.shortTitle ||
-                                  service.title ||
-                                  service.name}
+                                {service.shortTitle || service.title || service.name}
                               </button>
                             );
                           })}
@@ -627,9 +653,7 @@ export default function Finance() {
                                 "
               >
                 {standaloneServices.map((service) => {
-                  const serviceIndex = services.findIndex(
-                    (item) => item.id === service.id,
-                  );
+                  const serviceIndex = services.findIndex((item) => item.id === service.id);
 
                   const isActive = activeTab === serviceIndex;
 
@@ -1206,8 +1230,7 @@ export default function Finance() {
                                                 text-[#03254C]
                                             "
                     >
-                      Why Businesses Choose{" "}
-                      {currentService.name || currentService.title}
+                      Why Businesses Choose {currentService.name || currentService.title}
                     </h3>
                   </div>
 
@@ -1220,8 +1243,7 @@ export default function Finance() {
                                         "
                   >
                     {(currentService.whyChoose || []).map((item, index) => {
-                      const title =
-                        typeof item === "string" ? item : item?.title;
+                      const title = typeof item === "string" ? item : item?.title;
 
                       const desc = typeof item === "string" ? "" : item?.desc;
 
@@ -1286,106 +1308,6 @@ export default function Finance() {
                         </motion.div>
                       );
                     })}
-                  </div>
-                </motion.div>
-
-                {/* =================================================
-                                    FUNDING CATEGORY
-                                ================================================= */}
-
-                <motion.div
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  className="
-                                        bg-[#03254C]
-                                        rounded-md
-                                        p-5
-                                        sm:p-6
-                                        relative
-                                        overflow-hidden
-                                    "
-                >
-                  <div
-                    className="
-                                            absolute
-                                            -right-16
-                                            -top-16
-                                            w-40
-                                            h-40
-                                            rounded-full
-                                            bg-[#157327]/20
-                                        "
-                  />
-
-                  <div
-                    className="
-                                            absolute
-                                            -left-20
-                                            -bottom-20
-                                            w-48
-                                            h-48
-                                            rounded-full
-                                            bg-[#F26522]/10
-                                        "
-                  />
-
-                  <div className="relative">
-                    <div
-                      className="
-                                                flex
-                                                items-center
-                                                gap-3
-                                            "
-                    >
-                      <div
-                        className="
-                                                    w-9
-                                                    h-9
-                                                    rounded-md
-                                                    bg-white/10
-                                                    flex
-                                                    items-center
-                                                    justify-center
-                                                "
-                      >
-                        <IndianRupee
-                          className="
-                                                        w-4
-                                                        h-4
-                                                        text-white
-                                                    "
-                        />
-                      </div>
-
-                      <div>
-                        <p
-                          className="
-                                                        text-[9px]
-                                                        uppercase
-                                                        tracking-[0.12em]
-                                                        font-semibold
-                                                        text-white/60
-                                                    "
-                        >
-                          Funding Category
-                        </p>
-
-                        <h3
-                          className="
-                                                        mt-0.5
-                                                        text-sm
-                                                        sm:text-base
-                                                        font-bold
-                                                        text-white
-                                                    "
-                        >
-                          {currentService.category ||
-                            currentService.name ||
-                            currentService.title}
-                        </h3>
-                      </div>
-                    </div>
                   </div>
                 </motion.div>
               </motion.article>

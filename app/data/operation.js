@@ -16,7 +16,7 @@ export const operationData = {
       category: "People & Operations",
       tagline: "Build a stronger, scalable team",
       description:
-        "Human Resources is the operational backbone that determines whether your business can attract, retain, and develop the talent needed to execute your growth plans. For most growing businesses, the difference between scaling successfully and struggling operationally comes down to having the right HR systems, processes, and support structures in place. Aarambh Grow's HR support helps businesses build professional people operations that create high-performing, engaged teams.",
+        "Human Resources is the operational backbone that determines whether your business can attract, retain, and develop the talent needed to execute your growth plans. For most growing businesses, the difference between scaling successfully and struggling operationally comes down to having the right HR systems, processes, and support structures in place. AarambhGrow's HR support helps businesses build professional people operations that create high-performing, engaged teams.",
 
       benefits: [
         {
@@ -112,7 +112,7 @@ export const operationData = {
       category: "Customer & Sales Operations",
       tagline: "Turn customer management into a revenue engine",
       description:
-        "A Customer Relationship Management (CRM) system is the central nervous system of your sales and customer operations — it tracks every prospect interaction, manages your complete sales pipeline, organizes customer communication history, and provides the data intelligence your team needs to close more deals and retain more customers. Aarambh Grow helps businesses select, implement, and customize CRM systems that transform chaotic customer management into a systematic, scalable revenue engine.",
+        "A Customer Relationship Management (CRM) system is the central nervous system of your sales and customer operations — it tracks every prospect interaction, manages your complete sales pipeline, organizes customer communication history, and provides the data intelligence your team needs to close more deals and retain more customers. AarambhGrow helps businesses select, implement, and customize CRM systems that transform chaotic customer management into a systematic, scalable revenue engine.",
 
       benefits: [
         {
@@ -208,7 +208,7 @@ export const operationData = {
       category: "Strategy & Growth",
       tagline: "Turn business ambition into a clear roadmap",
       description:
-        "Business strategy is the master plan that determines where your business is going, why it will win in the market, and exactly how it will get there. Without a clear, well-articulated strategy, businesses make reactive decisions, miss opportunities, and waste resources pursuing the wrong priorities. Aarambh Grow's business strategy consultation helps founders and business leaders develop the clarity, direction, and competitive frameworks needed to make consistently better decisions and build businesses that win.",
+        "Business strategy is the master plan that determines where your business is going, why it will win in the market, and exactly how it will get there. Without a clear, well-articulated strategy, businesses make reactive decisions, miss opportunities, and waste resources pursuing the wrong priorities. AarambhGrow's business strategy consultation helps founders and business leaders develop the clarity, direction, and competitive frameworks needed to make consistently better decisions and build businesses that win.",
 
       benefits: [
         {
@@ -304,7 +304,7 @@ export const operationData = {
       category: "Revenue & Sales",
       tagline: "Build a sales process that consistently converts",
       description:
-        "Revenue is the lifeblood of every business — and your sales process is the system that generates it. Most businesses lose significant revenue not because their product isn't good enough, but because their sales process has leaks, gaps, and inefficiencies that prevent qualified prospects from converting. Aarambh Grow's sales support services help businesses design, implement, and optimize the sales systems, materials, and training that consistently convert more leads into paying customers.",
+        "Revenue is the lifeblood of every business — and your sales process is the system that generates it. Most businesses lose significant revenue not because their product isn't good enough, but because their sales process has leaks, gaps, and inefficiencies that prevent qualified prospects from converting. AarambhGrow's sales support services help businesses design, implement, and optimize the sales systems, materials, and training that consistently convert more leads into paying customers.",
 
       benefits: [
         {
@@ -400,7 +400,7 @@ export const operationData = {
       category: "Customer Experience",
       tagline: "Turn customer service into a competitive advantage",
       description:
-        "Exceptional customer support is one of the most powerful, yet underutilized, competitive advantages available to any business. In an era where customers share experiences instantly and publicly, the quality of your support directly determines your reputation, retention rate, and revenue. Aarambh Grow helps businesses design and implement professional customer support systems that resolve issues efficiently, turn dissatisfied customers into loyal advocates, and build the service reputation that drives referrals and repeat business.",
+        "Exceptional customer support is one of the most powerful, yet underutilized, competitive advantages available to any business. In an era where customers share experiences instantly and publicly, the quality of your support directly determines your reputation, retention rate, and revenue. AarambhGrow helps businesses design and implement professional customer support systems that resolve issues efficiently, turn dissatisfied customers into loyal advocates, and build the service reputation that drives referrals and repeat business.",
 
       benefits: [
         {

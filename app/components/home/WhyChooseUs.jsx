@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Users, Briefcase, Calendar, ShieldCheck, Check } from "lucide-react";
 
@@ -58,7 +59,7 @@ export default function WhyChooseUs() {
         {/* FULL BACKGROUND IMAGE — Visible on laptop, hidden on mobile */}
         <Image
           src="/images/why.png"
-          alt="Why Choose Us Background"
+          alt="Why Choose Us - Business Consultancy Experts"
           fill
           priority
           sizes="(min-width: 1024px) 1330px, 100vw"
@@ -97,8 +98,7 @@ export default function WhyChooseUs() {
             </h2>
 
             <p className="text-[11px] sm:text-[12px] lg:text-[13px] font-normal text-[#64748B] leading-snug max-w-lg mx-auto lg:mx-0">
-              We simplify your business journey with expert guidance,
-              transparent processes, and technology-driven solutions.
+              We simplify your business journey with expert guidance, transparent processes, and technology-driven solutions.
             </p>
 
             {/* Feature Bullet Points */}
@@ -109,17 +109,30 @@ export default function WhyChooseUs() {
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.3 + idx * 0.08 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: 0.3 + idx * 0.08,
+                  }}
                   className="flex items-center gap-2 justify-start"
                 >
                   <div className="w-3.5 h-3.5 rounded-full bg-[#F26522] flex items-center justify-center shrink-0 shadow-2xs">
                     <Check className="w-2 h-2 text-white stroke-[3]" />
                   </div>
-                  <span className="text-[11px] sm:text-[12px] font-semibold font-heading text-[#0F2A4A] text-left">
-                    {item}
-                  </span>
+
+                  <span className="text-[11px] sm:text-[12px] font-semibold font-heading text-[#0F2A4A] text-left">{item}</span>
                 </motion.div>
               ))}
+            </div>
+
+            {/* SEO-FRIENDLY INTERNAL LINK */}
+            <div className="pt-2 sm:pt-3 flex justify-center lg:justify-start">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 text-[11px] sm:text-[12px] font-bold font-heading text-[#F26522] hover:text-[#03254C] transition-colors duration-200 group"
+              >
+                Learn how our business consultancy experts support your growth
+                <span className="text-sm transition-transform duration-200 group-hover:translate-x-1">→</span>
+              </Link>
             </div>
           </motion.div>
 
@@ -133,6 +146,7 @@ export default function WhyChooseUs() {
           >
             {stats.map((stat, i) => {
               const Icon = stat.icon;
+
               return (
                 <motion.div
                   key={i}
@@ -140,19 +154,13 @@ export default function WhyChooseUs() {
                   whileTap={{ scale: 0.98 }}
                   className="bg-white/95 lg:bg-white/90 backdrop-blur-xs rounded-md p-2.5 sm:p-3 border border-[#E2E8F0] shadow-2xs flex flex-col items-center justify-center text-center transition-transform duration-200"
                 >
-                  <div
-                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full ${stat.iconBg} flex items-center justify-center mb-1 shadow-2xs`}
-                  >
-                    <Icon
-                      className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${stat.iconColor}`}
-                    />
+                  <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full ${stat.iconBg} flex items-center justify-center mb-1 shadow-2xs`}>
+                    <Icon className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${stat.iconColor}`} />
                   </div>
-                  <span className="text-[15px] sm:text-[18px] font-bold font-heading text-[#0F2A4A] leading-none mb-0.5">
-                    {stat.value}
-                  </span>
-                  <span className="text-[10px] sm:text-[11px] font-normal text-[#64748B]">
-                    {stat.label}
-                  </span>
+
+                  <span className="text-[15px] sm:text-[18px] font-bold font-heading text-[#0F2A4A] leading-none mb-0.5">{stat.value}</span>
+
+                  <span className="text-[10px] sm:text-[11px] font-normal text-[#64748B]">{stat.label}</span>
                 </motion.div>
               );
             })}

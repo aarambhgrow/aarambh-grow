@@ -1,14 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {
-  ArrowRight,
-  Building2,
-  TrendingUp,
-  Globe2,
-  ShieldCheck,
-  ArrowUpRight,
-} from "lucide-react";
+import { ArrowRight, Building2, TrendingUp, Globe2, ShieldCheck, ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -73,20 +66,23 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* Headline */}
+            {/* SEO H1 */}
             <h1 className="animate-slow-fade-2 text-2xl sm:text-3xl lg:text-[42px] xl:text-[46px] font-extrabold tracking-tight text-[#03254C] leading-[1.2] sm:leading-[1.12]">
-              Your Trusted Partner for <br className="hidden sm:inline" />
-              <span className="text-[#F26522]">Business Growth</span> &{" "}
+              Business Registration & Compliance Consultants for
               <br className="hidden sm:inline" />
-              <span className="text-[#157327]">Government Approvals</span>
+              <span className="text-[#F26522]">Startups and MSMEs</span> <br className="hidden sm:inline" />
+              <span className="text-[#157327]">in Gujarat</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="animate-slow-fade-3 text-xs mb-1 sm:mb-2.5 sm:text-sm text-slate-600 font-normal leading-relaxed max-w-lg">
-              From business registration and compliance to digital marketing,
-              financial consulting, certifications, and growth strategies,
-              AarambhGrow provides end to end business solutions that help
-              startups, MSMEs, and enterprises achieve long term success.
+            <p className="animate-slow-fade-3 text-sm sm:text-base text-slate-600 font-semibold leading-relaxed max-w-lg">
+              Your Trusted Partner for Business Growth & Government Approvals
+            </p>
+
+            {/* Supporting Description */}
+            <p className="animate-slow-fade-3 text-xs sm:text-sm text-slate-600 font-normal leading-relaxed max-w-lg">
+              From business registration and compliance to digital marketing, financial consulting, certifications, and growth strategies,
+              AarambhGrow provides end to end business solutions that help startups, MSMEs, and enterprises achieve long term success.
             </p>
 
             {/* Action Buttons */}
@@ -130,12 +126,8 @@ export default function Hero() {
                   <Building2 className="h-4.5 w-4.5" />
                 </div>
                 <div>
-                  <h3 className="text-xs sm:text-sm font-bold text-[#03254C]">
-                    Multiple
-                  </h3>
-                  <p className="text-[10px] sm:text-xs text-slate-500 font-medium">
-                    Entities & Sectors
-                  </p>
+                  <h3 className="text-xs sm:text-sm font-bold text-[#03254C]">Multiple</h3>
+                  <p className="text-[10px] sm:text-xs text-slate-500 font-medium">Entities & Sectors</p>
                 </div>
               </div>
 
@@ -145,12 +137,8 @@ export default function Hero() {
                   <TrendingUp className="h-4.5 w-4.5" />
                 </div>
                 <div>
-                  <h3 className="text-xs sm:text-sm font-bold text-[#03254C]">
-                    1000+
-                  </h3>
-                  <p className="text-[10px] sm:text-xs text-slate-500 font-medium">
-                    Enterprises Scaled
-                  </p>
+                  <h3 className="text-xs sm:text-sm font-bold text-[#03254C]">1000+</h3>
+                  <p className="text-[10px] sm:text-xs text-slate-500 font-medium">Enterprises Scaled</p>
                 </div>
               </div>
 
@@ -160,12 +148,8 @@ export default function Hero() {
                   <Globe2 className="h-4.5 w-4.5" />
                 </div>
                 <div>
-                  <h3 className="text-xs sm:text-sm font-bold text-[#03254C]">
-                    Pan-India
-                  </h3>
-                  <p className="text-[10px] sm:text-xs text-slate-500 font-medium">
-                    Corporate Presence
-                  </p>
+                  <h3 className="text-xs sm:text-sm font-bold text-[#03254C]">Pan-India</h3>
+                  <p className="text-[10px] sm:text-xs text-slate-500 font-medium">Corporate Presence</p>
                 </div>
               </div>
 
@@ -175,12 +159,8 @@ export default function Hero() {
                   <ShieldCheck className="h-4.5 w-4.5" />
                 </div>
                 <div>
-                  <h3 className="text-xs sm:text-sm font-bold text-[#03254C]">
-                    99.8%
-                  </h3>
-                  <p className="text-[10px] sm:text-xs text-slate-500 font-medium">
-                    Compliance Rate
-                  </p>
+                  <h3 className="text-xs sm:text-sm font-bold text-[#03254C]">99.8%</h3>
+                  <p className="text-[10px] sm:text-xs text-slate-500 font-medium">Compliance Rate</p>
                 </div>
               </div>
             </div>

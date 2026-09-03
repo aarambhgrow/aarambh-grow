@@ -1,14 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Star,
-  Target,
-  Award,
-  ShieldCheck,
-  Sparkles,
-  CheckCircle2,
-} from "lucide-react";
+import { Star, Target, Award, ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react";
 
 export default function AboutSection() {
   const [activeHighlight, setActiveHighlight] = useState(0);
@@ -23,11 +16,7 @@ export default function AboutSection() {
       accent: "#f26522",
       description:
         "We simplify complex business processes, eliminate unnecessary roadblocks, and provide strategic solutions that help businesses operate efficiently and unlock new opportunities.",
-      highlights: [
-        "Simplify complex business processes",
-        "Eliminate unnecessary roadblocks",
-        "Create roadmaps for long-term success",
-      ],
+      highlights: ["Simplify complex business processes", "Eliminate unnecessary roadblocks", "Create roadmaps for long-term success"],
     },
     {
       id: "vision",
@@ -38,11 +27,7 @@ export default function AboutSection() {
       accent: "#157327",
       description:
         "To become a trusted business growth partner that empowers entrepreneurs and organizations with innovative, reliable, and strategic solutions that create lasting value.",
-      highlights: [
-        "Trusted growth partner for entrepreneurs",
-        "Innovative and reliable solutions",
-        "Focus on creating sustainable value",
-      ],
+      highlights: ["Trusted growth partner for entrepreneurs", "Innovative and reliable solutions", "Focus on creating sustainable value"],
     },
     {
       id: "mission",
@@ -87,9 +72,7 @@ export default function AboutSection() {
         <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-1.5 rounded-full bg-[#fff5f0] border border-[#f26522]/20 px-3.5 py-1">
             <Star className="w-3 h-3 fill-[#f26522] text-[#f26522]" />
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#f26522]">
-              WHO WE ARE
-            </span>
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#f26522]">WHO WE ARE</span>
           </div>
         </div>
 
@@ -103,12 +86,9 @@ export default function AboutSection() {
 
             {/* Interactive Narrative Block */}
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-              Starting and growing a business requires more than completing
-              registrations or managing compliance. At{" "}
-              <strong className="text-[#0f2a4a] font-bold">AarambhGrow</strong>,
-              we bring business consulting, financial advisory, legal
-              compliance, certifications, branding, and operational support
-              under one roof by{" "}
+              Starting and growing a business requires more than completing registrations or managing compliance. At{" "}
+              <strong className="text-[#0f2a4a] font-bold">AarambhGrow</strong>, we bring business consulting, financial advisory, legal
+              compliance, certifications, branding, and operational support under one roof by{" "}
               <button
                 onMouseEnter={() => setActiveHighlight(0)}
                 onClick={() => setActiveHighlight(0)}
@@ -149,9 +129,8 @@ export default function AboutSection() {
 
             {/* Quick Trigger Selector */}
             <div className="pt-2 flex flex-wrap items-center gap-2">
-              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mr-1">
-                Hover to explore:
-              </span>
+              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mr-1">Hover to explore:</span>
+
               {pillars.map((item, idx) => (
                 <button
                   key={item.id}
@@ -175,43 +154,63 @@ export default function AboutSection() {
               {/* Top Meta Indicator */}
               <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
                 <div className="flex items-center gap-2">
-                  <span
-                    className="w-2.5 h-2.5 rounded-full animate-pulse"
-                    style={{ backgroundColor: current.accent }}
-                  />
-                  <span className="text-xs font-black uppercase tracking-wider text-[#0f2a4a]">
-                    {current.badge}
-                  </span>
+                  <span className="w-2.5 h-2.5 rounded-full animate-pulse" style={{ backgroundColor: current.accent }} />
+
+                  <span className="text-xs font-black uppercase tracking-wider text-[#0f2a4a]">{current.badge}</span>
                 </div>
+
                 <Sparkles className="w-4 h-4 text-slate-300" />
               </div>
 
               {/* Title & Description */}
               <div className="space-y-2 mb-5">
-                <h3 className="text-lg font-black text-[#0f2a4a]">
-                  {current.title}
-                </h3>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  {current.description}
-                </p>
+                <h3 className="text-lg font-black text-[#0f2a4a]">{current.title}</h3>
+
+                <p className="text-xs text-slate-500 leading-relaxed">{current.description}</p>
               </div>
 
               {/* Bullet Points */}
               <div className="space-y-2 mb-5">
                 {current.highlights.map((point, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center gap-2.5 p-2 rounded-md bg-[#f8fafc] border border-slate-100"
-                  >
-                    <CheckCircle2
-                      className="w-3.5 h-3.5 shrink-0"
-                      style={{ color: current.accent }}
-                    />
-                    <span className="text-xs font-bold text-[#0f2a4a]">
-                      {point}
-                    </span>
+                  <div key={idx} className="flex items-center gap-2.5 p-2 rounded-md bg-[#f8fafc] border border-slate-100">
+                    <CheckCircle2 className="w-3.5 h-3.5 shrink-0" style={{ color: current.accent }} />
+
+                    <span className="text-xs font-bold text-[#0f2a4a]">{point}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* EXPERIENCE & JOURNEY */}
+        <div className="mt-10 sm:mt-14">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#f26522]">OUR JOURNEY</span>
+
+            <h2 className="mt-2 text-2xl sm:text-3xl font-black text-[#0f2a4a] leading-tight">Our Experience & Journey</h2>
+
+            <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
+              AarambhGrow brings together business consulting, compliance, finance, legal, branding, and operational support to help
+              businesses build stronger foundations and pursue sustainable growth. Our journey is focused on simplifying complex business
+              requirements and creating practical solutions for startups, MSMEs, and growing enterprises.
+            </p>
+
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+              <div className="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+                <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Experience</p>
+
+                <p className="mt-1 text-xl font-black text-[#0f2a4a]">20+ Years</p>
+
+                <p className="mt-1 text-xs text-slate-500">Business experience supporting growth and development.</p>
+              </div>
+
+              <div className="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+                <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Focus</p>
+
+                <p className="mt-1 text-xl font-black text-[#0f2a4a]">Business Growth</p>
+
+                <p className="mt-1 text-xs text-slate-500">Integrated support across key business requirements.</p>
               </div>
             </div>
           </div>

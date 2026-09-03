@@ -168,7 +168,7 @@ export default function Preloader() {
               letterSpacing: "0.05em",
             }}
           >
-            Aarambh Grow
+            AarambhGrow 
           </h1>
           <p
             className="mt-2 text-lg md:text-xl leading-none"

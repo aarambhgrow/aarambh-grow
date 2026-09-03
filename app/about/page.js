@@ -8,10 +8,17 @@ import FAQ from "../components/layout/FAQ";
 import CTASection from "../components/layout/CTA";
 import Footer from "../components/layout/Footer";
 
+export const metadata = {
+  title: "About AarambhGrow – Business Consultancy Team in Gujarat",
+  description:
+    "Meet the team behind AarambhGrow — helping startups, MSMEs, and enterprises across India with registration, compliance, finance, and growth strategy.",
+};
+
 export default function AboutPage() {
   return (
     <>
       <Navbar />
+
       <main className="min-h-screen">
         <Hero />
         <About />
@@ -21,6 +28,7 @@ export default function AboutPage() {
         <FAQ />
         <CTASection />
       </main>
+
       <Footer />
     </>
   );

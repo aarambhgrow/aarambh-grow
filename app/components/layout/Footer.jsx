@@ -132,7 +132,7 @@ export default function Footer() {
               />
             </motion.div>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Aarambh Grow empowers entrepreneurs, startups, MSMEs, and growing
+              AarambhGrow empowers entrepreneurs, startups, MSMEs, and growing
               businesses with expert consultancy, strategic solutions, and
               end-to-end support to build, strengthen, and scale their
               businesses sustainably.
@@ -327,7 +327,7 @@ export default function Footer() {
       <div className="border-t border-slate-800/80 bg-[#051120] py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-3 text-xs text-slate-500 text-center sm:text-left">
           <p>
-            © {currentYear} Aarambh Grow Group of Companies. All rights
+            © {currentYear} AarambhGrow Group of Companies. All rights
             reserved.
           </p>
           <div className="flex justify-center gap-5">

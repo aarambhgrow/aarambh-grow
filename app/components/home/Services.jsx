@@ -4,18 +4,7 @@ import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import {
-  ArrowRight,
-  Star,
-  Headphones,
-  FileText,
-  Award,
-  Palette,
-  Settings,
-  Scale,
-  ArrowUpRight,
-  IndianRupee,
-} from "lucide-react";
+import { ArrowRight, Star, Headphones, FileText, Award, Palette, Settings, Scale, ArrowUpRight, IndianRupee } from "lucide-react";
 
 export default function ServicesSection() {
   const [activeTab, setActiveTab] = useState("All");
@@ -88,15 +77,11 @@ export default function ServicesSection() {
         variants={containerVariants}
         className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
       >
-        <motion.div
-          variants={fadeUpVariants}
-          className="text-center flex flex-col items-center max-w-3xl mx-auto mb-8 sm:mb-12"
-        >
+        <motion.div variants={fadeUpVariants} className="text-center flex flex-col items-center max-w-3xl mx-auto mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-1.5 rounded-full bg-[#fff5f0] border border-[#f26522]/20 px-3.5 py-1 mb-3.5 shadow-sm">
             <Star className="w-3 h-3 fill-[#f26522] text-[#f26522]" />
-            <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#f26522]">
-              OUR EXPERTISE
-            </span>
+
+            <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#f26522]">OUR EXPERTISE</span>
           </div>
 
           <div
@@ -113,14 +98,14 @@ export default function ServicesSection() {
           </div>
 
           <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-slate-500 font-normal max-w-2xl leading-relaxed">
-            From registration and financial setup to branding, certifications,
-            legal compliance, and operations, we offer tailored end-to-end
-            solutions for your business.
+            From registration and financial setup to branding, certifications, legal compliance, and operations, we offer tailored
+            end-to-end solutions for your business.
           </p>
         </motion.div>
 
         <motion.div layout className="space-y-4 sm:space-y-6">
           <AnimatePresence mode="popLayout">
+            {/* ==================== TOP ROW ==================== */}
             <motion.div
               layout
               key={`top-group-${activeTab}`}
@@ -142,6 +127,7 @@ export default function ServicesSection() {
               }}
               className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch"
             >
+              {/* ==================== REGISTRATION ==================== */}
               {(activeTab === "All" || activeTab === "Registration") && (
                 <motion.div layout className="lg:col-span-6 flex">
                   <Link
@@ -153,9 +139,8 @@ export default function ServicesSection() {
                         <div>
                           <div className="flex items-center gap-2 mb-2">
                             <FileText className="w-4 h-4 text-[#f26522] shrink-0" />
-                            <span className="text-xs font-extrabold text-[#f26522]">
-                              01 —
-                            </span>
+
+                            <span className="text-xs font-extrabold text-[#f26522]">01 —</span>
                           </div>
 
                           <h3 className="text-lg font-black text-[#0f2a4a] mb-1.5 group-hover:text-[#f26522] transition-colors duration-300">
@@ -163,30 +148,24 @@ export default function ServicesSection() {
                           </h3>
 
                           <p className="text-xs text-slate-500 leading-relaxed mb-3">
-                            Start your company with ease. We handle Private
-                            Limited, LLP, OPC, MSME, and all essential business
-                            registrations.
+                            Start your company with ease. We handle Private Limited, LLP, OPC, MSME, and all essential business
+                            registrations. Includes GST registration, Startup India recognition, and Udyam/MSME certification — fully
+                            managed from start to finish.
                           </p>
 
                           <ul className="space-y-1.5 text-xs font-semibold text-slate-700 mb-4 sm:mb-2">
                             <li className="flex items-center gap-2">
-                              <span className="text-[#f26522] font-bold">
-                                ✓
-                              </span>
+                              <span className="text-[#f26522] font-bold">✓</span>
                               Private Limited Company
                             </li>
 
                             <li className="flex items-center gap-2">
-                              <span className="text-[#f26522] font-bold">
-                                ✓
-                              </span>
+                              <span className="text-[#f26522] font-bold">✓</span>
                               LLP & Partnership Setup
                             </li>
 
                             <li className="flex items-center gap-2">
-                              <span className="text-[#f26522] font-bold">
-                                ✓
-                              </span>
+                              <span className="text-[#f26522] font-bold">✓</span>
                               One Person Company (OPC)
                             </li>
                           </ul>
@@ -194,6 +173,7 @@ export default function ServicesSection() {
 
                         <div className="hidden sm:inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#f26522] transition-colors duration-300 mt-2">
                           <span>Learn More</span>
+
                           <div className="w-5 h-5 rounded-full bg-[#f26522] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
                             <ArrowRight className="w-3 h-3" />
                           </div>
@@ -203,7 +183,7 @@ export default function ServicesSection() {
                       <div className="sm:col-span-5 relative h-36 sm:h-full min-h-[130px] w-full bg-slate-50/80 rounded-md flex items-center justify-center p-3 order-2">
                         <Image
                           src="/images/service-1.png"
-                          alt="Registration"
+                          alt="Business Registration Services"
                           width={280}
                           height={220}
                           className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
@@ -213,6 +193,7 @@ export default function ServicesSection() {
 
                       <div className="flex sm:hidden items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#f26522] transition-colors duration-300 order-3 pt-1">
                         <span>Learn More</span>
+
                         <div className="w-5 h-5 rounded-full bg-[#f26522] text-white flex items-center justify-center">
                           <ArrowRight className="w-3 h-3" />
                         </div>
@@ -222,6 +203,7 @@ export default function ServicesSection() {
                 </motion.div>
               )}
 
+              {/* ==================== FINANCE ==================== */}
               {(activeTab === "All" || activeTab === "Finance") && (
                 <motion.div layout className="lg:col-span-3 flex">
                   <Link
@@ -231,9 +213,8 @@ export default function ServicesSection() {
                     <div>
                       <div className="flex items-center gap-2 mb-2">
                         <IndianRupee className="w-4 h-4 text-[#157327] shrink-0" />
-                        <span className="text-xs font-extrabold text-[#157327]">
-                          02 —
-                        </span>
+
+                        <span className="text-xs font-extrabold text-[#157327]">02 —</span>
                       </div>
 
                       <h3 className="text-base font-black text-[#0f2a4a] mb-1.5 group-hover:text-[#157327] transition-colors duration-300">
@@ -241,14 +222,14 @@ export default function ServicesSection() {
                       </h3>
 
                       <p className="text-xs text-slate-500 leading-relaxed mb-3">
-                        Business loans, government subsidy support, investor
-                        pitching, and financial planning.
+                        Business loans, government subsidy support, investor pitching, and financial planning. Includes MSME loans, Mudra
+                        loans, and government funding assistance to help businesses secure the right financial support.
                       </p>
 
                       <div className="relative h-32 sm:h-28 w-full bg-slate-50/80 rounded-md flex items-center justify-center mb-3 p-2">
                         <Image
                           src="/images/service-2.png"
-                          alt="Finance"
+                          alt="Business Finance and Loan Services"
                           width={200}
                           height={140}
                           className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
@@ -258,6 +239,7 @@ export default function ServicesSection() {
 
                     <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#157327] transition-colors duration-300 mt-auto">
                       <span>Learn More</span>
+
                       <div className="w-5 h-5 rounded-full bg-[#157327] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
                         <ArrowRight className="w-3 h-3" />
                       </div>
@@ -266,6 +248,7 @@ export default function ServicesSection() {
                 </motion.div>
               )}
 
+              {/* ==================== CERTIFICATION ==================== */}
               {(activeTab === "All" || activeTab === "Certification") && (
                 <motion.div layout className="lg:col-span-3 flex">
                   <Link
@@ -275,9 +258,8 @@ export default function ServicesSection() {
                     <div>
                       <div className="flex items-center gap-2 mb-2">
                         <Award className="w-4 h-4 text-[#f26522] shrink-0" />
-                        <span className="text-xs font-extrabold text-[#f26522]">
-                          03 —
-                        </span>
+
+                        <span className="text-xs font-extrabold text-[#f26522]">03 —</span>
                       </div>
 
                       <h3 className="text-base font-black text-[#0f2a4a] mb-1.5 group-hover:text-[#f26522] transition-colors duration-300">
@@ -285,14 +267,14 @@ export default function ServicesSection() {
                       </h3>
 
                       <p className="text-xs text-slate-500 leading-relaxed mb-3">
-                        ISO, MSME, FSSAI, Startup India, and trademark approvals
-                        to build market authority.
+                        ISO, MSME, FSSAI, Startup India, and trademark approvals to build market authority. Includes ISO certification,
+                        FSSAI registration, and Startup India recognition to strengthen business credibility.
                       </p>
 
                       <div className="relative h-32 sm:h-28 w-full bg-slate-50/80 rounded-md flex items-center justify-center mb-3 p-2">
                         <Image
                           src="/images/service-3.png"
-                          alt="Certification"
+                          alt="ISO FSSAI and Business Certification Services"
                           width={200}
                           height={140}
                           className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
@@ -302,6 +284,7 @@ export default function ServicesSection() {
 
                     <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#f26522] transition-colors duration-300 mt-auto">
                       <span>Learn More</span>
+
                       <div className="w-5 h-5 rounded-full bg-[#f26522] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
                         <ArrowRight className="w-3 h-3" />
                       </div>
@@ -311,6 +294,7 @@ export default function ServicesSection() {
               )}
             </motion.div>
 
+            {/* ==================== BOTTOM ROW ==================== */}
             <motion.div
               layout
               key={`bottom-group-${activeTab}`}
@@ -333,6 +317,7 @@ export default function ServicesSection() {
               }}
               className="grid grid-cols-1 md:grid-cols-3 gap-4"
             >
+              {/* ==================== BRANDING ==================== */}
               {(activeTab === "All" || activeTab === "Branding") && (
                 <motion.div layout className="flex">
                   <Link
@@ -343,9 +328,8 @@ export default function ServicesSection() {
                       <div className="w-full sm:col-span-6">
                         <div className="flex items-center gap-2 mb-1.5">
                           <Palette className="w-4 h-4 text-[#157327] shrink-0" />
-                          <span className="text-xs font-extrabold text-[#157327]">
-                            04 —
-                          </span>
+
+                          <span className="text-xs font-extrabold text-[#157327]">04 —</span>
                         </div>
 
                         <h3 className="text-base font-black text-[#0f2a4a] mb-1 group-hover:text-[#157327] transition-colors duration-300">
@@ -353,15 +337,15 @@ export default function ServicesSection() {
                         </h3>
 
                         <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed mb-3 sm:mb-0">
-                          Brand positioning, identity design, digital strategy,
-                          and high-impact UI/UX experiences.
+                          Brand positioning, identity design, digital strategy, and high-impact UI/UX experiences. Includes logo design,
+                          brand identity, and website UI/UX design to create a consistent digital presence.
                         </p>
                       </div>
 
                       <div className="w-full sm:col-span-6 h-32 sm:h-28 bg-slate-50/80 rounded-md flex items-center justify-center p-2">
                         <Image
                           src="/images/service-4.png"
-                          alt="Branding"
+                          alt="Branding and Digital Design Services"
                           width={160}
                           height={120}
                           className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
@@ -371,6 +355,7 @@ export default function ServicesSection() {
 
                     <div className="mt-auto inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#157327] transition-colors duration-300">
                       <span>Learn More</span>
+
                       <div className="w-5 h-5 rounded-full bg-[#157327] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
                         <ArrowRight className="w-2.5 h-2.5" />
                       </div>
@@ -379,6 +364,7 @@ export default function ServicesSection() {
                 </motion.div>
               )}
 
+              {/* ==================== OPERATIONS ==================== */}
               {(activeTab === "All" || activeTab === "Operations") && (
                 <motion.div layout className="flex">
                   <Link
@@ -389,9 +375,8 @@ export default function ServicesSection() {
                       <div className="w-full sm:col-span-6">
                         <div className="flex items-center gap-2 mb-1.5">
                           <Settings className="w-4 h-4 text-[#f26522] shrink-0" />
-                          <span className="text-xs font-extrabold text-[#f26522]">
-                            05 —
-                          </span>
+
+                          <span className="text-xs font-extrabold text-[#f26522]">05 —</span>
                         </div>
 
                         <h3 className="text-base font-black text-[#0f2a4a] mb-1 group-hover:text-[#f26522] transition-colors duration-300">
@@ -399,15 +384,15 @@ export default function ServicesSection() {
                         </h3>
 
                         <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed mb-3 sm:mb-0">
-                          Streamline operations, workflow automation, team
-                          structure, and business consulting.
+                          Streamline operations, workflow automation, team structure, and business consulting. Includes process
+                          optimization, workflow automation, and SOP development to improve efficiency and support scalable growth.
                         </p>
                       </div>
 
                       <div className="w-full sm:col-span-6 h-32 sm:h-28 bg-slate-50/80 rounded-md flex items-center justify-center p-2">
                         <Image
                           src="/images/service-5.png"
-                          alt="Operations"
+                          alt="Business Operations and Consulting Services"
                           width={160}
                           height={120}
                           className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
@@ -417,6 +402,7 @@ export default function ServicesSection() {
 
                     <div className="mt-auto inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#f26522] transition-colors duration-300">
                       <span>Learn More</span>
+
                       <div className="w-5 h-5 rounded-full bg-[#f26522] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
                         <ArrowRight className="w-2.5 h-2.5" />
                       </div>
@@ -425,6 +411,7 @@ export default function ServicesSection() {
                 </motion.div>
               )}
 
+              {/* ==================== LEGAL & CA ==================== */}
               {(activeTab === "All" || activeTab === "Legal & CA") && (
                 <motion.div layout className="flex">
                   <Link
@@ -435,9 +422,8 @@ export default function ServicesSection() {
                       <div className="w-full sm:col-span-6">
                         <div className="flex items-center gap-2 mb-1.5">
                           <Scale className="w-4 h-4 text-[#157327] shrink-0" />
-                          <span className="text-xs font-extrabold text-[#157327]">
-                            06 —
-                          </span>
+
+                          <span className="text-xs font-extrabold text-[#157327]">06 —</span>
                         </div>
 
                         <h3 className="text-base font-black text-[#0f2a4a] mb-1 group-hover:text-[#157327] transition-colors duration-300">
@@ -445,23 +431,25 @@ export default function ServicesSection() {
                         </h3>
 
                         <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed mb-3 sm:mb-0">
-                          GST filings, income tax returns, ROC filings, legal
-                          drafting, and audit compliance.
+                          GST filings, income tax returns, ROC filings, legal drafting, and audit compliance. Includes GST return filing,
+                          income tax filing, and ROC annual compliance to keep your business legally and financially compliant.
                         </p>
                       </div>
 
                       <div className="w-full sm:col-span-6 h-32 sm:h-28 bg-slate-50/80 rounded-md flex items-center justify-center p-2">
                         <Image
                           src="/images/service-6.png"
-                          alt="Legal & CA"
+                          alt="Legal Compliance and CA Services"
                           width={160}
                           height={120}
                           className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
                     </div>
+
                     <div className="mt-auto inline-flex items-center gap-2 text-xs font-bold text-[#0f2a4a] group-hover:text-[#157327] transition-colors duration-300">
                       <span>Learn More</span>
+
                       <div className="w-5 h-5 rounded-full bg-[#157327] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
                         <ArrowRight className="w-2.5 h-2.5" />
                       </div>
@@ -473,6 +461,7 @@ export default function ServicesSection() {
           </AnimatePresence>
         </motion.div>
 
+        {/* ==================== CTA ==================== */}
         <motion.div
           variants={fadeUpVariants}
           className="mt-8 sm:mt-10 rounded-md bg-gradient-to-r from-[#fff2eb] via-[#fff8f5] to-white border border-[#f26522]/15 p-5 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-6 shadow-sm"
@@ -481,14 +470,12 @@ export default function ServicesSection() {
             <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-md bg-white shadow-sm border border-[#f26522]/20 flex items-center justify-center text-[#f26522] shrink-0">
               <Headphones className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
+
             <div>
-              <h3 className="text-base sm:text-xl font-black text-[#0f2a4a]">
-                Ready to Grow Your Business?
-              </h3>
+              <h3 className="text-base sm:text-xl font-black text-[#0f2a4a]">Ready to Grow Your Business?</h3>
 
               <p className="text-xs text-slate-500 mt-0.5">
-                Our experts are here to guide you through every stage of your
-                business journey.
+                Our experts are here to guide you through every stage of your business journey.
               </p>
             </div>
           </div>
@@ -509,26 +496,15 @@ export default function ServicesSection() {
             <div className="hidden lg:flex items-center gap-2 shrink-0">
               <div className="flex -space-x-2">
                 {avatars.map((avatar, idx) => (
-                  <div
-                    key={idx}
-                    className="w-8 h-8 rounded-full border-2 border-white bg-slate-300 overflow-hidden relative shrink-0"
-                  >
-                    <Image
-                      src={avatar}
-                      alt={`Client ${idx + 1}`}
-                      fill
-                      sizes="32px"
-                      className="object-cover"
-                    />
+                  <div key={idx} className="w-8 h-8 rounded-full border-2 border-white bg-slate-300 overflow-hidden relative shrink-0">
+                    <Image src={avatar} alt={`Client ${idx + 1}`} fill sizes="32px" className="object-cover" />
                   </div>
                 ))}
               </div>
 
               <div className="text-left">
                 <p className="text-xs font-black text-[#0f2a4a]">1000+</p>
-                <p className="text-[10px] text-slate-400 font-medium">
-                  Businesses Trust Us
-                </p>
+                <p className="text-[10px] text-slate-400 font-medium">Businesses Trust Us</p>
               </div>
             </div>
           </div>

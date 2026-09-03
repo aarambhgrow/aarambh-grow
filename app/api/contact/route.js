@@ -23,12 +23,12 @@ export async function POST(request) {
       replyTo: email,
       subject: subject
         ? `New Contact Inquiry - ${subject}`
-        : "New Contact Inquiry - Aarambh Grow",
+        : "New Contact Inquiry - AarambhGrow Group of Companies",
       html: `
         <div style="max-width:650px;margin:0 auto;font-family:Arial,sans-serif;background:#ffffff;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
           <div style="background:#03254C;padding:25px;">
             <h2 style="margin:0;color:#ffffff;font-size:22px;">New Contact Form Submission</h2>
-            <p style="margin:8px 0 0;color:#dbeafe;font-size:14px;">Aarambh Grow Group of Companies</p>
+            <p style="margin:8px 0 0;color:#dbeafe;font-size:14px;">AarambhGrow Group of Companies</p>
           </div>
           <div style="padding:25px;">
             <h3 style="color:#03254C;">Contact Details</h3>
@@ -41,7 +41,7 @@ export async function POST(request) {
               ${escapeHtml(message).replace(/\n/g, "<br />")}
             </div>
             <p style="margin-top:25px;padding-top:15px;border-top:1px solid #e5e7eb;color:#94a3b8;font-size:12px;">
-              This message was submitted through the Aarambh Grow website.
+              This message was submitted through the AarambhGrow website.
             </p>
           </div>
         </div>

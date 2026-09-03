@@ -235,7 +235,7 @@ export default function ContactFormWithMap() {
             className="lg:col-span-5 relative min-h-[300px] sm:min-h-[360px] lg:min-h-full bg-[#03254C] overflow-hidden flex flex-col justify-end"
           >
             <iframe
-              title="Aarambh Grow Group of Companies Location Map"
+              title="AarambhGrow Group of Companies Location Map"
               src="https://www.google.com/maps?q=813%2C%20Silver%20Rediance-4%2C%20Gota%2C%20Jagatpur%20Road%2C%20Gota%20SG%20Highway%2C%20Gujarat%20382470&output=embed"
               className="w-full h-full border-0 absolute inset-0 opacity-80 invert brightness-90 contrast-125"
               loading="lazy"
@@ -248,7 +248,7 @@ export default function ContactFormWithMap() {
               className="relative m-4 sm:m-6 bg-white/95 backdrop-blur-xs p-4 rounded-md border border-slate-200/80 shadow-lg space-y-2 z-10"
             >
               <h4 className="text-xs font-black text-[#03254C]">
-                Aarambh Grow Group of Companies
+                AarambhGrow Group of Companies
               </h4>
               <p className="text-[11px] text-slate-600 leading-snug">
                 813, Silver Rediance-4, Gota, Jagatpur Road, Gota SG Highway,
