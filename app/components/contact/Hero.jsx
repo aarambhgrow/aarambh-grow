@@ -30,7 +30,6 @@ export default function ContactHero() {
     },
   ];
 
-  // Framer Motion animation variants for content only
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -52,7 +51,7 @@ export default function ContactHero() {
   };
 
   return (
-    <section className="relative w-full bg-[#f8fafc] font-sans text-[#03254C] overflow-hidden  m-0 p-0">
+    <section className="relative w-full bg-[#f8fafc] font-sans text-[#03254C] overflow-hidden m-0 p-0">
       <div className="w-full flex items-center relative p-0 m-0 py-8 sm:py-12 lg:py-16">
         {/* LEFT SIDE: Text Content with Framer Motion Animations */}
         <motion.div
@@ -124,7 +123,7 @@ export default function ContactHero() {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT SIDE: Graphic Flush to Top & Right */}
+        {/* RIGHT SIDE: Graphic Flush to Top & Right (Hidden on mobile to prevent text overlap, visible on lg screens) */}
         <div className="hidden lg:block absolute right-0 -top-4 -bottom-4 w-1/2 p-0 m-0 pointer-events-none">
           <Image
             src="/images/contact-hero.png"

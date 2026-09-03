@@ -52,14 +52,15 @@ export default function AboutHero() {
 
   return (
     <section className="relative w-full max-w-none bg-[#f8fafc] font-sans text-[#03254C] m-0 p-0 overflow-hidden min-h-[440px] lg:min-h-[450px] flex items-center">
-      <div className="absolute inset-y-0 right-0 w-full lg:w-[65%] z-0 pointer-events-none overflow-hidden flex items-center justify-end">
+      {/* Background Image: Hidden on mobile to prevent text overlap, fully active on lg screens */}
+      <div className="hidden lg:block absolute inset-y-0 right-0 w-[65%] z-0 pointer-events-none overflow-hidden flex items-center justify-end">
         <Image
           src="/images/about-bg1.png"
           alt="Corporate Advisory Background"
           fill
           priority
-          sizes="(max-width: 1024px) 100vw, 65vw"
-          className="object-contain object-right scale-110 sm:scale-[1.28] origin-right p-0"
+          sizes="65vw"
+          className="object-contain object-right scale-[1.28] origin-right p-0"
         />
       </div>
 
