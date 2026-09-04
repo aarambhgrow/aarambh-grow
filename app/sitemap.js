@@ -1,64 +1,71 @@
 export default function sitemap() {
-  const baseUrl = "https://aarambhgrow.group";
-
   return [
     {
-      url: baseUrl,
-      lastModified: new Date(),
+      url: "https://aarambhgrow.group/",
+      lastModified: new Date("2026-09-01"),
       changeFrequency: "weekly",
       priority: 1,
     },
+
     {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      url: "https://aarambhgrow.group/about",
+      lastModified: new Date("2026-09-01"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
+
     {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
+      url: "https://aarambhgrow.group/services",
+      lastModified: new Date("2026-09-01"),
+      changeFrequency: "monthly",
       priority: 0.9,
     },
+
     {
-      url: `${baseUrl}/services/registration`,
-      lastModified: new Date(),
+      url: "https://aarambhgrow.group/services/registration",
+      lastModified: new Date("2026-09-01"),
+      changeFrequency: "monthly",
+      priority: 0.95,
+    },
+
+    {
+      url: "https://aarambhgrow.group/services/legal-ca",
+      lastModified: new Date("2026-09-01"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
+    {
+      url: "https://aarambhgrow.group/services/certification",
+      lastModified: new Date("2026-09-01"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+
+    {
+      url: "https://aarambhgrow.group/services/finance",
+      lastModified: new Date("2026-09-01"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+
+    {
+      url: "https://aarambhgrow.group/services/branding",
+      lastModified: new Date("2026-09-01"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
+
     {
-      url: `${baseUrl}/services/finance`,
-      lastModified: new Date(),
+      url: "https://aarambhgrow.group/services/operations",
+      lastModified: new Date("2026-09-01"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
+
     {
-      url: `${baseUrl}/services/certification`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/branding`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/operations`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/legal-ca`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      url: "https://aarambhgrow.group/contact",
+      lastModified: new Date("2026-09-01"),
       changeFrequency: "monthly",
       priority: 0.7,
     },

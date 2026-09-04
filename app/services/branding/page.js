@@ -17,8 +17,7 @@ export default function BrandingPage() {
     "@type": "Service",
     name: "Brand Identity, Strategy & UI/UX Design Services",
     serviceType: "Branding & UI/UX Design",
-    description:
-      "Build a brand that stands out with identity design, positioning strategy, and high-impact UI/UX from AarambhGrow.",
+    description: "Build a brand that stands out with identity design, positioning strategy, and high-impact UI/UX from AarambhGrow.",
     provider: {
       "@type": "Organization",
       name: "AarambhGrow",
@@ -37,7 +36,6 @@ export default function BrandingPage() {
       <main className="min-h-screen">
         <Hero />
         <Branding />
-        {/* <FAQ /> */}
         <CTASection />
       </main>
 
